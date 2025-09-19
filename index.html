@@ -3,58 +3,75 @@
 <head>
   <meta charset="UTF-8">
   <title>Justin's Homepage</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: #f7f7f7;
+      color: #333;
     }
 
     .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 60px 20px;
       display: flex;
-      justify-content: center;
+      flex-wrap: wrap;
       align-items: center;
-      height: 100vh;
-      padding: 40px;
+      justify-content: center;
+      gap: 40px;
     }
 
     .profile-pic {
-      flex: 1;
+      flex: 1 1 280px;
       text-align: center;
     }
 
     .profile-pic img {
-      max-width: 80%;
-      height: auto;
-      border-radius: 20px;
+      max-width: 220px;
+      width: 100%;
+      border-radius: 16px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     }
 
     .intro {
-      flex: 1;
-      padding: 20px 40px;
+      flex: 2 1 480px;
     }
 
     .intro h1 {
-      font-size: 36px;
-      color: #333;
+      font-size: 32px;
       margin-bottom: 20px;
     }
 
     .intro p {
-      font-size: 18px;
-      color: #555;
+      font-size: 17px;
       line-height: 1.6;
+      white-space: pre-line;
+    }
+
+    .contact {
+      margin-top: 20px;
+      font-size: 16px;
+    }
+
+    .contact a {
+      color: #007acc;
+      text-decoration: none;
+    }
+
+    .contact a:hover {
+      text-decoration: underline;
     }
 
     @media (max-width: 768px) {
       .container {
         flex-direction: column;
+        text-align: center;
       }
 
       .intro {
-        padding: 20px;
-        text-align: center;
+        padding: 0;
       }
     }
   </style>
@@ -68,16 +85,20 @@
     <div class="intro">
       <h1>Hello, I'm Justin!</h1>
       <p>
-        I earned my BS '20, MS '22, and Ph.D. '25 in Electrical Engineering from POSTECH. In 2024, I was affiliated with the Department of Engineering Science at the University of Oxford as a Recognised Student. Starting September 2025, I joined the Natural Sciences Research Institue at KAIST as a Jang Youngsil Postdoctoral Fellow.<br>
-        <br>
-        My core interests lie in cutting-edge technologies and emerging trends with the potential to drive significant global impact. I am committed to creating meaningful change through innovation and strategic decision-making.<br><br>
-        <br>
-        I love building things that make people's lives easier and more beautiful.<br><br><br>
-        
-        Feel free to connect with me via email at:<br>
-        📧 justin.js.ma@gmail.com<br>
-        📧 junseok.ma@kaist.ac.kr<br>
+I earned my BS '20, MS '22, and Ph.D. '25 in Electrical Engineering from POSTECH.
+In 2024, I was affiliated with the Department of Engineering Science at the University of Oxford as a Recognised Student.
+Starting September 2025, I joined the Natural Sciences Research Institue at KAIST as a Jang Youngsil Postdoctoral Fellow.<br><br>
+
+My core interests lie in cutting-edge technologies and emerging trends with the potential to drive significant global impact.
+I am committed to creating meaningful change through innovation and strategic decision-making.<br><br>
+
       </p>
+
+      <div class="contact">
+        Feel free to connect with me via email at:<br>
+        📧 <a href="mailto:justin.js.ma@gmail.com">justin.js.ma@gmail.com</a><br>
+        📧 <a href="mailto:junseok.ma@kaist.ac.kr">junseok.ma@kaist.ac.kr</a>
+      </div>
     </div>
   </div>
 
