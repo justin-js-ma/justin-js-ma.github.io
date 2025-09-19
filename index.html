@@ -11,6 +11,7 @@
       --ink: #202124;
       --muted: #666;
       --rule: #e6e6e6;
+      --link: #0b62d6;
     }
     html, body { margin:0; padding:0; background:var(--bg); color:var(--ink); }
     body { font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Helvetica,Arial,sans-serif; line-height:1.65; }
@@ -26,14 +27,18 @@
     .intro h1 { margin:0 0 10px; font-size:34px; font-weight:700; }
     .intro .lines { font-size:16px; }
     .intro .lines div + div { margin-top:4px; }
-    .intro a { color:#0b62d6; text-decoration:none; }
+    .intro a { color:var(--link); text-decoration:none; }
     .intro a:hover { text-decoration:underline; }
 
-    /* 구분선 섹션 */
+    /* 섹션 */
     .section { margin-top:36px; padding-top:24px; border-top:1px solid var(--rule); }
     .section h2 { margin:0 0 12px; font-size:20px; font-weight:700; }
-    .list { margin:0; padding-left:18px; }
-    .list li { margin:6px 0; font-size:15px; }
+
+    /* 리스트 */
+    .bullets { margin:0; padding-left:18px; }
+    .bullets li { margin:6px 0; font-size:15px; }
+    .ordered { margin:0; padding-left:22px; }
+    .ordered li { margin:6px 0; font-size:15px; }
     .where { font-weight:600; }
     .when { color:var(--muted); }
     .note { color:var(--muted); }
@@ -63,10 +68,10 @@
     </div>
   </section>
 
-  <!-- Research Interests -->
-  <section class="section" id="research">
+  <!-- Research Interests (프로필 바로 아래) -->
+  <section class="section" id="interests">
     <h2 class="serif">Research Interests</h2>
-    <ul class="list">
+    <ul class="bullets">
       <li>Liquid Crystals</li>
       <li>Optoelectronics</li>
       <li>Microwave &amp; mmWave Devices</li>
@@ -78,39 +83,102 @@
   <!-- Education -->
   <section class="section" id="education">
     <h2 class="serif">Education</h2>
-    <ul class="list">
-      <li><span class="where">KAIST</span> — Postdoctoral Research Fellow <span class="when">Sep 2025 – Sep 2026</span> <span class="note">· Jang Young-Sil Fellow</span></li>
-      <li><span class="where">University of Oxford</span> — Recognized Student, Engineering Science <span class="when">Dec 2023 – Dec 2024</span></li>
-      <li><span class="where">POSTECH</span> — Ph.D. Electrical Engineering <span class="when">Feb 2022 – Aug 2025</span></li>
-      <li><span class="where">POSTECH</span> — M.S. Electrical Engineering <span class="when">Feb 2020 – Feb 2022</span></li>
-      <li><span class="where">POSTECH</span> — B.S. Electrical Engineering <span class="when">Feb 2016 – Feb 2020</span></li>
+    <ul class="bullets">
+      <li><span class="where">KAIST</span> — Postdoctoral Research Fellow <span class="when">Sep 2025 – Sep 2026</span> <span class="note">· Jang Young-Sil Postdoctoral Fellow Track</span></li>
+      <li><span class="where">University of Oxford</span> — Recognized Student, Engineering Science (Keble College) <span class="when">Dec 2023 – Dec 2024</span></li>
+      <li><span class="where">POSTECH</span> — Ph.D., Electrical Engineering <span class="when">Feb 2022 – Aug 2025</span></li>
+      <li><span class="where">POSTECH</span> — M.S., Electrical Engineering <span class="when">Feb 2020 – Feb 2022</span></li>
+      <li><span class="where">POSTECH</span> — B.S., Electrical Engineering <span class="when">Feb 2016 – Feb 2020</span></li>
     </ul>
   </section>
 
   <!-- Professional Experience -->
   <section class="section" id="experience">
     <h2 class="serif">Professional Experience</h2>
-    <ul class="list">
-      <li><span class="where">KAIST</span> — Postdoctoral Research Fellow, Liquid Crystal Devices <span class="when">Sep 2025 – Present</span></li>
-      <li><span class="where">POSTECH</span> — Project Lead, Liquid Crystal Printing for Smart Devices <span class="when">Feb 2025 – Present</span></li>
+    <ul class="bullets">
+      <li><span class="where">KAIST</span> — Postdoctoral Research Fellow (College of Natural Sciences) <span class="when">Sep 2025 – Present</span></li>
+      <li><span class="where">POSTECH</span> — Project Lead, LC Printing for Smart Devices <span class="when">Feb 2025 – Present</span></li>
       <li><span class="where">University of Oxford</span> — Project Lead, DoD Printing for Smart Windows <span class="when">Dec 2023 – Dec 2024</span></li>
-      <li><span class="where">Samsung Science &amp; Technology Foundation</span> — Researcher, Cognitive Organic Reconfigurable Electronics <span class="when">Sep 2021 – Sep 2024</span></li>
-      <li><span class="where">POSTECH</span> — Researcher, LC-based RF Applications <span class="when">Sep 2020 – Aug 2024</span></li>
-      <li><span class="where">LG Display</span> — Intern, OLED R&amp;D <span class="when">Jun 2018 – Aug 2018</span></li>
+      <li><span class="where">Samsung Science &amp; Technology Foundation</span> — Researcher, CORE: Sub-THz 6G <span class="when">Sep 2021 – Sep 2024</span></li>
+      <li><span class="where">POSTECH</span> — Researcher, LC-based RF Applications &amp; Commercialization <span class="when">Sep 2020 – Aug 2024</span></li>
+      <li><span class="where">LG Display</span> — Intern, Preliminary Research Team for OLED <span class="when">Jun 2018 – Aug 2018</span></li>
     </ul>
   </section>
 
-  <!-- Publications -->
+  <!-- Publications (번호 매김, 전체) -->
   <section class="section" id="publications">
-    <h2 class="serif">Selected Publications</h2>
-    <ul class="list">
-      <li>J. Ma, “Development of Multifunctional Reconfigurable Liquid Crystal Devices Using Drop-on-Demand Printing,” Ph.D. Dissertation, POSTECH, 2025.</li>
-      <li>J. Ma, “A Study of Liquid Crystal-based Phase Shifter in the Millimeter-wave Range,” M.S. Thesis, POSTECH, 2021.</li>
-      <li>J. Ma, W. Kamal, A. Pradeep, et al., “Advanced image-integrated smart windows using printed electrochromic polymer-dispersed liquid crystal droplets,” Adv. Opt. Mater., 2025.</li>
-      <li>J. Ma, A. Pradeep, et al., “Operating temperature control in push-pull azobenzene-doped liquid crystal light-driven devices,” Dyes and Pigments, 2025.</li>
-      <li>S.-O. Cha, J.-H. Ka, I.-B. Kong, J. Ma, et al., “Off-Center Rotational Dynamics in Virtual Reality,” IEEE Access, 2025.</li>
-      <li>J. Ma, J.-Y. Choi, S. Park, I. Kong, et al., “Liquid crystals for advanced smart devices with microwave and millimeter-wave applications,” Adv. Mater., 2023.</li>
-      <li>J. Ma, J.-Y. Choi, et al., “Phase shifting enhancement of a substrate-integrated waveguide phase shifter based on liquid crystal,” Appl. Sci., 2023.</li>
+    <h2 class="serif">Publications (20+)</h2>
+
+    <h3 class="serif" style="margin:10px 0 6px">Dissertations</h3>
+    <ol class="ordered">
+      <li>J. Ma, “A Study of Liquid Crystal-based Phase Shifter in the Millimeter-wave Range for Utilizing Current Mass-production Technology of Display Industry,” M.S. Thesis, Dept. of Electrical Engineering, POSTECH, Korea, 2021.</li>
+      <li>J. Ma, “Development of Multifunctional Reconfigurable Liquid Crystal Devices Using Drop-on-Demand Printing,” Ph.D. Dissertation, Dept. of Electrical Engineering, POSTECH, Korea, 2025.</li>
+    </ol>
+
+    <h3 class="serif" style="margin:14px 0 6px">Journal Publications</h3>
+    <ol class="ordered">
+      <li>J. Ma +, D. Lee+, et al., “Low-Power Full-Color Printed Reflective Liquid Crystal Display Pixels with Field-Off Memory”, Adv. Mater., 2025. (Drafting)</li>
+      <li>J.Y. Choi, J.S. Ma, W.S. Kim*, “Tunable High-Selectivity Wideband Bandpass Filter Using Triple-Mode Stub-Loaded Resonators Based on Liquid Crystals”, IEEE Access, 2025 (Submitted).</li>
+      <li>A. Pradeep, Y. Montelongo, J.S. Ma, Z. Xu, T. Wang, J. Qin, C. Nourshagh, S. J. Elston, and S. M. Morris, “From Millimeters to Microns: A Hybrid Strategy for Reconfigurable Liquid-Crystal Patterning” Adv. Eng. Mater., 2025 (Submitted).</li>
+      <li>B. Mee et al., “Reconfigurable Optically-Transparent Antenna Using Drop-on-Demand Printed Nematic Liquid Crystals”, Adv. Eng. Mater., 2025 (Submitted).</li>
+      <li>J. Ma, W. Kamal, A. Pradeep, A. J. Orr, S.-W. Oh, J.-Y. Choi, J. Guo, B. Mee, H.-W. Oh, J.-H. Lee, A. A. Castrejon-Pita*, S. J. Elston*, W.-S. Kim*, and S. M. Morris*, “Advanced image-integrated smart windows using printed electrochromic polymer-dispersed liquid crystal droplets,” Adv. Opt. Mater., 2025.</li>
+      <li>J. Ma, A. Pradeep, S.W. Oh, J.H. Lee, J.Y. Choi, S.O. Cha, H.W. Oh, W.S. Kim*, “Operating temperature control in push-pull azobenzene-doped liquid crystal light-driven devices via a UV absorber”, Dyes and Pigments, 2025.</li>
+      <li>S.-H. Lee+, S.-G. Park+, J. Ma, W.-S. Kim, and S.-W. Oh*, “High-performance switchable visor for augmented reality using low-voltage, fast-response cholesteric liquid crystals,” Dyes and Pigments, 2025.</li>
+      <li>S.-O. Cha, J.-H. Ka, I.-B. Kong, J. Ma, S.-Y. Park, and W.-S. Kim*, “Off-Center Rotational Dynamics in Virtual Reality: Effects on Cybersickness and Presence,” IEEE Access, 2025.</li>
+      <li>A. Pradeep*, U. Mur, J. Ma, N. Spiller, Y. Jin, W. Kamal, S. J. Elston*, and S. M. Morris*, “Locking metastable topological domains in nematic liquid crystal Pi cells,” Adv. Funct. Mater., 2025. (Editor’s Choice)</li>
+      <li>J.-Y. Choi, J. Ma, and W.-S. Kim*, “Reconfigurable wideband bandpass filter using stepped impedance resonator based on liquid crystals,” Electronics, 2025.</li>
+      <li>S. Park, J. Ma, S. Oh, and W. Kim, “Blur image representation in defocus using generalized Gaussian kernel,” Inf. Disp., 2025.</li>
+      <li>J.-Y. Choi, J. Ma, H. Oh, and W.-S. Kim*, “Reconfigurable narrow-band bandpass filter using electrically-coupled open-loop resonators based on liquid crystals,” J. Phys. D: Appl. Phys., 2024.</li>
+      <li>J.-H. Lee, J. Ma, C.-H. An, G.-H. Lee, and S.-W. Oh*, “Advanced light: Liquid crystals-based ultra-broadband polarization rotator for functional smart devices,” Small Methods, 2023.</li>
+      <li>J. Ma, J.-Y. Choi, S. Park, I. Kong, D. Kim, C. Lee, Y. Youn, M. Hwang, S.-W. Oh*, W. Hong*, and W.-S. Kim*, “Liquid crystals for advanced smart devices with microwave and millimeter-wave applications: Recent progress for next-generation communication,” Adv. Mater., 2023. (Frontispiece Cover)</li>
+      <li>H. Shin+, J. Ma+, J.-Y. Choi+, and W.-S. Kim*, “Phase shifting enhancement of a substrate-integrated waveguide phase shifter based on liquid crystal,” Appl. Sci., 2023. (+ equal contribution)</li>
+      <li>J. Ma, J.-Y. Choi, H. Shin, J. Lee, S.-W. Oh*, and W.-S. Kim*, “An evaluation of surface-active agent hexadecyltrimethylammonium bromide with vertical self-alignment properties to align liquid crystals for various cell gap conditions,” Appl. Sci., 2022.</li>
+      <li>J. Ma, J.-Y. Choi, S.-W. Oh, and W.-S. Kim, “Liquid-crystal-based floating-electrode-free coplanar waveguide phase shifter with an additional liquid-crystal layer for 28-GHz applications,” J. Phys. D: Appl. Phys., 2021.</li>
+      <li>J. Ma, J.-Y. Choi, and W.-S. Kim, “액정의 고주파 대역 특성과 RF 응용 기술 동향,” Information Display, 22(3), 2021.</li>
+    </ol>
+
+    <h3 class="serif" style="margin:14px 0 6px">International Conference Presentations</h3>
+    <ol class="ordered">
+      <li>H. Oh, S. Park, J.-Y. Choi, J. Ma, S. Choi, and W.-S. Kim, “Analysis of Meander Delay Line Liquid Crystal Phase Shifter using Director Angle Extraction,” IMID, 2024.</li>
+      <li>J.-Y. Choi, J. Ma, H. Oh, and W.-S. Kim, “Characterization of Nematic Liquid Crystals at 10 GHz using an Open Stub Resonator,” AP-S/URSI, 2024.</li>
+      <li>J.-Y. Choi, J. Ma, H. Shin, and W.-S. Kim, “Reconfigurable Phased Array Antenna Based on Liquid Crystal with Miniaturized Bandpass Filter,” ISAP, Oct. 31–Nov. 3, 2022.</li>
+      <li>H. Shin, J.-Y. Choi, J. Ma, and W.-S. Kim, “Phase Shift Enhancement of Substrate Integrated Waveguide Phase Shifter Using Liquid Crystal,” IMID, Korea, Aug. 23–26, 2022.</li>
+      <li>J. Ma, J.-Y. Choi, H. Shin, and W.-S. Kim, “Comparative Analysis of Liquid-Crystal Driving between the Grounded-Coplanar Waveguide and the Floating-Electrode-Free Coplanar Waveguide in Liquid-Crystal Phase Shifters,” AP-S/URSI, 2022.</li>
+      <li>J. Ma, H. Shin, and W.-S. Kim, “Analysis about Novel Design of Liquid Crystal Based Floating Electrode Free Coplanar Waveguide Phase Shifter for Performance Improvement,” IMID, Korea, Aug. 25–27, 2021.</li>
+      <li>S. Cha, J. Ma, and W.-S. Kim, “Concept and Numerical Modeling for Virtual Acceleration Sense on Vestibular Organ using Focused Ultrasound,” IMID, Korea, Aug. 25–28, 2020.</li>
+    </ol>
+
+    <h3 class="serif" style="margin:14px 0 6px">Domestic Conference Presentations</h3>
+    <ol class="ordered">
+      <li>J. Ma, S.-W. Oh, J.-Y. Choi, H. Oh, S. M. Morris*, and W.-S. Kim*, “Enhancing Light-driven Polymer Stabilized Liquid Crystal Smart Devices,” BLCS, 2024.</li>
+      <li>J.-Y. Choi, J. Ma, H. Oh, and W.-S. Kim*, “Characterization of Nematic Liquid Crystal at 10 GHz using Director Angle Extraction,” Korea Liquid Crystal Conf., 2024.</li>
+      <li>J.-Y. Choi, J. Ma, S. Park, and W.-S. Kim*, “전기적 커플링 오픈 스터브를 이용한 소형 액정 기반 가변 광대역 대역저지 필터,” IEIE, 2023.</li>
+    </ol>
+  </section>
+
+  <!-- Academic Experiences: Reviewer -->
+  <section class="section" id="reviewer">
+    <h2 class="serif">Academic Service — Journal Reviewer</h2>
+    <ul class="bullets">
+      <li><span class="where">Engineering Research Express</span> (IOP) — <span class="when">2023 – Current</span> · Reviews: 2</li>
+      <li><span class="where">Journal of Physics D: Applied Physics</span> (IOP) — <span class="when">2025 – Current</span> · Reviews: 1</li>
+      <li><span class="where">Liquid Crystals</span> (Taylor &amp; Francis) — <span class="when">2025 – Current</span> · Reviews: 1</li>
+    </ul>
+  </section>
+
+  <!-- Scholarships / Honors & Awards -->
+  <section class="section" id="awards">
+    <h2 class="serif">Scholarships, Honors &amp; Awards</h2>
+    <ul class="bullets">
+      <li>Jang Young-Sil Postdoctoral Fellowship, KAIST <span class="when">2025</span></li>
+      <li>POSTECHIAN Fellowship, POSTECH <span class="when">2024</span></li>
+      <li>Excellence Awards (2nd Prize), EE Dept. Outstanding Performance Contest, POSTECH <span class="when">2024</span></li>
+      <li>Excellent Paper Challenge Prize, POSTECH Best Paper Competition <span class="when">2024</span></li>
+      <li>Samsung Electronics MX Division Sponsorship (Antenna Prior Research Organization) <span class="when">2023</span></li>
+      <li>Grand Prize, The 8th Electromagnetic Wave Measurement Thesis Contest (KIEES) <span class="when">2023</span></li>
+      <li>BK21 FOUR Outstanding Graduate Student International Funding (Oxford) <span class="when">2023</span></li>
+      <li>BK21 Interdisciplinary Research Group Support Funding <span class="when">2023</span></li>
+      <li>Kim Jong-Han Foundation Scholarship <span class="when">2018 – 2019</span></li>
     </ul>
   </section>
 
