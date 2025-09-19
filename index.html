@@ -29,6 +29,10 @@
     .intro .lines div + div { margin-top:4px; }
     .intro a { color:var(--link); text-decoration:none; }
     .intro a:hover { text-decoration:underline; }
+    .links { margin-top:10px; font-size:15px; }
+    .links a { color:var(--link); text-decoration:none; }
+    .links a:hover { text-decoration:underline; }
+    .links span { color:var(--muted); margin:0 6px; }
 
     /* 섹션 */
     .section { margin-top:36px; padding-top:24px; border-top:1px solid var(--rule); }
@@ -42,6 +46,9 @@
     .where { font-weight:600; }
     .when { color:var(--muted); }
     .note { color:var(--muted); }
+
+    /* 저자명 하이라이트 */
+    .me { font-weight:700; text-decoration: underline; }
 
     @media (max-width:720px){
       .hero{flex-direction:column}
@@ -65,10 +72,21 @@
         <div>Nature Sciences Research Institute (자연과학연구소) &amp; Soft Material Assembly Group (SMA Group)</div>
         <div>Korea Advanced Institute of Science and Technology (KAIST)</div>
       </div>
+
+      <!-- 프로필 하단 링크 묶음 -->
+      <div class="links">
+        <a href="https://www.linkedin.com/in/justin-junseok-ma/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <span>·</span>
+        <a href="https://github.com/justin-js-ma" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <span>·</span>
+        <a href="https://scholar.google.com/citations?user=HI6_iqEAAAAJ&hl=ko&oi=ao" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+        <span>·</span>
+        <a href="https://drive.google.com/file/d/1p5k6vQe7dK-f-yq7acQ5JMtoc0FTZlGU/view" target="_blank" rel="noopener noreferrer">CV (PDF)</a>
+      </div>
     </div>
   </section>
 
-  <!-- Research Interests (프로필 바로 아래) -->
+  <!-- Research Interests -->
   <section class="section" id="interests">
     <h2 class="serif">Research Interests</h2>
     <ul class="bullets">
@@ -105,58 +123,58 @@
     </ul>
   </section>
 
-  <!-- Publications (번호 매김, 전체) -->
+  <!-- Publications -->
   <section class="section" id="publications">
     <h2 class="serif">Publications (20+)</h2>
 
     <h3 class="serif" style="margin:10px 0 6px">Dissertations</h3>
     <ol class="ordered">
-      <li>J. Ma, “A Study of Liquid Crystal-based Phase Shifter in the Millimeter-wave Range for Utilizing Current Mass-production Technology of Display Industry,” M.S. Thesis, Dept. of Electrical Engineering, POSTECH, Korea, 2021.</li>
-      <li>J. Ma, “Development of Multifunctional Reconfigurable Liquid Crystal Devices Using Drop-on-Demand Printing,” Ph.D. Dissertation, Dept. of Electrical Engineering, POSTECH, Korea, 2025.</li>
+      <li><span class="me">J. Ma</span>, “A Study of Liquid Crystal-based Phase Shifter in the Millimeter-wave Range for Utilizing Current Mass-production Technology of Display Industry,” M.S. Thesis, Dept. of Electrical Engineering, POSTECH, Korea, 2021.</li>
+      <li><span class="me">J. Ma</span>, “Development of Multifunctional Reconfigurable Liquid Crystal Devices Using Drop-on-Demand Printing,” Ph.D. Dissertation, Dept. of Electrical Engineering, POSTECH, Korea, 2025.</li>
     </ol>
 
     <h3 class="serif" style="margin:14px 0 6px">Journal Publications</h3>
     <ol class="ordered">
-      <li>J. Ma +, D. Lee+, et al., “Low-Power Full-Color Printed Reflective Liquid Crystal Display Pixels with Field-Off Memory”, Adv. Mater., 2025. (Drafting)</li>
-      <li>J.Y. Choi, J.S. Ma, W.S. Kim*, “Tunable High-Selectivity Wideband Bandpass Filter Using Triple-Mode Stub-Loaded Resonators Based on Liquid Crystals”, IEEE Access, 2025 (Submitted).</li>
-      <li>A. Pradeep, Y. Montelongo, J.S. Ma, Z. Xu, T. Wang, J. Qin, C. Nourshagh, S. J. Elston, and S. M. Morris, “From Millimeters to Microns: A Hybrid Strategy for Reconfigurable Liquid-Crystal Patterning” Adv. Eng. Mater., 2025 (Submitted).</li>
+      <li><span class="me">J. Ma</span>+, D. Lee+, et al., “Low-Power Full-Color Printed Reflective Liquid Crystal Display Pixels with Field-Off Memory”, Adv. Mater., 2025. (Drafting)</li>
+      <li>J.Y. Choi, <span class="me">J.S. Ma</span>, W.S. Kim*, “Tunable High-Selectivity Wideband Bandpass Filter Using Triple-Mode Stub-Loaded Resonators Based on Liquid Crystals”, IEEE Access, 2025 (Submitted).</li>
+      <li>A. Pradeep, Y. Montelongo, <span class="me">J.S. Ma</span>, Z. Xu, T. Wang, J. Qin, C. Nourshagh, S. J. Elston, and S. M. Morris, “From Millimeters to Microns: A Hybrid Strategy for Reconfigurable Liquid-Crystal Patterning” Adv. Eng. Mater., 2025 (Submitted).</li>
       <li>B. Mee et al., “Reconfigurable Optically-Transparent Antenna Using Drop-on-Demand Printed Nematic Liquid Crystals”, Adv. Eng. Mater., 2025 (Submitted).</li>
-      <li>J. Ma, W. Kamal, A. Pradeep, A. J. Orr, S.-W. Oh, J.-Y. Choi, J. Guo, B. Mee, H.-W. Oh, J.-H. Lee, A. A. Castrejon-Pita*, S. J. Elston*, W.-S. Kim*, and S. M. Morris*, “Advanced image-integrated smart windows using printed electrochromic polymer-dispersed liquid crystal droplets,” Adv. Opt. Mater., 2025.</li>
-      <li>J. Ma, A. Pradeep, S.W. Oh, J.H. Lee, J.Y. Choi, S.O. Cha, H.W. Oh, W.S. Kim*, “Operating temperature control in push-pull azobenzene-doped liquid crystal light-driven devices via a UV absorber”, Dyes and Pigments, 2025.</li>
-      <li>S.-H. Lee+, S.-G. Park+, J. Ma, W.-S. Kim, and S.-W. Oh*, “High-performance switchable visor for augmented reality using low-voltage, fast-response cholesteric liquid crystals,” Dyes and Pigments, 2025.</li>
-      <li>S.-O. Cha, J.-H. Ka, I.-B. Kong, J. Ma, S.-Y. Park, and W.-S. Kim*, “Off-Center Rotational Dynamics in Virtual Reality: Effects on Cybersickness and Presence,” IEEE Access, 2025.</li>
-      <li>A. Pradeep*, U. Mur, J. Ma, N. Spiller, Y. Jin, W. Kamal, S. J. Elston*, and S. M. Morris*, “Locking metastable topological domains in nematic liquid crystal Pi cells,” Adv. Funct. Mater., 2025. (Editor’s Choice)</li>
-      <li>J.-Y. Choi, J. Ma, and W.-S. Kim*, “Reconfigurable wideband bandpass filter using stepped impedance resonator based on liquid crystals,” Electronics, 2025.</li>
-      <li>S. Park, J. Ma, S. Oh, and W. Kim, “Blur image representation in defocus using generalized Gaussian kernel,” Inf. Disp., 2025.</li>
-      <li>J.-Y. Choi, J. Ma, H. Oh, and W.-S. Kim*, “Reconfigurable narrow-band bandpass filter using electrically-coupled open-loop resonators based on liquid crystals,” J. Phys. D: Appl. Phys., 2024.</li>
-      <li>J.-H. Lee, J. Ma, C.-H. An, G.-H. Lee, and S.-W. Oh*, “Advanced light: Liquid crystals-based ultra-broadband polarization rotator for functional smart devices,” Small Methods, 2023.</li>
-      <li>J. Ma, J.-Y. Choi, S. Park, I. Kong, D. Kim, C. Lee, Y. Youn, M. Hwang, S.-W. Oh*, W. Hong*, and W.-S. Kim*, “Liquid crystals for advanced smart devices with microwave and millimeter-wave applications: Recent progress for next-generation communication,” Adv. Mater., 2023. (Frontispiece Cover)</li>
-      <li>H. Shin+, J. Ma+, J.-Y. Choi+, and W.-S. Kim*, “Phase shifting enhancement of a substrate-integrated waveguide phase shifter based on liquid crystal,” Appl. Sci., 2023. (+ equal contribution)</li>
-      <li>J. Ma, J.-Y. Choi, H. Shin, J. Lee, S.-W. Oh*, and W.-S. Kim*, “An evaluation of surface-active agent hexadecyltrimethylammonium bromide with vertical self-alignment properties to align liquid crystals for various cell gap conditions,” Appl. Sci., 2022.</li>
-      <li>J. Ma, J.-Y. Choi, S.-W. Oh, and W.-S. Kim, “Liquid-crystal-based floating-electrode-free coplanar waveguide phase shifter with an additional liquid-crystal layer for 28-GHz applications,” J. Phys. D: Appl. Phys., 2021.</li>
-      <li>J. Ma, J.-Y. Choi, and W.-S. Kim, “액정의 고주파 대역 특성과 RF 응용 기술 동향,” Information Display, 22(3), 2021.</li>
+      <li><span class="me">J. Ma</span>, W. Kamal, A. Pradeep, A. J. Orr, S.-W. Oh, J.-Y. Choi, J. Guo, B. Mee, H.-W. Oh, J.-H. Lee, A. A. Castrejon-Pita*, S. J. Elston*, W.-S. Kim*, and S. M. Morris*, “Advanced image-integrated smart windows using printed electrochromic polymer-dispersed liquid crystal droplets,” Adv. Opt. Mater., 2025.</li>
+      <li><span class="me">J. Ma</span>, A. Pradeep, S.W. Oh, J.H. Lee, J.Y. Choi, S.O. Cha, H.W. Oh, W.S. Kim*, “Operating temperature control in push-pull azobenzene-doped liquid crystal light-driven devices via a UV absorber”, Dyes and Pigments, 2025.</li>
+      <li>S.-H. Lee+, S.-G. Park+, <span class="me">J. Ma</span>, W.-S. Kim, and S.-W. Oh*, “High-performance switchable visor for augmented reality using low-voltage, fast-response cholesteric liquid crystals,” Dyes and Pigments, 2025.</li>
+      <li>S.-O. Cha, J.-H. Ka, I.-B. Kong, <span class="me">J. Ma</span>, S.-Y. Park, and W.-S. Kim*, “Off-Center Rotational Dynamics in Virtual Reality: Effects on Cybersickness and Presence,” IEEE Access, 2025.</li>
+      <li>A. Pradeep*, U. Mur, <span class="me">J. Ma</span>, N. Spiller, Y. Jin, W. Kamal, S. J. Elston*, and S. M. Morris*, “Locking metastable topological domains in nematic liquid crystal Pi cells,” Adv. Funct. Mater., 2025. (Editor’s Choice)</li>
+      <li>J.-Y. Choi, <span class="me">J. Ma</span>, and W.-S. Kim*, “Reconfigurable wideband bandpass filter using stepped impedance resonator based on liquid crystals,” Electronics, 2025.</li>
+      <li>S. Park, <span class="me">J. Ma</span>, S. Oh, and W. Kim, “Blur image representation in defocus using generalized Gaussian kernel,” Inf. Disp., 2025.</li>
+      <li>J.-Y. Choi, <span class="me">J. Ma</span>, H. Oh, and W.-S. Kim*, “Reconfigurable narrow-band bandpass filter using electrically-coupled open-loop resonators based on liquid crystals,” J. Phys. D: Appl. Phys., 2024.</li>
+      <li>J.-H. Lee, <span class="me">J. Ma</span>, C.-H. An, G.-H. Lee, and S.-W. Oh*, “Advanced light: Liquid crystals-based ultra-broadband polarization rotator for functional smart devices,” Small Methods, 2023.</li>
+      <li><span class="me">J. Ma</span>, J.-Y. Choi, S. Park, I. Kong, D. Kim, C. Lee, Y. Youn, M. Hwang, S.-W. Oh*, W. Hong*, and W.-S. Kim*, “Liquid crystals for advanced smart devices with microwave and millimeter-wave applications: Recent progress for next-generation communication,” Adv. Mater., 2023. (Frontispiece Cover)</li>
+      <li>H. Shin+, <span class="me">J. Ma</span>+, J.-Y. Choi+, and W.-S. Kim*, “Phase shifting enhancement of a substrate-integrated waveguide phase shifter based on liquid crystal,” Appl. Sci., 2023. (+ equal contribution)</li>
+      <li><span class="me">J. Ma</span>, J.-Y. Choi, H. Shin, J. Lee, S.-W. Oh*, and W.-S. Kim*, “An evaluation of surface-active agent hexadecyltrimethylammonium bromide with vertical self-alignment properties to align liquid crystals for various cell gap conditions,” Appl. Sci., 2022.</li>
+      <li><span class="me">J. Ma</span>, J.-Y. Choi, S.-W. Oh, and W.-S. Kim, “Liquid-crystal-based floating-electrode-free coplanar waveguide phase shifter with an additional liquid-crystal layer for 28-GHz applications,” J. Phys. D: Appl. Phys., 2021.</li>
+      <li><span class="me">J. Ma</span>, J.-Y. Choi, and W.-S. Kim, “액정의 고주파 대역 특성과 RF 응용 기술 동향,” Information Display, 22(3), 2021.</li>
     </ol>
 
     <h3 class="serif" style="margin:14px 0 6px">International Conference Presentations</h3>
     <ol class="ordered">
-      <li>H. Oh, S. Park, J.-Y. Choi, J. Ma, S. Choi, and W.-S. Kim, “Analysis of Meander Delay Line Liquid Crystal Phase Shifter using Director Angle Extraction,” IMID, 2024.</li>
-      <li>J.-Y. Choi, J. Ma, H. Oh, and W.-S. Kim, “Characterization of Nematic Liquid Crystals at 10 GHz using an Open Stub Resonator,” AP-S/URSI, 2024.</li>
-      <li>J.-Y. Choi, J. Ma, H. Shin, and W.-S. Kim, “Reconfigurable Phased Array Antenna Based on Liquid Crystal with Miniaturized Bandpass Filter,” ISAP, Oct. 31–Nov. 3, 2022.</li>
-      <li>H. Shin, J.-Y. Choi, J. Ma, and W.-S. Kim, “Phase Shift Enhancement of Substrate Integrated Waveguide Phase Shifter Using Liquid Crystal,” IMID, Korea, Aug. 23–26, 2022.</li>
-      <li>J. Ma, J.-Y. Choi, H. Shin, and W.-S. Kim, “Comparative Analysis of Liquid-Crystal Driving between the Grounded-Coplanar Waveguide and the Floating-Electrode-Free Coplanar Waveguide in Liquid-Crystal Phase Shifters,” AP-S/URSI, 2022.</li>
-      <li>J. Ma, H. Shin, and W.-S. Kim, “Analysis about Novel Design of Liquid Crystal Based Floating Electrode Free Coplanar Waveguide Phase Shifter for Performance Improvement,” IMID, Korea, Aug. 25–27, 2021.</li>
-      <li>S. Cha, J. Ma, and W.-S. Kim, “Concept and Numerical Modeling for Virtual Acceleration Sense on Vestibular Organ using Focused Ultrasound,” IMID, Korea, Aug. 25–28, 2020.</li>
+      <li>H. Oh, S. Park, J.-Y. Choi, <span class="me">J. Ma</span>, S. Choi, and W.-S. Kim, “Analysis of Meander Delay Line Liquid Crystal Phase Shifter using Director Angle Extraction,” IMID, 2024.</li>
+      <li>J.-Y. Choi, <span class="me">J. Ma</span>, H. Oh, and W.-S. Kim, “Characterization of Nematic Liquid Crystals at 10 GHz using an Open Stub Resonator,” AP-S/URSI, 2024.</li>
+      <li>J.-Y. Choi, <span class="me">J. Ma</span>, H. Shin, and W.-S. Kim, “Reconfigurable Phased Array Antenna Based on Liquid Crystal with Miniaturized Bandpass Filter,” ISAP, Oct. 31–Nov. 3, 2022.</li>
+      <li>H. Shin, J.-Y. Choi, <span class="me">J. Ma</span>, and W.-S. Kim, “Phase Shift Enhancement of Substrate Integrated Waveguide Phase Shifter Using Liquid Crystal,” IMID, Korea, Aug. 23–26, 2022.</li>
+      <li><span class="me">J. Ma</span>, J.-Y. Choi, H. Shin, and W.-S. Kim, “Comparative Analysis of Liquid-Crystal Driving between the Grounded-Coplanar Waveguide and the Floating-Electrode-Free Coplanar Waveguide in Liquid-Crystal Phase Shifters,” AP-S/URSI, 2022.</li>
+      <li><span class="me">J. Ma</span>, H. Shin, and W.-S. Kim, “Analysis about Novel Design of Liquid Crystal Based Floating Electrode Free Coplanar Waveguide Phase Shifter for Performance Improvement,” IMID, Korea, Aug. 25–27, 2021.</li>
+      <li>S. Cha, <span class="me">J. Ma</span>, and W.-S. Kim, “Concept and Numerical Modeling for Virtual Acceleration Sense on Vestibular Organ using Focused Ultrasound,” IMID, Korea, Aug. 25–28, 2020.</li>
     </ol>
 
     <h3 class="serif" style="margin:14px 0 6px">Domestic Conference Presentations</h3>
     <ol class="ordered">
-      <li>J. Ma, S.-W. Oh, J.-Y. Choi, H. Oh, S. M. Morris*, and W.-S. Kim*, “Enhancing Light-driven Polymer Stabilized Liquid Crystal Smart Devices,” BLCS, 2024.</li>
-      <li>J.-Y. Choi, J. Ma, H. Oh, and W.-S. Kim*, “Characterization of Nematic Liquid Crystal at 10 GHz using Director Angle Extraction,” Korea Liquid Crystal Conf., 2024.</li>
-      <li>J.-Y. Choi, J. Ma, S. Park, and W.-S. Kim*, “전기적 커플링 오픈 스터브를 이용한 소형 액정 기반 가변 광대역 대역저지 필터,” IEIE, 2023.</li>
+      <li><span class="me">J. Ma</span>, S.-W. Oh, J.-Y. Choi, H. Oh, S. M. Morris*, and W.-S. Kim*, “Enhancing Light-driven Polymer Stabilized Liquid Crystal Smart Devices,” BLCS, 2024.</li>
+      <li>J.-Y. Choi, <span class="me">J. Ma</span>, H. Oh, and W.-S. Kim*, “Characterization of Nematic Liquid Crystal at 10 GHz using Director Angle Extraction,” Korea Liquid Crystal Conf., 2024.</li>
+      <li>J.-Y. Choi, <span class="me">J. Ma</span>, S. Park, and W.-S. Kim*, “전기적 커플링 오픈 스터브를 이용한 소형 액정 기반 가변 광대역 대역저지 필터,” IEIE, 2023.</li>
     </ol>
   </section>
 
-  <!-- Academic Experiences: Reviewer -->
+  <!-- Academic Service — Reviewer -->
   <section class="section" id="reviewer">
     <h2 class="serif">Academic Service — Journal Reviewer</h2>
     <ul class="bullets">
