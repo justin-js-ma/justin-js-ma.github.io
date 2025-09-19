@@ -5,108 +5,115 @@
   <title>Dr. Justin (Junseok) Ma</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
-    :root{
+    :root {
       --maxw: 980px;
-      --accent: #111;
+      --bg: #fff;
+      --ink: #202124;
       --muted: #666;
-      --bg: #fafafa;
+      --rule: #e6e6e6;
     }
-    html,body{margin:0;padding:0;background:var(--bg);color:#222;}
-    body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,Helvetica,Arial,sans-serif; line-height:1.6;}
+    html, body { margin:0; padding:0; background:var(--bg); color:var(--ink); }
+    body { font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Helvetica,Arial,sans-serif; line-height:1.65; }
+    .serif { font-family: Georgia, "Times New Roman", Times, serif; }
 
-    /* Header (two columns) */
-    .wrap{max-width:var(--maxw); margin:0 auto; padding:56px 20px;}
-    .hero{display:flex; gap:36px; align-items:flex-start; flex-wrap:wrap;}
-    .photo{flex:0 0 260px}
-    .photo img{
-      display:block; width:100%; max-width:260px; height:auto;
-      border-radius:14px; box-shadow:0 6px 18px rgba(0,0,0,.12);
-    }
-    .intro{flex:1 1 420px; min-width:280px}
-    .intro h1{
-      margin:0 0 12px; font-size:34px; font-weight:700; letter-spacing:.2px; color:var(--accent);
-    }
-    .intro .lines{font-size:16px; color:#222;}
-    .intro .lines .muted{color:var(--muted)}
-    .intro .lines a{color:#0b62d6; text-decoration:none}
-    .intro .lines a:hover{text-decoration:underline}
+    .wrap { max-width: var(--maxw); margin:0 auto; padding:56px 20px; }
 
-    /* Section title left-aligned with thin divider */
-    .section{margin-top:42px; padding-top:28px; border-top:1px solid #e5e5e5;}
-    .section h2{
-      margin:0 0 10px; font-size:20px; letter-spacing:.2px; color:#222;
-    }
-    .edu-list{margin:0; padding-left:18px}
-    .edu-list li{margin:6px 0; font-size:15px; color:#333}
-    .edu-list li .where{font-weight:600}
-    .edu-list li .when{color:var(--muted)}
-    .edu-list li .note{color:var(--muted)}
+    /* 상단 레이아웃 */
+    .hero { display:flex; gap:36px; align-items:flex-start; flex-wrap:wrap; }
+    .photo { flex:0 0 260px; }
+    .photo img { width:100%; max-width:260px; border-radius:10px; box-shadow:0 6px 18px rgba(0,0,0,.1); }
+    .intro { flex:1 1 420px; min-width:280px; }
+    .intro h1 { margin:0 0 10px; font-size:34px; font-weight:700; }
+    .intro .lines { font-size:16px; }
+    .intro .lines div + div { margin-top:4px; }
+    .intro a { color:#0b62d6; text-decoration:none; }
+    .intro a:hover { text-decoration:underline; }
 
-    /* Footer space */
-    .spacer{height:40px}
+    /* 구분선 섹션 */
+    .section { margin-top:36px; padding-top:24px; border-top:1px solid var(--rule); }
+    .section h2 { margin:0 0 12px; font-size:20px; font-weight:700; }
+    .list { margin:0; padding-left:18px; }
+    .list li { margin:6px 0; font-size:15px; }
+    .where { font-weight:600; }
+    .when { color:var(--muted); }
+    .note { color:var(--muted); }
 
-    /* Mobile stacking */
-    @media (max-width: 720px){
-      .hero{flex-direction:column; align-items:center; text-align:left}
+    @media (max-width:720px){
+      .hero{flex-direction:column}
       .intro h1{font-size:28px}
-      .intro .lines{font-size:15px}
     }
   </style>
 </head>
 <body>
-  <main class="wrap">
+<main class="wrap">
 
-    <!-- Top: Left photo, Right text -->
-    <section class="hero">
-      <div class="photo">
-        <img src="https://raw.githubusercontent.com/justin-js-ma/justin-js-ma.github.io/main/images/profile/Grad_Profile.jpg" alt="Dr. Justin (Junseok) Ma">
+  <!-- 상단 프로필 -->
+  <section class="hero">
+    <div class="photo">
+      <img src="https://raw.githubusercontent.com/justin-js-ma/justin-js-ma.github.io/main/images/profile/Grad_Profile.jpg" alt="Dr. Justin (Junseok) Ma">
+    </div>
+    <div class="intro">
+      <h1 class="serif">Dr. Justin (Junseok) Ma</h1>
+      <div class="lines">
+        <div><a href="mailto:junseok.ma@kaist.ac.kr">junseok.ma@kaist.ac.kr</a></div>
+        <div>Jang Young-Sil Postdoctoral Research Fellow</div>
+        <div>Nature Sciences Research Institute (자연과학연구소) &amp; Soft Material Assembly Group (SMA Group)</div>
+        <div>Korea Advanced Institute of Science and Technology (KAIST)</div>
       </div>
+    </div>
+  </section>
 
-      <div class="intro">
-        <h1>Dr. Justin (Junseok) Ma</h1>
-        <div class="lines">
-          <div><a href="mailto:junseok.ma@kaist.ac.kr">junseok.ma@kaist.ac.kr</a></div>
-          <div>Jang Young-Sil Postdoctoral Research Fellow</div>
-          <div>Nature Sciences Research Institute (자연과학연구소) &amp; Soft Material Assembly Group (SMA Group)</div>
-          <div>Korea Advanced Institute of Science and Technology (KAIST)</div>
-        </div>
-      </div>
-    </section>
+  <!-- Research Interests -->
+  <section class="section" id="research">
+    <h2 class="serif">Research Interests</h2>
+    <ul class="list">
+      <li>Liquid Crystals</li>
+      <li>Optoelectronics</li>
+      <li>Microwave &amp; mmWave Devices</li>
+      <li>Functional Materials</li>
+      <li>Printing Technology</li>
+    </ul>
+  </section>
 
-    <!-- Full break, then Education starting at left -->
-    <section class="section" id="education">
-      <h2>Education</h2>
-      <ul class="edu-list">
-        <li>
-          <span class="where">Korea Advanced Institute of Science and Technology (KAIST)</span>,
-          Postdoctoral Research Fellow (College of Natural Sciences)
-          <span class="when">— Sep 2025 – Sep 2026</span>
-          <span class="note"> · Jang Young-Sil Postdoctoral Fellow Track</span>
-        </li>
-        <li>
-          <span class="where">University of Oxford, United Kingdom</span>,
-          Recognized Student in Engineering Science (Keble College)
-          <span class="when">— Dec 2023 – Dec 2024</span>
-        </li>
-        <li>
-          <span class="where">POSTECH, Republic of Korea</span>,
-          Ph.D. in Electrical Engineering
-          <span class="when">— Feb 2022 – Aug 2025</span>
-        </li>
-        <li>
-          <span class="where">POSTECH, Republic of Korea</span>,
-          M.S. in Electrical Engineering
-          <span class="when">— Feb 2020 – Feb 2022</span>
-        </li>
-        <li>
-          <span class="where">POSTECH, Republic of Korea</span>,
-          B.S. in Electrical Engineering
-          <span class="when">— Feb 2016 – Feb 2020</span>
-        </li>
-      </ul>
-    </section>
+  <!-- Education -->
+  <section class="section" id="education">
+    <h2 class="serif">Education</h2>
+    <ul class="list">
+      <li><span class="where">KAIST</span> — Postdoctoral Research Fellow <span class="when">Sep 2025 – Sep 2026</span> <span class="note">· Jang Young-Sil Fellow</span></li>
+      <li><span class="where">University of Oxford</span> — Recognized Student, Engineering Science <span class="when">Dec 2023 – Dec 2024</span></li>
+      <li><span class="where">POSTECH</span> — Ph.D. Electrical Engineering <span class="when">Feb 2022 – Aug 2025</span></li>
+      <li><span class="where">POSTECH</span> — M.S. Electrical Engineering <span class="when">Feb 2020 – Feb 2022</span></li>
+      <li><span class="where">POSTECH</span> — B.S. Electrical Engineering <span class="when">Feb 2016 – Feb 2020</span></li>
+    </ul>
+  </section>
 
-    <div class="spacer"></div>
-  </main>
+  <!-- Professional Experience -->
+  <section class="section" id="experience">
+    <h2 class="serif">Professional Experience</h2>
+    <ul class="list">
+      <li><span class="where">KAIST</span> — Postdoctoral Research Fellow, Liquid Crystal Devices <span class="when">Sep 2025 – Present</span></li>
+      <li><span class="where">POSTECH</span> — Project Lead, Liquid Crystal Printing for Smart Devices <span class="when">Feb 2025 – Present</span></li>
+      <li><span class="where">University of Oxford</span> — Project Lead, DoD Printing for Smart Windows <span class="when">Dec 2023 – Dec 2024</span></li>
+      <li><span class="where">Samsung Science &amp; Technology Foundation</span> — Researcher, Cognitive Organic Reconfigurable Electronics <span class="when">Sep 2021 – Sep 2024</span></li>
+      <li><span class="where">POSTECH</span> — Researcher, LC-based RF Applications <span class="when">Sep 2020 – Aug 2024</span></li>
+      <li><span class="where">LG Display</span> — Intern, OLED R&amp;D <span class="when">Jun 2018 – Aug 2018</span></li>
+    </ul>
+  </section>
+
+  <!-- Publications -->
+  <section class="section" id="publications">
+    <h2 class="serif">Selected Publications</h2>
+    <ul class="list">
+      <li>J. Ma, “Development of Multifunctional Reconfigurable Liquid Crystal Devices Using Drop-on-Demand Printing,” Ph.D. Dissertation, POSTECH, 2025.</li>
+      <li>J. Ma, “A Study of Liquid Crystal-based Phase Shifter in the Millimeter-wave Range,” M.S. Thesis, POSTECH, 2021.</li>
+      <li>J. Ma, W. Kamal, A. Pradeep, et al., “Advanced image-integrated smart windows using printed electrochromic polymer-dispersed liquid crystal droplets,” Adv. Opt. Mater., 2025.</li>
+      <li>J. Ma, A. Pradeep, et al., “Operating temperature control in push-pull azobenzene-doped liquid crystal light-driven devices,” Dyes and Pigments, 2025.</li>
+      <li>S.-O. Cha, J.-H. Ka, I.-B. Kong, J. Ma, et al., “Off-Center Rotational Dynamics in Virtual Reality,” IEEE Access, 2025.</li>
+      <li>J. Ma, J.-Y. Choi, S. Park, I. Kong, et al., “Liquid crystals for advanced smart devices with microwave and millimeter-wave applications,” Adv. Mater., 2023.</li>
+      <li>J. Ma, J.-Y. Choi, et al., “Phase shifting enhancement of a substrate-integrated waveguide phase shifter based on liquid crystal,” Appl. Sci., 2023.</li>
+    </ul>
+  </section>
+
+</main>
 </body>
 </html>
