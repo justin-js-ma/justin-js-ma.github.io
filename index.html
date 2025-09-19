@@ -17,7 +17,6 @@
     body { font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Helvetica,Arial,sans-serif; line-height:1.65; }
     .serif { font-family: Georgia, "Times New Roman", Times, serif; }
 
-    /* Top Nav */
     .nav { border-bottom:1px solid var(--rule); background:#fff; }
     .nav-inner { max-width:var(--maxw); margin:0 auto; padding:12px 20px; display:flex; align-items:center; gap:18px; }
     .nav a { color:var(--ink); text-decoration:none; font-size:15px; padding:6px 10px; border-radius:6px; }
@@ -27,7 +26,6 @@
 
     .wrap { max-width: var(--maxw); margin:0 auto; padding:32px 20px 56px; }
 
-    /* 상단 레이아웃 */
     .hero { display:flex; gap:36px; align-items:flex-start; flex-wrap:wrap; }
     .photo { flex:0 0 260px; }
     .photo img { width:100%; max-width:260px; border-radius:10px; box-shadow:0 6px 18px rgba(0,0,0,.1); }
@@ -42,39 +40,28 @@
     .links a:hover { text-decoration:underline; }
     .links span { color:var(--muted); margin:0 6px; }
 
-    /* 섹션 */
     .section { margin-top:36px; padding-top:24px; border-top:1px solid var(--rule); }
     .section h2 { margin:0 0 12px; font-size:20px; font-weight:700; }
 
-    /* 리스트 */
     .bullets { margin:0; padding-left:18px; }
     .bullets li { margin:6px 0; font-size:15px; }
     .ordered { margin:0; padding-left:22px; }
     .ordered li { margin:6px 0; font-size:15px; }
-    .where { font-weight:700; }  /* 폰트 굵기를 700으로 변경 */
+    .where { font-weight:700; }
     .when { color:var(--muted); }
     .note { color:var(--muted); }
 
-    /* 저자명 하이라이트 */
     .me { font-weight:700; text-decoration: underline; }
-
-    /* KAIST 하이라이트 */
     .kaist-letter { color: var(--link); font-weight:700; }
     .kaist-blue { color: var(--link); font-weight:700; }
-
-    /* 서브 리스트 (프로젝트 설명용) */
     .sub { margin:6px 0 0 16px; padding-left:16px; }
     .sub li { font-size:14px; color:#333; }
 
-    @media (max-width:720px){
-      .hero{flex-direction:column}
-      .intro h1{font-size:28px}
-    }
+    @media (max-width:720px){ .hero{flex-direction:column} .intro h1{font-size:28px} }
   </style>
 </head>
 <body>
 
-  <!-- NAV -->
   <nav class="nav">
     <div class="nav-inner">
       <a class="brand" href="/">Justin Ma</a>
@@ -85,10 +72,8 @@
 
 <main class="wrap">
 
-  <!-- 상단 프로필 -->
   <section class="hero">
     <div class="photo">
-      <!-- 너가 원하면 /images/... 로 바꿔도 됩니다 -->
       <img src="https://raw.githubusercontent.com/justin-js-ma/justin-js-ma.github.io/main/images/profile/Grad_Profile.jpg" alt="Dr. Justin (Junseok) Ma">
     </div>
     <div class="intro">
@@ -111,7 +96,6 @@
         </div>
       </div>
 
-      <!-- 프로필 하단 링크 묶음 -->
       <div class="links">
         <a href="https://www.linkedin.com/in/justin-junseok-ma/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         <span>·</span>
@@ -124,34 +108,21 @@
     </div>
   </section>
 
-  <!-- Research Interests -->
-  <section class="section" id="interests">
-    <h2 class="serif">Research Interests</h2>
-    <ul class="bullets">
-      <li>Liquid Crystals</li>
-      <li>Optoelectronics</li>
-      <li>Microwave &amp; mmWave Devices</li>
-      <li>Functional Materials</li>
-      <li>Printing Technology</li>
-    </ul>
-  </section>
-
-  <!-- Education (KAIST에 NSRI 추가) -->
   <section class="section" id="education">
     <h2 class="serif">Education</h2>
     <ul class="bullets">
-      <li>
-        <span class="where">KAIST — Nature Sciences Research Institute</span>
-        — Postdoctoral Research Fellow
-        <span class="when">Sep 2025 – Sep 2026</span>
-        <span class="note"> · Jang Young-Sil Postdoctoral Fellow Track; Soft Material Assembly Group (SMA Group)</span>
-      </li>
-      <li><span class="where">University of Oxford</span> — Recognized Student, Engineering Science (Keble College) <span class="when">Dec 2023 – Dec 2024</span></li>
-      <li><span class="where">POSTECH</span> — Ph.D., Electrical Engineering <span class="when">Feb 2022 – Aug 2025</span></li>
-      <li><span class="where">POSTECH</span> — M.S., Electrical Engineering <span class="when">Feb 2020 – Feb 2022</span></li>
+      <li><span class="where">KAIST — Nature Sciences Research Institute</span> — Postdoctoral Research Fellow <span class="when">Sep 2025 – Sep 2026</span> <span class="note"> · <a href="https://starlibrary.org/research/laboratoryDetail?mngNo=295" target="_blank">Soft Material Assembly Group (SMA Group)</a></span></li>
+      <li><span class="where">University of Oxford</span> — Recognized Student, Engineering Science (Keble College) <span class="when">Dec 2023 – Dec 2024</span> <span class="note"> · <a href="https://eng.ox.ac.uk/smp/" target="_blank">SMP Group</a> · <a href="https://eng.ox.ac.uk/people/junseok-ma/" target="_blank">My Profile</a></span></li>
+      <li><span class="where">POSTECH</span> — Ph.D., Electrical Engineering <span class="when">Feb 2022 – Aug 2025</span> <span class="note"> · <a href="https://sites.google.com/view/kimwooksung" target="_blank">WADE Group</a></span></li>
+      <li><span class="where">POSTECH</span> — M.S., Electrical Engineering <span class="when">Feb 2020 – Feb 2022</span> <span class="note"> · <a href="https://sites.google.com/view/kimwooksung" target="_blank">WADE Group</a></span></li>
       <li><span class="where">POSTECH</span> — B.S., Electrical Engineering <span class="when">Feb 2016 – Feb 2020</span></li>
     </ul>
   </section>
+
+</main>
+</body>
+</html>
+
 
   <!-- Professional Experience -->
   <section class="section" id="experience">
