@@ -18,14 +18,14 @@
       padding: 60px 20px;
       display: flex;
       flex-wrap: wrap;
-      align-items: center;
+      align-items: flex-start;
       justify-content: center;
       gap: 40px;
     }
 
     .profile-pic {
       flex: 1 1 280px;
-      text-align: center;
+      text-align: left;
     }
 
     .profile-pic img {
@@ -33,6 +33,28 @@
       width: 100%;
       border-radius: 16px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      margin-bottom: 24px;
+    }
+
+    .education {
+      text-align: left;
+    }
+
+    .education h2 {
+      font-size: 20px;
+      margin-bottom: 10px;
+      color: #222;
+    }
+
+    .education ul {
+      padding-left: 20px;
+      list-style-type: disc;
+    }
+
+    .education li {
+      margin-bottom: 6px;
+      font-size: 15px;
+      color: #444;
     }
 
     .intro {
@@ -68,10 +90,17 @@
       .container {
         flex-direction: column;
         text-align: center;
+        align-items: center;
       }
 
-      .intro {
-        padding: 0;
+      .profile-pic,
+      .education {
+        text-align: center;
+      }
+
+      .education ul {
+        padding-left: 0;
+        list-style-position: inside;
       }
     }
   </style>
@@ -81,17 +110,28 @@
   <div class="container">
     <div class="profile-pic">
       <img src="https://raw.githubusercontent.com/justin-js-ma/justin-js-ma.github.io/main/images/profile/Grad_Profile.jpg" alt="Profile Photo">
+
+      <!-- ✅ Education: 사진 바로 아래에 위치 -->
+      <div class="education">
+        <h2>Education</h2>
+        <ul>
+          <li><strong>Ph.D. in Electrical Engineering</strong>, POSTECH — 2025</li>
+          <li><strong>M.S. in Electrical Engineering</strong>, POSTECH — 2022</li>
+          <li><strong>B.S. in Electrical Engineering</strong>, POSTECH — 2020</li>
+          <li><strong>Visiting Student</strong>, University of Oxford — 2024</li>
+        </ul>
+      </div>
     </div>
+
     <div class="intro">
       <h1>Hello, I'm Justin!</h1>
       <p>
 I earned my BS '20, MS '22, and Ph.D. '25 in Electrical Engineering from POSTECH.
 In 2024, I was affiliated with the Department of Engineering Science at the University of Oxford as a Recognised Student.
-Starting September 2025, I joined the Natural Sciences Research Institue at KAIST as a Jang Youngsil Postdoctoral Fellow.<br><br>
+Starting September 2025, I joined the Natural Sciences Research Institue at KAIST as a Jang Youngsil Postdoctoral Fellow.
 
 My core interests lie in cutting-edge technologies and emerging trends with the potential to drive significant global impact.
-I am committed to creating meaningful change through innovation and strategic decision-making.<br><br>
-
+I am committed to creating meaningful change through innovation and strategic decision-making.
       </p>
 
       <div class="contact">
@@ -99,18 +139,6 @@ I am committed to creating meaningful change through innovation and strategic de
         📧 <a href="mailto:justin.js.ma@gmail.com">justin.js.ma@gmail.com</a><br>
         📧 <a href="mailto:junseok.ma@kaist.ac.kr">junseok.ma@kaist.ac.kr</a>
       </div>
-
-    <div class="education">
-      <h2>Education</h2>
-      <ul>
-        <li><strong>Ph.D. in Electrical Engineering</strong>, POSTECH — 2025</li>
-        <li><strong>M.S. in Electrical Engineering</strong>, POSTECH — 2022</li>
-        <li><strong>B.S. in Electrical Engineering</strong>, POSTECH — 2020</li>
-        <li><strong>Visiting Student</strong>, University of Oxford — 2024</li>
-      </ul>
-    </div>
-
-      
     </div>
   </div>
 
