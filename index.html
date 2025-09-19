@@ -1,144 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Justin's Homepage</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8" />
+  <title>Dr. Justin (Junseok) Ma</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f7f7f7;
-      color: #333;
+    :root{
+      --maxw: 980px;
+      --accent: #111;
+      --muted: #666;
+      --bg: #fafafa;
     }
+    html,body{margin:0;padding:0;background:var(--bg);color:#222;}
+    body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,Helvetica,Arial,sans-serif; line-height:1.6;}
 
-    .container {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 60px 20px;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: flex-start;
-      justify-content: center;
-      gap: 40px;
+    /* Header (two columns) */
+    .wrap{max-width:var(--maxw); margin:0 auto; padding:56px 20px;}
+    .hero{display:flex; gap:36px; align-items:flex-start; flex-wrap:wrap;}
+    .photo{flex:0 0 260px}
+    .photo img{
+      display:block; width:100%; max-width:260px; height:auto;
+      border-radius:14px; box-shadow:0 6px 18px rgba(0,0,0,.12);
     }
-
-    .profile-pic {
-      flex: 1 1 280px;
-      text-align: 20 px;
+    .intro{flex:1 1 420px; min-width:280px}
+    .intro h1{
+      margin:0 0 12px; font-size:34px; font-weight:700; letter-spacing:.2px; color:var(--accent);
     }
+    .intro .lines{font-size:16px; color:#222;}
+    .intro .lines .muted{color:var(--muted)}
+    .intro .lines a{color:#0b62d6; text-decoration:none}
+    .intro .lines a:hover{text-decoration:underline}
 
-    .profile-pic img {
-      max-width: 240px;
-      width: 100%;
-      border-radius: 20px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-      margin-bottom: 24px;
+    /* Section title left-aligned with thin divider */
+    .section{margin-top:42px; padding-top:28px; border-top:1px solid #e5e5e5;}
+    .section h2{
+      margin:0 0 10px; font-size:20px; letter-spacing:.2px; color:#222;
     }
+    .edu-list{margin:0; padding-left:18px}
+    .edu-list li{margin:6px 0; font-size:15px; color:#333}
+    .edu-list li .where{font-weight:600}
+    .edu-list li .when{color:var(--muted)}
+    .edu-list li .note{color:var(--muted)}
 
-    .education {
-      text-align: left;
-    }
+    /* Footer space */
+    .spacer{height:40px}
 
-    .education h2 {
-      font-size: 20px;
-      margin-bottom: 10px;
-      color: #222;
-    }
-
-    .education ul {
-      padding-left: 20px;
-      list-style-type: disc;
-    }
-
-    .education li {
-      margin-bottom: 6px;
-      font-size: 15px;
-      color: #444;
-    }
-
-    .intro {
-      flex: 2 1 480px;
-    }
-
-    .intro h1 {
-      font-size: 32px;
-      margin-bottom: 20px;
-    }
-
-    .intro p {
-      font-size: 17px;
-      line-height: 1.6;
-      white-space: pre-line;
-    }
-
-    .contact {
-      margin-top: 20px;
-      font-size: 16px;
-    }
-
-    .contact a {
-      color: #007acc;
-      text-decoration: none;
-    }
-
-    .contact a:hover {
-      text-decoration: underline;
-    }
-
-    @media (max-width: 768px) {
-      .container {
-        flex-direction: column;
-        text-align: center;
-        align-items: center;
-      }
-
-      .profile-pic,
-      .education {
-        text-align: center;
-      }
-
-      .education ul {
-        padding-left: 0;
-        list-style-position: inside;
-      }
+    /* Mobile stacking */
+    @media (max-width: 720px){
+      .hero{flex-direction:column; align-items:center; text-align:left}
+      .intro h1{font-size:28px}
+      .intro .lines{font-size:15px}
     }
   </style>
 </head>
 <body>
+  <main class="wrap">
 
-  <div class="container">
-    <div class="profile-pic">
-      <img src="https://raw.githubusercontent.com/justin-js-ma/justin-js-ma.github.io/main/images/profile/Grad_Profile.jpg" alt="Profile Photo">
-
-
-      <div class="education">
-        <h2>Education</h2>
-        <ul>
-          <li><strong>B.S. in Electrical Engineering</strong>,  POSTECH — 2016 ~ 2020</li>
-          <li><strong>M.S. in Electrical Engineering</strong>,  POSTECH — 2020 ~ 2022</li>
-          <li><strong>Ph.D. in Electrical Engineering</strong>, POSTECH — 2022 ~ 2025</li>
-          <li><strong>Recognised Student in Engineering Science Department </strong>, University of Oxford — 2024 (1 y)</li>
-        </ul>
+    <!-- Top: Left photo, Right text -->
+    <section class="hero">
+      <div class="photo">
+        <img src="https://raw.githubusercontent.com/justin-js-ma/justin-js-ma.github.io/main/images/profile/Grad_Profile.jpg" alt="Dr. Justin (Junseok) Ma">
       </div>
-    </div>
 
-    <div class="intro">
-      <h1>Dr. Justin Junseok Ma!</h1>
-      <p>
-I earned my BS '20, MS '22, and Ph.D. '25 in Electrical Engineering from POSTECH. In 2024, I was affiliated with the Department of Engineering Science at the University of Oxford as a Recognised Student. Starting September 2025, I joined the Natural Sciences Research Institue at KAIST as a Jang Youngsil Postdoctoral Fellow.
-
-My core interests lie in cutting-edge technologies and emerging trends with the potential to drive significant global impact.
-I am committed to creating meaningful change through innovation and strategic decision-making.
-      </p>
-
-      <div class="contact">
-        Feel free to connect with me via email at:<br>
-        📧 <a href="mailto:justin.js.ma@gmail.com">justin.js.ma@gmail.com</a><br>
-        📧 <a href="mailto:junseok.ma@kaist.ac.kr">junseok.ma@kaist.ac.kr</a>
+      <div class="intro">
+        <h1>Dr. Justin (Junseok) Ma</h1>
+        <div class="lines">
+          <div><a href="mailto:junseok.ma@kaist.ac.kr">junseok.ma@kaist.ac.kr</a></div>
+          <div>Jang Young-Sil Postdoctoral Research Fellow</div>
+          <div>Nature Sciences Research Institute (자연과학연구소) &amp; Soft Material Assembly Group (SMA Group)</div>
+          <div>Korea Advanced Institute of Science and Technology (KAIST)</div>
+        </div>
       </div>
-    </div>
-  </div>
+    </section>
 
+    <!-- Full break, then Education starting at left -->
+    <section class="section" id="education">
+      <h2>Education</h2>
+      <ul class="edu-list">
+        <li>
+          <span class="where">Korea Advanced Institute of Science and Technology (KAIST)</span>,
+          Postdoctoral Research Fellow (College of Natural Sciences)
+          <span class="when">— Sep 2025 – Sep 2026</span>
+          <span class="note"> · Jang Young-Sil Postdoctoral Fellow Track</span>
+        </li>
+        <li>
+          <span class="where">University of Oxford, United Kingdom</span>,
+          Recognized Student in Engineering Science (Keble College)
+          <span class="when">— Dec 2023 – Dec 2024</span>
+        </li>
+        <li>
+          <span class="where">POSTECH, Republic of Korea</span>,
+          Ph.D. in Electrical Engineering
+          <span class="when">— Feb 2022 – Aug 2025</span>
+        </li>
+        <li>
+          <span class="where">POSTECH, Republic of Korea</span>,
+          M.S. in Electrical Engineering
+          <span class="when">— Feb 2020 – Feb 2022</span>
+        </li>
+        <li>
+          <span class="where">POSTECH, Republic of Korea</span>,
+          B.S. in Electrical Engineering
+          <span class="when">— Feb 2016 – Feb 2020</span>
+        </li>
+      </ul>
+    </section>
+
+    <div class="spacer"></div>
+  </main>
 </body>
 </html>
