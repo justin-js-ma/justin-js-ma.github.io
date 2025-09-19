@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Dr. Justin (Junseok) Ma</title>
+  <title>Dr. Justin (Junseok) Ma — About</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
     :root {
@@ -17,7 +17,15 @@
     body { font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Helvetica,Arial,sans-serif; line-height:1.65; }
     .serif { font-family: Georgia, "Times New Roman", Times, serif; }
 
-    .wrap { max-width: var(--maxw); margin:0 auto; padding:56px 20px; }
+    /* Top Nav */
+    .nav { border-bottom:1px solid var(--rule); background:#fff; }
+    .nav-inner { max-width:var(--maxw); margin:0 auto; padding:12px 20px; display:flex; align-items:center; gap:18px; }
+    .nav a { color:var(--ink); text-decoration:none; font-size:15px; padding:6px 10px; border-radius:6px; }
+    .nav a:hover { background:#f5f5f5; }
+    .nav .brand { font-weight:700; letter-spacing:.2px; margin-right:auto; }
+    .nav .active { color:#fff; background:#111; }
+
+    .wrap { max-width: var(--maxw); margin:0 auto; padding:32px 20px 56px; }
 
     /* 상단 레이아웃 */
     .hero { display:flex; gap:36px; align-items:flex-start; flex-wrap:wrap; }
@@ -57,12 +65,23 @@
   </style>
 </head>
 <body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="/">Justin Ma</a>
+      <a class="active" href="/">About</a>
+      <a href="/research.html">Research</a>
+    </div>
+  </nav>
+
 <main class="wrap">
 
   <!-- 상단 프로필 -->
   <section class="hero">
     <div class="photo">
-      <img src="/images/profile/Grad_Profile.jpg" alt="Profile Photo" alt="Dr. Justin (Junseok) Ma">
+      <!-- 상대경로로 변경 -->
+      <img src="/images/profile/Grad_Profile.jpg" alt="Dr. Justin (Junseok) Ma">
     </div>
     <div class="intro">
       <h1 class="serif">Dr. Justin (Junseok) Ma</h1>
@@ -164,13 +183,6 @@
       <li><span class="me">J. Ma</span>, J.-Y. Choi, H. Shin, and W.-S. Kim, “Comparative Analysis of Liquid-Crystal Driving between the Grounded-Coplanar Waveguide and the Floating-Electrode-Free Coplanar Waveguide in Liquid-Crystal Phase Shifters,” AP-S/URSI, 2022.</li>
       <li><span class="me">J. Ma</span>, H. Shin, and W.-S. Kim, “Analysis about Novel Design of Liquid Crystal Based Floating Electrode Free Coplanar Waveguide Phase Shifter for Performance Improvement,” IMID, Korea, Aug. 25–27, 2021.</li>
       <li>S. Cha, <span class="me">J. Ma</span>, and W.-S. Kim, “Concept and Numerical Modeling for Virtual Acceleration Sense on Vestibular Organ using Focused Ultrasound,” IMID, Korea, Aug. 25–28, 2020.</li>
-    </ol>
-
-    <h3 class="serif" style="margin:14px 0 6px">Domestic Conference Presentations</h3>
-    <ol class="ordered">
-      <li><span class="me">J. Ma</span>, S.-W. Oh, J.-Y. Choi, H. Oh, S. M. Morris*, and W.-S. Kim*, “Enhancing Light-driven Polymer Stabilized Liquid Crystal Smart Devices,” BLCS, 2024.</li>
-      <li>J.-Y. Choi, <span class="me">J. Ma</span>, H. Oh, and W.-S. Kim*, “Characterization of Nematic Liquid Crystal at 10 GHz using Director Angle Extraction,” Korea Liquid Crystal Conf., 2024.</li>
-      <li>J.-Y. Choi, <span class="me">J. Ma</span>, S. Park, and W.-S. Kim*, “전기적 커플링 오픈 스터브를 이용한 소형 액정 기반 가변 광대역 대역저지 필터,” IEIE, 2023.</li>
     </ol>
   </section>
 
