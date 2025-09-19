@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dr. Justin (Junseok) Ma — Research</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      --maxw: 980px;
+      --bg: #fff;
+      --ink: #202124;
+      --muted: #666;
+      --rule: #e6e6e6;
+      --link: #0b62d6;
+      --card: #f7f7f7;
+    }
+    html, body { margin:0; padding:0; background:var(--bg); color:var(--ink); }
+    body { font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Helvetica,Arial,sans-serif; line-height:1.65; }
+    .serif { font-family: Georgia, "Times New Roman", Times, serif; }
+
+    /* Nav */
+    .nav { border-bottom:1px solid var(--rule); background:#fff; }
+    .nav-inner { max-width:var(--maxw); margin:0 auto; padding:12px 20px; display:flex; align-items:center; gap:18px; }
+    .nav a { color:var(--ink); text-decoration:none; font-size:15px; padding:6px 10px; border-radius:6px; }
+    .nav a:hover { background:#f5f5f5; }
+    .nav .brand { font-weight:700; letter-spacing:.2px; margin-right:auto; }
+    .nav .active { color:#fff; background:#111; }
+
+    .wrap { max-width: var(--maxw); margin:0 auto; padding:32px 20px 56px; }
+
+    .page-title { margin:6px 0 18px; }
+    .lead { color:var(--muted); margin:0 0 18px; }
+
+    .section { margin-top:28px; padding-top:18px; border-top:1px solid var(--rule); }
+    .section h2 { margin:0 0 10px; font-size:20px; font-weight:700; }
+    .bullets { margin:0; padding-left:18px; }
+    .bullets li { margin:6px 0; font-size:15px; }
+
+    .grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap:16px; }
+    .card { background:var(--card); border:1px solid var(--rule); border-radius:10px; padding:14px 14px; }
+    .card h3 { margin:0 0 8px; font-size:16px; }
+    .card p { margin:0; font-size:14px; color:#333; }
+    .note { color:var(--muted); font-size:13px; }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="/">Justin Ma</a>
+      <a href="/">About</a>
+      <a class="active" href="/research.html">Research</a>
+    </div>
+  </nav>
+
+  <main class="wrap">
+    <h1 class="serif page-title">Research</h1>
+    <p class="lead">Reconfigurable devices with liquid crystals and printing technologies across optics and RF.</p>
+
+    <section class="section" id="overview">
+      <h2 class="serif">Overview</h2>
+      <p>Write a short paragraph here about your research vision, goals, and the kind of problems you solve.</p>
+    </section>
+
+    <section class="section" id="focus-areas">
+      <h2 class="serif">Focus Areas</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Liquid-Crystal Devices</h3>
+          <p>Polarization control, tunable filters, and phase shifters with wide operating ranges.</p>
+        </div>
+        <div class="card">
+          <h3>Optoelectronics</h3>
+          <p>Smart windows and image-integrated LC systems with low-power drive.</p>
+        </div>
+        <div class="card">
+          <h3>Microwave &amp; mmWave</h3>
+          <p>LC-based BPF/phase shifters near 10–30+ GHz; system integration for arrays.</p>
+        </div>
+        <div class="card">
+          <h3>Printing Technology</h3>
+          <p>Drop-on-Demand patterning from millimeters to microns for LC structures.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="highlights">
+      <h2 class="serif">Recent Highlights</h2>
+      <ul class="bullets">
+        <li>Printed electrochromic PDLC smart windows with controllable image integration.</li>
+        <li>LC-based tunable RF components: narrow/wideband filters, phase shifters.</li>
+        <li>Hybrid patterning workflows for reliable LC device fabrication.</li>
+      </ul>
+      <p class="note">You can link to detailed papers on the About page or Google Scholar.</p>
+    </section>
+  </main>
+</body>
+</html>
