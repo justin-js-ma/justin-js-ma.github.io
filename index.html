@@ -2,30 +2,78 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title> Dr. Justin Ma's Work Space </title>
+  <title>Justin's Homepage</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f7f7f7;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      padding: 40px;
+    }
+
+    .profile-pic {
+      flex: 1;
       text-align: center;
-      padding: 100px;
-      background: #f0f0f0;
     }
-    h1 {
+
+    .profile-pic img {
+      max-width: 80%;
+      height: auto;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    .intro {
+      flex: 1;
+      padding: 20px 40px;
+    }
+
+    .intro h1 {
+      font-size: 36px;
       color: #333;
+      margin-bottom: 20px;
     }
-    p {
-      color: #666;
+
+    .intro p {
       font-size: 18px;
+      color: #555;
+      line-height: 1.6;
     }
-    a {
-      color: #007acc;
-      text-decoration: none;
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .intro {
+        padding: 20px;
+        text-align: center;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>Hello, I'm Justin!</h1>
-  <p>Welcome to my GitHub Pages website.</p>
-  <p><a href="https://github.com/justin-js-ma" target="_blank">Visit my GitHub Profile</a></p>
+
+  <div class="container">
+    <div class="profile-pic">
+      <img src="https://raw.githubusercontent.com/justin-js-ma/justin-js-ma.github.io/main/images/profile/Grad_Profile.jpg" alt="Profile Photo">
+    </div>
+    <div class="intro">
+      <h1>Hello, I'm Justin!</h1>
+      <p>
+        I'm passionate about research, creativity, and technology.  
+        I love building things that make people's lives easier and more beautiful.  
+        This page is a small window into my world — welcome!
+      </p>
+    </div>
+  </div>
+
 </body>
 </html>
