@@ -58,6 +58,14 @@
     /* 저자명 하이라이트 */
     .me { font-weight:700; text-decoration: underline; }
 
+    /* KAIST 하이라이트 */
+    .kaist-letter { color: var(--link); font-weight:700; }
+    .kaist-blue { color: var(--link); font-weight:700; }
+
+    /* 서브 리스트 (프로젝트 설명용) */
+    .sub { margin:6px 0 0 16px; padding-left:16px; }
+    .sub li { font-size:14px; color:#333; }
+
     @media (max-width:720px){
       .hero{flex-direction:column}
       .intro h1{font-size:28px}
@@ -80,16 +88,27 @@
   <!-- 상단 프로필 -->
   <section class="hero">
     <div class="photo">
-      <!-- 상대경로로 변경 -->
-      <img src="/images/profile/Grad_Profile.jpg" alt="Dr. Justin (Junseok) Ma">
+      <!-- 너가 원하면 /images/... 로 바꿔도 됩니다 -->
+      <img src="https://raw.githubusercontent.com/justin-js-ma/justin-js-ma.github.io/main/images/profile/Grad_Profile.jpg" alt="Dr. Justin (Junseok) Ma">
     </div>
     <div class="intro">
       <h1 class="serif">Dr. Justin (Junseok) Ma</h1>
       <div class="lines">
         <div><a href="mailto:junseok.ma@kaist.ac.kr">junseok.ma@kaist.ac.kr</a></div>
         <div>Jang Young-Sil Postdoctoral Research Fellow</div>
-        <div>Nature Sciences Research Institute (자연과학연구소) &amp; Soft Material Assembly Group (SMA Group)</div>
-        <div>Korea Advanced Institute of Science and Technology (KAIST)</div>
+        <div>
+          <a href="https://natsci.kaist.ac.kr/sub040501" target="_blank" rel="noopener">Nature Sciences Research Institute (자연과학연구소)</a>
+          &
+          <a href="https://yoon.kaist.ac.kr/" target="_blank" rel="noopener">Soft Material Assembly Group (SMA Group)</a>
+        </div>
+        <div>
+          <span class="kaist-letter">K</span>orea
+          <span class="kaist-letter">A</span>dvanced
+          <span class="kaist-letter">I</span>nstitute of
+          <span class="kaist-letter">S</span>cience and
+          <span class="kaist-letter">T</span>echnology
+          (<span class="kaist-blue">KAIST</span>)
+        </div>
       </div>
 
       <!-- 프로필 하단 링크 묶음 -->
@@ -117,11 +136,16 @@
     </ul>
   </section>
 
-  <!-- Education -->
+  <!-- Education (KAIST에 NSRI 추가) -->
   <section class="section" id="education">
     <h2 class="serif">Education</h2>
     <ul class="bullets">
-      <li><span class="where">KAIST</span> — Postdoctoral Research Fellow <span class="when">Sep 2025 – Sep 2026</span> <span class="note">· Jang Young-Sil Postdoctoral Fellow Track</span></li>
+      <li>
+        <span class="where">KAIST — Nature Sciences Research Institute</span>
+        — Postdoctoral Research Fellow
+        <span class="when">Sep 2025 – Sep 2026</span>
+        <span class="note"> · Jang Young-Sil Postdoctoral Fellow Track; Soft Material Assembly Group (SMA Group)</span>
+      </li>
       <li><span class="where">University of Oxford</span> — Recognized Student, Engineering Science (Keble College) <span class="when">Dec 2023 – Dec 2024</span></li>
       <li><span class="where">POSTECH</span> — Ph.D., Electrical Engineering <span class="when">Feb 2022 – Aug 2025</span></li>
       <li><span class="where">POSTECH</span> — M.S., Electrical Engineering <span class="when">Feb 2020 – Feb 2022</span></li>
@@ -129,11 +153,19 @@
     </ul>
   </section>
 
-  <!-- Professional Experience -->
+  <!-- Professional Experience (포닥 삭제 + KAIST 프로젝트 2건 추가) -->
   <section class="section" id="experience">
     <h2 class="serif">Professional Experience</h2>
     <ul class="bullets">
-      <li><span class="where">KAIST</span> — Postdoctoral Research Fellow (College of Natural Sciences) <span class="when">Sep 2025 – Present</span></li>
+      <!-- 포닥 항목 삭제됨 -->
+      <li>
+        <span class="where">KAIST</span> — National R&amp;D Projects (Researcher)
+        <ul class="sub">
+          <li><strong>6G Core Technology Development Program</strong> (IITP, Korea): Fast-switching <em>reconfigurable intelligent surface (RIS)</em> liquid-crystal antennas for next-generation wireless systems.</li>
+          <li><strong>Lightweight LC-based mmWave Beamforming Antenna System</strong> (ADD, Agency for Defense Development): Multi-purpose, lightweight LC beamforming antenna system for next-generation military communications and radar, mountable on missiles and mobile weapon platforms. <span class="when">Dec 2021 – Nov 2026</span> <span class="note"> · Total investment: KRW 6.718B</span></li>
+        </ul>
+      </li>
+
       <li><span class="where">POSTECH</span> — Project Lead, LC Printing for Smart Devices <span class="when">Feb 2025 – Present</span></li>
       <li><span class="where">University of Oxford</span> — Project Lead, DoD Printing for Smart Windows <span class="when">Dec 2023 – Dec 2024</span></li>
       <li><span class="where">Samsung Science &amp; Technology Foundation</span> — Researcher, CORE: Sub-THz 6G <span class="when">Sep 2021 – Sep 2024</span></li>
@@ -142,7 +174,7 @@
     </ul>
   </section>
 
-  <!-- Publications -->
+  <!-- Publications (그대로 유지, 내 이름 하이라이트) -->
   <section class="section" id="publications">
     <h2 class="serif">Publications (20+)</h2>
 
