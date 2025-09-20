@@ -70,6 +70,13 @@
       .hero{flex-direction:column}
       .intro h1{font-size:28px}
     }
+    .footer { border-top:1px solid var(--rule); background:#fff; }
+    .footer-inner {
+       max-width:var(--maxw); margin:0 auto; padding:14px 20px;
+       display:flex; align-items:center; gap:10px; justify-content:space-between;
+       font-size:13px; color:var(--muted);
+    }
+    .footer .hits img { height:20px; vertical-align:middle; }
   </style>
 </head>
 <body>
@@ -302,5 +309,15 @@
   </section>
 
 </main>
+<footer class="footer">
+  <div class="footer-inner">
+    <div>© Dr. Justin (Junseok) Ma</div>
+    <div class="hits">
+      <a href="https://hits.seeyoufarm.com" target="_blank" rel="noopener">
+        <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fjustin-js-ma.github.io&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=visits&edge_flat=false" alt="site visits"/>
+      </a>
+    </div>
+  </div>
+</footer>
 </body>
 </html>
