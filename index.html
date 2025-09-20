@@ -313,14 +313,29 @@
   <div class="footer-inner">
     <div>© Dr. Justin (Junseok) Ma</div>
     <div class="hits">
-      <a href="https://justin-js-ma.github.io/" rel="noopener">
-        <img
-          alt="site visits"
-          src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.countapi.xyz%2Fhit%2Fjustin-js-ma.github.io%2Fvisits&query=%24.value&label=visits&cacheSeconds=60"
-        />
-      </a>
+      <footer class="footer">
+        <div class="footer-inner">
+          <div>© Dr. Justin (Junseok) Ma</div>
+          <div class="hits">
+            visits: <strong id="visits">loading...</strong>
+          </div>
+        </div>
+      </footer>
     </div>
   </div>
 </footer>
+<script>
+  const visits = document.getElementById("visits");
+  fetch("https://api.countapi.xyz/hit/justin-js-ma.github.io/visits")
+    .then(res => res.json())
+    .then(data => {
+      visits.textContent = data.value.toLocaleString();
+    })
+    .catch(() => {
+      visits.textContent = "—";
+    });
+</script>
+</body>
+</html>
 </body>
 </html>
