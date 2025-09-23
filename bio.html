@@ -19,7 +19,7 @@
     h1 {
       font-size: 32px;
       font-weight: 700;
-      margin-bottom: 24px;
+      margin-bottom: 32px;
     }
 
     p {
@@ -41,57 +41,26 @@
       font-size: 15px;
     }
 
-    .bio-header {
-      display: flex;
-      align-items: flex-start;
-      gap: 24px;
-      margin-bottom: 32px;
-    }
-
-    .bio-header img {
-      width: 180px;
+    .profile-img {
+      float: right;
+      margin: 0 0 24px 32px;
+      width: 260px;
+      max-width: 40%;
       border-radius: 12px;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     }
 
-    .nav {
-      border-bottom: 1px solid #e6e6e6;
-      background: #fff;
-    }
-
-    .nav-inner {
-      max-width: 980px;
-      margin: 0 auto;
-      padding: 12px 20px;
-      display: flex;
-      align-items: center;
-      gap: 18px;
-    }
-
-    .nav a {
-      color: #202124;
-      text-decoration: none;
-      font-size: 15px;
-      padding: 6px 10px;
-      border-radius: 6px;
-    }
-
-    .nav a:hover {
-      background: #f5f5f5;
-    }
-
-    .nav .brand {
-      font-weight: 700;
-      letter-spacing: 0.2px;
-      margin-right: auto;
-    }
-
-    .nav .active {
-      color: #fff;
-      background: #111;
+    @media (max-width: 720px) {
+      .profile-img {
+        float: none;
+        display: block;
+        margin: 0 auto 24px;
+        width: 60%;
+      }
     }
   </style>
 </head>
+
 <body>
 
   <nav class="nav">
@@ -103,12 +72,8 @@
     </div>
   </nav>
 
-  <div class="bio-header">
-    <div>
-      <h1>Dr. Justin (Junseok) Ma</h1>
-    </div>
-    <img src="images/profile/biopage.jpg" alt="Justin Ma Portrait">
-  </div>
+  <h1>Dr. Justin (Junseok) Ma</h1>
+  <img src="images/profile/biopage.jpg" alt="Profile Photo" class="profile-img" />
 
   <p>Junseok Ma received the B.S., M.S., and Ph.D. degrees in Electrical Engineering from POSTECH (Pohang University of Science and Technology), Pohang, Korea, in 2020, 2022, and 2025, respectively. During his doctoral studies, he focused on the development of scalable, reconfigurable liquid crystal (LC) devices using techniques such as drop-on-demand (DoD) printing and laser writing. From 2023 to 2024, he was a Recognised Student in the Department of Engineering Science at the University of Oxford (Keble College), where he joined the Soft Matter Photonics Group to advance his work on adaptive LC-based optical systems.</p>
 
