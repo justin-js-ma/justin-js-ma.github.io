@@ -1,5 +1,5 @@
 // Research "screens": small animated, illustrative scenes for each research area.
-// Usage: <canvas data-scene="mmwave|lc|optics|print|pattern|meta|health"></canvas>
+// Usage: <canvas data-scene="mmwave|lc|optics|print|pattern|meta|phone|health"></canvas>
 (function () {
   var list = document.querySelectorAll('canvas[data-scene]');
   if (!list.length) return;
@@ -204,6 +204,49 @@
       hud(c, W, H, 'METASURFACE φ(x)', 'period ' + period + ' cells', t);
     },
 
+    // Smartphone antenna system: mmWave beams, UWB pulses, satellite link
+    phone: function (c, W, H, t) {
+      bg(c, W, H);
+      var pw = 46, ph = 88, px = W * 0.36 - pw / 2, py = H / 2 - ph / 2 + 6;
+      // satellite (top right) and UWB tag (right)
+      var sx = W - 46, sy = 34, ux = W - 40, uy = H - 34;
+      c.strokeStyle = rgba(VI, 0.9); c.lineWidth = 1.3;
+      c.strokeRect(sx - 6, sy - 5, 12, 10); c.beginPath(); c.moveTo(sx - 18, sy); c.lineTo(sx - 6, sy); c.moveTo(sx + 6, sy); c.lineTo(sx + 18, sy); c.stroke();
+      c.strokeRect(sx - 18, sy - 4, 0.1, 8); c.strokeRect(sx + 18, sy - 4, 0.1, 8);
+      c.fillStyle = rgba(GR, 0.85); c.beginPath(); c.arc(ux, uy, 4, 0, 6.283); c.fill();
+      // satellite link: dashed line with travelling packets
+      var ax = px + pw - 6, ay = py + 8;
+      c.setLineDash([3, 4]); c.strokeStyle = rgba(VI, 0.45); c.beginPath(); c.moveTo(ax, ay); c.lineTo(sx - 6, sy + 4); c.stroke(); c.setLineDash([]);
+      for (var k = 0; k < 3; k++) { var u = ((t / 1400) + k / 3) % 1; c.fillStyle = rgba(VI, 0.95); c.fillRect(ax + (sx - 6 - ax) * u - 1.5, ay + (sy + 4 - ay) * u - 1.5, 3, 3); }
+      // UWB pulses from lower edge toward the tag
+      for (var r = 0; r < 4; r++) {
+        var rr = ((t / 18) + r * 22) % 88, a = 1 - rr / 88;
+        c.strokeStyle = rgba(GR, 0.7 * a); c.lineWidth = 1.2; c.beginPath(); c.arc(px + pw, py + ph - 14, rr, -0.55, 0.55); c.stroke();
+      }
+      // mmWave beam sweeping from the left edge
+      var th = -Math.PI + 0.65 * Math.sin(t / 1700), bx = px + 4, by = py + ph / 2;
+      c.fillStyle = rgba(AM, 0.10); c.strokeStyle = rgba(AM, 0.9); c.lineWidth = 1.3; c.beginPath();
+      for (var s2 = -0.9; s2 <= 0.9; s2 += 0.03) {
+        var g = Math.pow(Math.max(0, Math.cos(s2 * 1.8)), 8), L = Math.min(px - 12, 90) * g, ang = th + s2;
+        var X = bx + Math.cos(ang) * L, Y = by + Math.sin(ang) * L;
+        if (s2 <= -0.89) c.moveTo(X, Y); else c.lineTo(X, Y);
+      }
+      c.closePath(); c.fill(); c.stroke();
+      // phone body
+      c.fillStyle = '#0b1120'; c.strokeStyle = rgba(CY, 0.9); c.lineWidth = 1.5;
+      c.beginPath(); if (c.roundRect) c.roundRect(px, py, pw, ph, 9); else c.rect(px, py, pw, ph); c.fill(); c.stroke();
+      c.strokeStyle = rgba(CY, 0.25); c.strokeRect(px + 5, py + 8, pw - 10, ph - 16);
+      // antenna modules
+      var mods = [[px - 2, py + ph / 2 - 9, 4, 18, AM], [px + pw - 2, py + 4, 4, 14, VI], [px + pw - 2, py + ph - 22, 4, 14, GR], [px + pw / 2 - 8, py - 2, 16, 4, AM]];
+      for (var m = 0; m < mods.length; m++) {
+        var md = mods[m], p = 0.5 + 0.5 * Math.sin(t / 350 + m * 1.7);
+        glow(c, rgba(md[4], 0.9), 8 * p); c.fillStyle = rgba(md[4], 0.55 + 0.45 * p); c.fillRect(md[0], md[1], md[2], md[3]); noGlow(c);
+      }
+      c.font = MONO; c.fillStyle = rgba(AM, 0.9); c.fillText('mmWave', 10, H - 10);
+      c.fillStyle = rgba(GR, 0.9); c.fillText('UWB', ux - 40, uy + 3);
+      c.fillStyle = rgba(VI, 0.9); c.fillText('SAT', sx - 11, sy + 18);
+      hud(c, W, H, 'DEVICE ANTENNA SYSTEM', '', t);
+    },
     // Flexible, skin-conformal sensing (vision): bending film + scrolling signal
     health: function (c, W, H, t) {
       bg(c, W, H);
