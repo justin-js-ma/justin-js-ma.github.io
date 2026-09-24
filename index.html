@@ -77,11 +77,11 @@
 
   <!-- Stats -->
   <div class="container">
-    <div class="stats">
-      <div class="stat"><div class="stat-num">24</div><div class="stat-label">Peer-reviewed journal articles</div></div>
-      <div class="stat"><div class="stat-num">12</div><div class="stat-label">Conference presentations</div></div>
-      <div class="stat"><div class="stat-num">12</div><div class="stat-label">Manuscripts reviewed for 9 journals</div></div>
-      <div class="stat"><div class="stat-num">11</div><div class="stat-label">Honors, fellowships &amp; awards</div></div>
+    <div class="stats" data-stats>
+      <div class="stat"><div class="stat-num" data-count="24">24</div><div class="stat-label">Peer-reviewed journal articles</div><div class="stat-sub">+2 under review</div><span class="stat-bar" aria-hidden="true"></span></div>
+      <div class="stat"><div class="stat-num" data-count="12">12</div><div class="stat-label">Conference presentations</div><div class="stat-sub">International &amp; domestic</div><span class="stat-bar" aria-hidden="true"></span></div>
+      <div class="stat"><div class="stat-num" data-count="12">12</div><div class="stat-label">Manuscripts reviewed</div><div class="stat-sub">for 9 journals</div><span class="stat-bar" aria-hidden="true"></span></div>
+      <div class="stat"><div class="stat-num" data-count="11">11</div><div class="stat-label">Honors, fellowships &amp; awards</div><div class="stat-sub">2018 — 2026</div><span class="stat-bar" aria-hidden="true"></span></div>
     </div>
   </div>
 
@@ -96,6 +96,10 @@
       </div>
       <div>
         <p class="research-intro">My work turns liquid crystals from display materials into field-programmable media for electronics and photonics, and now applies that electromagnetic intuition — together with AI/ML — to antenna engineering for mobile platforms.</p>
+        <figure class="figure card figure--hero">
+          <img src="/images/research-overview.jpg" alt="Research overview: materials design, processing and characterization, and advanced fabrication feeding microwave/mmWave and optoelectronic devices, toward human-centered technologies" loading="lazy" width="1224" height="532" />
+          <figcaption><span>Functional materials for smart electronics</span> Adaptive materials and scalable processes, toward reconfigurable electronic and photonic systems.</figcaption>
+        </figure>
         <figure class="flow card" aria-labelledby="flow-title">
           <div class="flow-head">
             <span class="eyebrow" id="flow-title">From molecules to systems</span>
@@ -155,14 +159,15 @@
           </div>
         </figure>
         <div class="themes">
-          <article class="theme card">
-            <div class="theme-top">
-              <span class="theme-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20V10"/><path d="M8.5 6.5a5 5 0 0 1 7 0"/><path d="M6 4a8.5 8.5 0 0 1 12 0"/><circle cx="12" cy="10" r="1.2"/><path d="M9 20h6"/></svg></span>
-              <span class="theme-when">2026 — now</span>
+          <article class="ai-panel ai-panel--compact">
+            <div class="ai-copy">
+              <span class="ai-tag">// focus_area.now</span>
+              <h3>AI × Electromagnetics</h3>
+              <p>Exploring how machine learning can accelerate antenna design — pairing physics-based EM simulation with data-driven models to search larger design spaces, predict performance earlier, and keep physical insight in the loop.</p>
+              <ol class="ai-loop"><li>Simulate</li><li>Learn</li><li>Search</li><li>Verify</li></ol>
+              <span class="ai-note">Advanced Antenna Lab, Samsung Electronics · visual is illustrative</span>
             </div>
-            <h3>AI-Assisted Antenna Engineering</h3>
-            <p>Applying AI/ML to antenna design-space exploration, electromagnetic performance prediction and optimization for mmWave, UWB and satellite links in next-generation mobile and emerging form-factor devices.</p>
-            <div class="result"><span>Now</span>Advanced Antenna Lab, Samsung Electronics MX</div>
+            <div class="ai-screen"><canvas data-ai-visual data-compact role="img" aria-label="Animated illustration: candidate designs searching a performance landscape"></canvas><i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i></div>
           </article>
           <article class="theme card">
             <div class="theme-top">
@@ -406,6 +411,7 @@
   </div>
 </footer>
 <script src="/assets/js/site.js" defer></script>
+<script src="/assets/js/ai-visual.js" defer></script>
 <!-- FOOTER:END -->
 </body>
 </html>
