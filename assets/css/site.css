@@ -587,3 +587,14 @@ strong { font-weight: 600; }
 .bio-facts .fact + .fact { margin-top: 8px; }
 .pub-thumb.has-img { background: #ffffff; border: 1px solid var(--line); }
 .pub-thumb.has-img img { object-fit: contain; padding: 4px; }
+
+/* ---------- Home overview scene ---------- */
+.overview-fx { margin: 0 0 20px; }
+.scene--hero { height: auto !important; aspect-ratio: 12 / 5; border-radius: 16px; }
+.overview-fx figcaption { display: flex; flex-wrap: wrap; gap: 4px 8px; padding: 12px 4px 0; font-size: 13.5px; color: var(--muted); }
+.overview-fx figcaption span { font-weight: 600; color: var(--ink); }
+@media (max-width: 560px) { .scene--hero { aspect-ratio: 10 / 16.5; } }
+.tl-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 14px; margin: 4px 0 2px; }
+.tl-head .tl-title { margin: 0; }
+.tl-where { display: inline-flex; align-items: center; gap: 4px; font-size: 13px; color: var(--faint); }
+.tl-where svg { width: 13px; height: 13px; flex-shrink: 0; position: relative; top: 1px; }

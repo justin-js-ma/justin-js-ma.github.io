@@ -204,6 +204,96 @@
       hud(c, W, H, 'METASURFACE φ(x)', 'period ' + period + ' cells', t);
     },
 
+    // Home overview: materials -> processing/fabrication -> devices -> human-centered tech
+    overview: function (c, W, H, t) {
+      bg(c, W, H);
+      var vert = W < 560, VW = vert ? 400 : 960, VH = vert ? 660 : 400, s = Math.min(W / VW, H / VH);
+      c.save(); c.translate((W - VW * s) / 2, (H - VH * s) / 2); c.scale(s, s);
+      var L = vert ? {
+        ins: [[80, 110], [200, 110], [320, 110]], mids: [[110, 230], [200, 260], [290, 230]],
+        outs: [[120, 380], [280, 380]], ring: [200, 540, 78]
+      } : {
+        ins: [[120, 110], [120, 205], [120, 300]], mids: [[320, 130], [420, 235], [320, 305], [500, 175], [500, 290]],
+        outs: [[640, 145], [640, 275]], ring: [835, 210, 92]
+      };
+      function label(txt, x, y, col) {
+        c.font = '600 10.5px "JetBrains Mono", ui-monospace, monospace'; c.textAlign = 'center';
+        c.fillStyle = col || rgba(CY, 0.9); c.fillText(txt, x, y); c.textAlign = 'left';
+      }
+      function edge(a, b, k) {
+        c.strokeStyle = rgba(CY, 0.16); c.lineWidth = 1; c.beginPath(); c.moveTo(a[0], a[1]); c.lineTo(b[0], b[1]); c.stroke();
+        var u = ((t / 1600) + k * 0.137) % 1;
+        c.fillStyle = rgba(k % 3 === 0 ? AM : CY, 0.95); glow(c, rgba(CY, 0.9), 6);
+        c.beginPath(); c.arc(a[0] + (b[0] - a[0]) * u, a[1] + (b[1] - a[1]) * u, 1.8, 0, 6.283); c.fill(); noGlow(c);
+      }
+      // network
+      var k = 0;
+      L.ins.forEach(function (a) { L.mids.forEach(function (m) { edge(a, m, k++); }); });
+      L.mids.forEach(function (m) { L.outs.forEach(function (o) { edge(m, o, k++); }); });
+      L.mids.forEach(function (m, i) {
+        var p = 0.5 + 0.5 * Math.sin(t / 400 + i);
+        glow(c, rgba(VI, 0.9), 8 * p); c.fillStyle = rgba(VI, 0.6 + 0.4 * p);
+        c.beginPath(); c.arc(m[0], m[1], 3.5, 0, 6.283); c.fill(); noGlow(c);
+      });
+      L.outs.forEach(function (o) { var dx = L.ring[0] - o[0], dy = L.ring[1] - o[1], dl = Math.hypot(dx, dy); edge(o, [L.ring[0] - dx / dl * L.ring[2], L.ring[1] - dy / dl * L.ring[2]], k++); });
+      // input icons
+      function pod(x, y) { c.fillStyle = 'rgba(8,13,26,0.92)'; c.strokeStyle = rgba(CY, 0.35); c.lineWidth = 1; c.beginPath(); if (c.roundRect) c.roundRect(x - 34, y - 30, 68, 50, 10); else c.rect(x - 34, y - 30, 68, 50); c.fill(); c.stroke(); }
+      var a0 = L.ins[0]; pod(a0[0], a0[1]);
+      for (var r = 0; r < 7; r++) { var an = r * 0.9 + t / 900; rod(c, a0[0] + 14 * Math.cos(r * 0.9), a0[1] - 6 + 9 * Math.sin(r * 0.9), an, 12, rgba(CY, 0.95), 2); }
+      label('MATERIALS', a0[0], a0[1] + 36);
+      var a1 = L.ins[1]; pod(a1[0], a1[1]);
+      c.strokeStyle = rgba(VI, 0.9); c.lineWidth = 1.4; c.strokeRect(a1[0] - 14, a1[1] - 20, 28, 28);
+      for (var g = 1; g < 4; g++) { c.beginPath(); c.moveTo(a1[0] - 14 + g * 7, a1[1] - 20); c.lineTo(a1[0] - 14 + g * 7, a1[1] + 8); c.stroke(); }
+      var pp = 0.5 + 0.5 * Math.sin(t / 300); glow(c, rgba(CY, 1), 10 * pp); c.fillStyle = rgba(CY, 0.6 + 0.4 * pp); c.fillRect(a1[0] - 4, a1[1] - 10, 8, 8); noGlow(c);
+      label('PROCESS', a1[0], a1[1] + 36);
+      var a2 = L.ins[2]; pod(a2[0], a2[1]);
+      c.strokeStyle = rgba(CY, 0.9); c.strokeRect(a2[0] - 8, a2[1] - 24, 16, 7);
+      var fall = (t % 700) / 700; c.fillStyle = rgba(AM, 0.95); c.beginPath(); c.arc(a2[0], a2[1] - 14 + fall * 22, 2.4, 0, 6.283); c.fill();
+      c.strokeStyle = rgba(CY, 0.6); c.beginPath(); c.moveTo(a2[0] - 24, a2[1] + 12); c.lineTo(a2[0] + 24, a2[1] + 12); c.stroke();
+      for (var d = -2; d <= 2; d++) { c.fillStyle = rgba([CY, VI, AM, PK, GR][d + 2], 0.85); c.beginPath(); c.arc(a2[0] + d * 9, a2[1] + 8, 3, 0, 6.283); c.fill(); }
+      label('FABRICATION', a2[0], a2[1] + 36);
+      // outputs
+      var o0 = L.outs[0]; pod(o0[0], o0[1]);
+      var th = 0.6 * Math.sin(t / 1500), bx = o0[0], by = o0[1] + 12;
+      c.fillStyle = rgba(AM, 0.12); c.strokeStyle = rgba(AM, 0.95); c.lineWidth = 1.3; c.beginPath();
+      for (var q = -1; q <= 1.001; q += 0.05) { var gg = Math.pow(Math.max(0, Math.cos(q * 1.6)), 8), R = 34 * gg, ang = th + q; var X = bx + Math.sin(ang) * R, Y = by - Math.cos(ang) * R; if (q <= -0.99) c.moveTo(X, Y); else c.lineTo(X, Y); }
+      c.closePath(); c.fill(); c.stroke();
+      for (var e = -2; e <= 2; e++) { c.fillStyle = rgba(VI, 0.95); c.fillRect(bx + e * 7 - 2, by, 4, 3); }
+      label('MICROWAVE · mmWAVE', o0[0], o0[1] + 36, rgba(AM, 0.95));
+      var o1 = L.outs[1]; pod(o1[0], o1[1]);
+      for (var ry = 0; ry < 5; ry++) {
+        var yy = o1[1] - 20 + ry * 8, hue = 200 + ry * 30, m = 0.5 + 0.5 * Math.sin(t / 700 + ry);
+        c.strokeStyle = 'hsla(' + hue + ',95%,65%,0.9)'; c.lineWidth = 1.2; c.beginPath(); c.moveTo(o1[0] - 28, yy); c.lineTo(o1[0] - 4, yy); c.stroke();
+        c.strokeStyle = 'hsla(' + (hue + 50) + ',95%,65%,' + (0.2 + 0.8 * m).toFixed(2) + ')'; c.beginPath(); c.moveTo(o1[0] + 4, yy); c.lineTo(o1[0] + 28, yy); c.stroke();
+      }
+      c.fillStyle = rgba(VI, 0.35); c.fillRect(o1[0] - 4, o1[1] - 24, 8, 38);
+      label('OPTOELECTRONICS', o1[0], o1[1] + 36, rgba(PK, 0.95));
+      // human-centered ring
+      var cx = L.ring[0], cy = L.ring[1], RR = L.ring[2];
+      var gr = c.createRadialGradient(cx, cy, 10, cx, cy, RR); gr.addColorStop(0, rgba(CY, 0.18)); gr.addColorStop(1, rgba(CY, 0)); c.fillStyle = gr;
+      c.beginPath(); c.arc(cx, cy, RR, 0, 6.283); c.fill();
+      c.strokeStyle = rgba(CY, 0.55); c.lineWidth = 1.3; c.beginPath(); c.arc(cx, cy, RR, 0, 6.283); c.stroke();
+      c.setLineDash([2, 5]); c.strokeStyle = rgba(VI, 0.5); c.beginPath(); c.arc(cx, cy, RR * 0.72, 0, 6.283); c.stroke(); c.setLineDash([]);
+      var icons = ['phone', 'watch', 'glasses', 'ear'];
+      icons.forEach(function (ic, i) {
+        var an = t / 3000 + i * Math.PI / 2, x = cx + Math.cos(an) * RR, y = cy + Math.sin(an) * RR;
+        c.strokeStyle = rgba(CY, 0.95); c.lineWidth = 1.4; c.fillStyle = 'rgba(8,13,26,0.95)';
+        c.beginPath(); c.arc(x, y, 12, 0, 6.283); c.fill(); c.stroke();
+        c.beginPath();
+        if (ic === 'phone') { c.rect(x - 3.5, y - 6, 7, 12); }
+        else if (ic === 'watch') { c.rect(x - 4, y - 4, 8, 8); c.moveTo(x - 2, y - 4); c.lineTo(x - 2, y - 8); c.moveTo(x + 2, y - 4); c.lineTo(x + 2, y - 8); c.moveTo(x - 2, y + 4); c.lineTo(x - 2, y + 8); c.moveTo(x + 2, y + 4); c.lineTo(x + 2, y + 8); }
+        else if (ic === 'glasses') { c.arc(x - 4, y, 3, 0, 6.283); c.moveTo(x + 7, y); c.arc(x + 4, y, 3, 0, 6.283); }
+        else { c.arc(x, y - 1, 4, Math.PI * 0.9, Math.PI * 2.3); c.moveTo(x + 1, y + 3); c.lineTo(x - 1, y + 6); }
+        c.stroke();
+      });
+      c.textAlign = 'center'; c.font = '700 12px "Instrument Sans", system-ui, sans-serif'; c.fillStyle = '#e9ecf2';
+      c.fillText('HUMAN-CENTERED', cx, cy - 2); c.fillText('TECHNOLOGIES', cx, cy + 13);
+      c.font = '500 9.5px "JetBrains Mono", ui-monospace, monospace'; c.fillStyle = rgba(AM, 0.9); c.fillText('toward real-world use', cx, cy + RR + 30);
+      c.textAlign = 'left';
+      c.restore();
+      hud(c, W, H, 'FUNCTIONAL MATERIALS → SMART ELECTRONICS', vert ? '' : 'adaptive materials · scalable process', t);
+    },
+
     // Smartphone antenna system: mmWave beams, UWB pulses, satellite link
     phone: function (c, W, H, t) {
       bg(c, W, H);
