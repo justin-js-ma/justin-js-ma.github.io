@@ -136,18 +136,35 @@
             <div class="spectrum-label">Across the spectrum</div>
             <div class="spectrum-track">
               <span class="spectrum-now" style="left:2.9%;width:23.8%"><em>Current work · mobile antennas</em></span>
-              <div class="spectrum-bar"></div>
+              <div class="spectrum-regions" aria-hidden="true">
+                <span style="left:0;width:24.6%">Microwave</span>
+                <span style="left:24.6%;width:16.7%">mmWave</span>
+                <span style="left:41.3%;width:25.4%">THz</span>
+                <span style="left:66.7%;width:27.2%">Infrared</span>
+              </div>
+              <div class="spectrum-bar">
+                <i class="seg seg-mw" style="left:0;width:24.6%"></i>
+                <i class="seg seg-mm" style="left:24.6%;width:16.7%"></i>
+                <i class="seg seg-thz" style="left:41.3%;width:25.4%"></i>
+                <i class="seg seg-ir" style="left:66.7%;width:27.2%"></i>
+                <i class="seg seg-vis" style="left:93.9%;width:4%"></i>
+                <i class="seg seg-uv" style="left:97.9%;width:2.1%"></i>
+              </div>
               <span class="spectrum-dot" style="left:16.7%">1</span>
               <span class="spectrum-dot" style="left:24.1%">2</span>
               <span class="spectrum-dot" style="left:35.8%">3</span>
-              <span class="spectrum-dot" style="left:95.8%">4</span>
+              <span class="spectrum-dot" style="left:95.9%">4</span>
               <div class="spectrum-axis"><span style="left:0%">1 GHz</span><span style="left:16.7%">10 GHz</span><span style="left:33.3%">100 GHz</span><span style="left:50%">1 THz</span><span style="left:83.3%">100 THz</span><span style="left:100%">1 PHz</span></div>
+              <div class="spectrum-zoom" aria-hidden="true">
+                <div class="zoom-bar"><span class="spectrum-dot">4</span></div>
+                <div class="zoom-scale"><span>700 nm · 430 THz</span><b>Visible light</b><span>400 nm · 750 THz</span></div>
+              </div>
             </div>
             <ul class="spectrum-legend">
-              <li><b>1</b> ~10 GHz · tunable LC filters</li>
-              <li><b>2</b> 28 GHz · LC phase shifters, 5G &amp; satellite LC materials</li>
-              <li><b>3</b> D-band · LC intelligent surfaces for 6G</li>
-              <li><b>4</b> Visible · smart windows, reflective displays, AR optics</li>
+              <li><b>1</b><span>~10 GHz · tunable LC filters</span></li>
+              <li><b>2</b><span>28 GHz · LC phase shifters, 5G &amp; satellite LC materials</span></li>
+              <li><b>3</b><span>D-band (110–170 GHz) · LC intelligent surfaces for 6G</span></li>
+              <li><b>4</b><span>Visible (400–700 nm) · smart windows, reflective displays, AR optics</span></li>
             </ul>
           </div>
 
@@ -159,17 +176,8 @@
           </div>
         </figure>
         <div class="themes">
-          <article class="ai-panel ai-panel--compact">
-            <div class="ai-copy">
-              <span class="ai-tag">// focus_area.now</span>
-              <h3>AI × Electromagnetics</h3>
-              <p>Exploring how machine learning can accelerate antenna design — pairing physics-based EM simulation with data-driven models to search larger design spaces, predict performance earlier, and keep physical insight in the loop.</p>
-              <ol class="ai-loop"><li>Simulate</li><li>Learn</li><li>Search</li><li>Verify</li></ol>
-              <span class="ai-note">Advanced Antenna Lab, Samsung Electronics · visual is illustrative</span>
-            </div>
-            <div class="ai-screen"><canvas data-ai-visual data-compact role="img" aria-label="Animated illustration: candidate designs searching a performance landscape"></canvas><i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i></div>
-          </article>
           <article class="theme card">
+            <div class="scene"><canvas data-scene="mmwave" role="img" aria-label="Animated illustration: a liquid-crystal phased array steering a beam"></canvas><i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i></div>
             <div class="theme-top">
               <span class="theme-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12c2-4 4-4 6 0s4 4 6 0 4-4 6 0"/><path d="M2 18h20"/><path d="M2 6h20"/></svg></span>
               <span class="theme-when">2020 — 2026</span>
@@ -179,6 +187,7 @@
             <div class="result"><span>Result</span>LC mixture ZOC-A019XX commercialized with JNC (tan δ ≈ 0.006, tunability ≈ 0.33 @ 28 GHz)</div>
           </article>
           <article class="theme card">
+            <div class="scene"><canvas data-scene="print" role="img" aria-label="Animated illustration: drop-on-demand printing of liquid-crystal pixels"></canvas><i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i></div>
             <div class="theme-top">
               <span class="theme-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3s5 5.5 5 9a5 5 0 0 1-10 0c0-3.5 5-9 5-9z"/><path d="M10 13a2 2 0 0 0 2 2"/></svg></span>
               <span class="theme-when">2023 — 2026</span>
@@ -188,6 +197,7 @@
             <div class="result"><span>Result</span>Image-integrated electrochromic PDLC smart windows — Adv. Opt. Mater., Hot Topic</div>
           </article>
           <article class="theme card">
+            <div class="scene"><canvas data-scene="pattern" role="img" aria-label="Animated illustration: zooming from millimeter to micron liquid-crystal patterns"></canvas><i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i></div>
             <div class="theme-top">
               <span class="theme-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><path d="M14 17.5h7M17.5 14v7"/></svg></span>
               <span class="theme-when">2023 — 2026</span>
@@ -411,7 +421,7 @@
   </div>
 </footer>
 <script src="/assets/js/site.js" defer></script>
-<script src="/assets/js/ai-visual.js" defer></script>
+<script src="/assets/js/fx.js" defer></script>
 <!-- FOOTER:END -->
 </body>
 </html>
