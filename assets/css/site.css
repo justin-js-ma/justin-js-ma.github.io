@@ -547,3 +547,41 @@ strong { font-weight: 600; }
   .hl::before { left: 1px; }
   .hl-year { text-align: left; }
 }
+
+/* ---------- Stats: five columns ---------- */
+.stats--5 { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+.stats.is-in .stat:nth-child(5) .stat-bar { transition-delay: .56s; }
+@media (max-width: 980px) {
+  .stats--5 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .stats--5 .stat:nth-child(odd) { padding-left: 0; border-left: 0; }
+  .stats--5 .stat:nth-child(odd) .stat-bar { left: 0; width: 100%; }
+  .stats--5 .stat:nth-child(even) { padding-left: 24px; border-left: 1px solid var(--line); }
+  .stats--5 .stat:nth-child(n+3) { border-top: 1px solid var(--line); }
+  .stats--5 .stat:nth-child(5) { grid-column: 1 / -1; }
+}
+
+/* ---------- Publications: numbering + year dividers ---------- */
+.pubcard { grid-template-columns: 136px minmax(0, 1fr) 64px; padding: 16px 20px 16px 16px; margin-bottom: 10px; }
+.pubcard--compact { grid-template-columns: minmax(0, 1fr) 64px; }
+.pub-thumb { height: 92px; }
+.pub-name { font-size: 17.5px !important; line-height: 1.38; }
+.pub-by { color: color-mix(in srgb, var(--ink) 62%, var(--bg)); }
+.pub-in { margin-top: 5px; font-size: 14px; font-weight: 500; }
+.pub-in .journal-name { color: var(--accent); font-style: italic; font-weight: 600; }
+.pub-y { color: var(--faint); font-weight: 400; }
+.pub-no { justify-self: end; align-self: start; margin-top: 2px; font-family: var(--mono); font-size: 13px; font-weight: 500; color: var(--muted); background: var(--bg); border: 1px solid var(--line); border-radius: 8px; padding: 4px 8px; min-width: 44px; text-align: center; }
+.pubcard[data-first="true"] .pub-no { color: var(--accent); border-color: color-mix(in srgb, var(--accent) 40%, var(--line)); background: var(--accent-soft); }
+.pub-yeardiv { display: flex; align-items: center; gap: 12px; margin: 18px 0 10px; }
+.pub-yeardiv:first-of-type { margin-top: 4px; }
+.pub-yeardiv span { font-family: var(--mono); font-size: 13px; font-weight: 500; color: var(--ink); }
+.pub-yeardiv::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+.pub-yeardiv[hidden] { display: none; }
+.pub-group-title { margin-bottom: 8px !important; }
+@media (max-width: 720px) {
+  .pubcard, .pubcard--compact { grid-template-columns: minmax(0, 1fr) auto; }
+  .pub-no { order: 0; grid-row: 1; grid-column: 2; }
+  .pub-thumb, .pub-thumb.has-art { display: none; }
+  .pub-body { grid-row: 1; grid-column: 1; }
+}
+.bio-facts .fact { display: block; }
+.bio-facts .fact + .fact { margin-top: 8px; }
