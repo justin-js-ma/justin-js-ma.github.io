@@ -1,130 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- HEAD:START -->
   <meta charset="UTF-8" />
-  <title>Justin (Junseok) Ma, Ph.D. — Biography</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <style>
-    :root {
-      --maxw: 980px;
-      --bg: #fff;
-      --ink: #202124;
-      --muted: #666;
-      --rule: #e6e6e6;
-      --link: #0b62d6;
-      --card: #f7f7f7;
-    }
-
-    html, body {
-      margin: 0;
-      padding: 0;
-      background: var(--bg);
-      color: var(--ink);
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Helvetica, Arial, sans-serif;
-      line-height: 1.65;
-    }
-
-    .nav {
-      border-bottom: 1px solid var(--rule);
-      background: #fff;
-    }
-
-    .nav-inner {
-      max-width: var(--maxw);
-      margin: 0 auto;
-      padding: 12px 20px;
-      display: flex;
-      align-items: center;
-      gap: 18px;
-    }
-
-    .nav a {
-      color: var(--ink);
-      text-decoration: none;
-      font-size: 15px;
-      padding: 6px 10px;
-      border-radius: 6px;
-    }
-
-    .nav a:hover {
-      background: #f5f5f5;
-    }
-
-    .nav .brand {
-      font-weight: 700;
-      letter-spacing: 0.2px;
-      margin-right: auto;
-    }
-
-    .nav .active {
-      color: #fff;
-      background: #111;
-    }
-
-    .wrap {
-      max-width: var(--maxw);
-      margin: 0 auto;
-      padding: 32px 20px 56px;
-    }
-
-    h1 {
-      font-size: 32px;
-      font-weight: 700;
-      margin: 0 0 24px 0;
-    }
-
-    p {
-      font-size: 17px;
-      margin-bottom: 20px;
-    }
-
-    a {
-      color: var(--link);
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    .profile-pic {
-      float: right;
-      margin-left: 32px;
-      margin-bottom: 16px;
-      max-width: 240px;
-      border-radius: 12px;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
-    }
-
-    .back {
-      margin-top: 40px;
-      font-size: 15px;
-    }
-
-    @media (max-width: 720px) {
-      .profile-pic {
-        float: none;
-        display: block;
-        margin: 0 auto 24px auto;
-      }
-    }
-  </style>
+  <meta name="color-scheme" content="light dark" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/site.css" />
+  <script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
+  <!-- HEAD:END -->
+  <title>Justin (Junseok) Ma, Ph.D. — Biography</title>
 </head>
 <body>
+<!-- NAV:START -->
+<header class="site-nav">
+  <div class="container">
+    <a class="brand" href="/"><span class="brand-mark">JM</span>Justin Ma</a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="/" data-nav="home">About</a>
+      <a href="/research.html" data-nav="research">Research</a>
+      <a href="/publication.html" data-nav="publications">Publications</a>
+      <a href="/bio.html" data-nav="bio" class="active" aria-current="page">Bio</a>
+      <a class="nav-cv" href="https://drive.google.com/file/d/1LHwjuKT5SRex9XsXRxIwTksMJjRlqdAP/view?usp=sharing" target="_blank" rel="noopener">CV</a>
+    </nav>
+    <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+    </button>
+  </div>
+</header>
+<!-- NAV:END -->
 
-  <!-- NAV -->
-  <nav class="nav">
-    <div class="nav-inner">
-      <a class="brand" href="/">Justin Ma</a>
-      <a href="/">About</a>
-      <a class="active" href="/bio.html">Bio</a>
-      <a href="/research.html">Research</a>
-      <a href="/publication.html">Academic Publications</a>
-    </div>
-  </nav>
-
-  <main class="wrap">
-    <h1>Dr. Justin (Junseok) Ma</h1>
+  <main class="page">
+<div class="container">
+    <header class="page-header">
+      <span class="eyebrow">Biography</span>
+      <h1>Dr. Justin (Junseok) Ma</h1>
+    </header>
+    <div class="bio-body">
     <img src="images/profile/Grad_Profile.jpg" alt="Justin Ma" class="profile-pic" />
 
     <p>
@@ -194,7 +108,29 @@
     <p>He serves as a reviewer for several international journals, including Journal of Physics D: Applied Physics, Liquid Crystals, Engineering Research Express, Light: Science and Applications, and Dyes and Pigments. His current work aims to advance reconfigurable material-device platforms that bridge soft materials, photonics, and high-frequency electronics.</p>
 
 -->
+    </div>
     <p class="back"><a href="/">← Back to Home</a></p>
-  </main>
+  </div>
+</main>
+<!-- FOOTER:START -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-cta">
+      <h2>Let’s build the next<br /><span>antenna</span> together.</h2>
+      <div class="footer-links">
+        <a href="mailto:jun971105@gmail.com">jun971105@gmail.com</a>
+        <a href="https://scholar.google.com/citations?user=HI6_iqEAAAAJ&hl=en" target="_blank" rel="noopener">Scholar</a>
+        <a href="https://www.linkedin.com/in/justin-junseok-ma/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.researchgate.net/profile/Justin-Ma-11/research" target="_blank" rel="noopener">ResearchGate</a>
+        <a href="https://github.com/justin-js-ma" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Justin (Junseok) Ma, Ph.D. · Suwon, Republic of Korea</span>
+    </div>
+  </div>
+</footer>
+<script src="/assets/js/site.js" defer></script>
+<!-- FOOTER:END -->
 </body>
 </html>

@@ -1,79 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- HEAD:START -->
   <meta charset="UTF-8" />
-  <title>Publications — Justin (Junseok) Ma, Ph.D.</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <style>
-    :root {
-      --maxw: 980px;
-      --bg: #fff;
-      --ink: #202124;
-      --muted: #666;
-      --rule: #e6e6e6;
-      --link: #0b62d6;
-    }
-    html, body { margin:0; padding:0; background:var(--bg); color:var(--ink); }
-    body { font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Helvetica,Arial,sans-serif; line-height:1.65; display: flex; flex-direction: column; min-height: 100vh; }
-    .serif { font-family: Georgia, "Times New Roman", Times, serif; }
-
-    /* Top Nav */
-    .nav { border-bottom:1px solid var(--rule); background:#fff; }
-    .nav-inner { max-width:var(--maxw); margin:0 auto; padding:12px 20px; display:flex; align-items:center; gap:18px; }
-    .nav a { color:var(--ink); text-decoration:none; font-size:15px; padding:6px 10px; border-radius:6px; }
-    .nav a:hover { background:#f5f5f5; }
-    .nav .brand { font-weight:700; letter-spacing:.2px; margin-right:auto; }
-    .nav .active { color:#fff; background:#111; }
-
-    .wrap { max-width: var(--maxw); margin:0 auto; padding:32px 20px 56px; flex: 1; }
-
-    /* Publications Styling */
-    .section h2 { margin:0 0 24px; font-size:28px; font-weight:700; border-bottom: 2px solid var(--ink); padding-bottom: 8px; }
-    h3 { margin:40px 0 16px; font-size:20px; color: var(--ink); border-left: 4px solid var(--link); padding-left: 12px; }
-    
-    .ordered { margin:0; padding-left:22px; }
-    .ordered li { margin:16px 0; font-size:15px; color: #333; line-height: 1.6; }
-    
-    /* Highlight */
-    .me { font-weight:700; text-decoration: underline; color: #000; }
-    .journal-name { font-weight: 700; font-style: italic; }
-    .tag { font-size: 11px; padding: 2px 8px; border-radius: 12px; background: #f0f0f0; color: #555; margin-left: 5px; font-weight: 600; vertical-align: middle; }
-    
-    .link-btn { color: var(--link); text-decoration: none; font-size: 14px; margin-left: 5px; }
-    .link-btn:hover { text-decoration: underline; }
-
-    .footer { padding: 2rem 0; text-align: center; color: #888; font-size: 14px; border-top: 1px solid var(--rule); margin-top: 40px; }
-
-    @media (max-width:720px){
-      .nav-inner { padding: 10px; gap: 10px; }
-      .nav a { font-size: 14px; padding: 4px 8px; }
-    }
-  </style>
+  <meta name="color-scheme" content="light dark" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/site.css" />
+  <script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
+  <!-- HEAD:END -->
+  <title>Publications — Justin (Junseok) Ma, Ph.D.</title>
 </head>
 <body>
-
-  <!-- NAV -->
-  <nav class="nav">
-    <div class="nav-inner">
-      <a class="brand" href="/">Justin Ma</a>
-      <a href="/">About</a>
-      <a href="/bio.html">Bio</a>
-      <a href="/research.html">Research</a>
-      <a class="active" href="/publication.html">Academic Publications</a>
-    </div>
-  </nav>
+<!-- NAV:START -->
+<header class="site-nav">
+  <div class="container">
+    <a class="brand" href="/"><span class="brand-mark">JM</span>Justin Ma</a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="/" data-nav="home">About</a>
+      <a href="/research.html" data-nav="research">Research</a>
+      <a href="/publication.html" data-nav="publications" class="active" aria-current="page">Publications</a>
+      <a href="/bio.html" data-nav="bio">Bio</a>
+      <a class="nav-cv" href="https://drive.google.com/file/d/1LHwjuKT5SRex9XsXRxIwTksMJjRlqdAP/view?usp=sharing" target="_blank" rel="noopener">CV</a>
+    </nav>
+    <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+    </button>
+  </div>
+</header>
+<!-- NAV:END -->
   
-  <main class="wrap">
+  <main class="page">
+<div class="container">
     <section class="section">
-      <h2 class="serif">Publications</h2>
+      <header class="page-header">
+        <span class="eyebrow">Publications</span>
+        <h1>Papers, patents &amp; talks</h1>
+        <p>Journal articles, dissertations, patents and conference presentations. <span class="me">Underlined</span> = me · * corresponding · † / + equal contribution.</p>
+      </header>
 
-      <h3 class="serif">Dissertations</h3>
+      <h3>Dissertations</h3>
       <ol class="ordered">
         <li><span class="me">J. Ma</span>, “Development of Multifunctional Reconfigurable Liquid Crystal Devices Using Drop-on-Demand Printing,” Ph.D. Dissertation, Dept. of Electrical Engineering, POSTECH, Korea, 2025.</li>
         <li><span class="me">J. Ma</span>, “A Study of Liquid Crystal-based Phase Shifter in the Millimeter-wave Range for Utilizing Current Mass-production Technology of Display Industry,” M.S. Thesis, Dept. of Electrical Engineering, POSTECH, Korea, 2021.</li>
       </ol>
 
-      <h3 class="serif">Patents</h3>
+      <h3>Patents</h3>
       <ol class="ordered">
         <li>
           <span class="me">J.-S. Ma</span> and D. K. Yoon, 
@@ -83,7 +57,7 @@
         </li>
       </ol>
       
-      <h3 class="serif">Journal Publications</h3>
+      <h3>Journal Publications</h3>
       <ol class="ordered">
         <li>J.-Y. Choi, <span class="me">J.-S. Ma</span>, J.-S. Park, W.-S. Kim*, and H.-R. Kim*, “Low-Voltage Tunable Bandpass Filter with Selective Center-Frequency and Bandwidth Control Using Liquid-Crystal-Loaded Lines,” <span class="journal-name">IEEE Journal of Microwaves</span>, 2026. <span class="tag" style="background: #e8f0fe; color: #1a73e8;">Submitted</span></li>
         <li>Baekman Kim†, Jongseok Kim†, Geunjung Lee†, Yeongsik Kim, Hyungju Ahn, <span class="me">Junseok Ma</span>, Yun Ho Kim*, Hyun You Kim*, and Dong Ki Yoon*, “Dual-Parameter Control of Low-κ Liquid Crystal Polymer Films for GHz-Frequency Dielectric Applications via Porogen-Induced Porosity and Molecular Alignment,” <span class="journal-name">Journal of Information Display</span>, 2026. <span class="tag" style="background: #e8f0fe; color: #1a73e8;">Submitted</span></li>
@@ -113,7 +87,7 @@
         <li><span class="me">J. Ma</span>, J.-Y. Choi, and W.-S. Kim, “액정의 고주파 대역 특성과 RF 응용 기술 동향,” <span class="journal-name">Information Display</span>, 2021. <a href="https://www.researchgate.net/profile/Justin-Ma-11/publication/365668761" class="link-btn" target="_blank">[Link]</a></li>
       </ol>
 
-      <h3 class="serif">International Conference Presentations</h3>
+      <h3>International Conference Presentations</h3>
       <ol class="ordered">
         <li><span class="me">J.-S. Ma</span> and D. K. Yoon, “Electrically Addressable Subpixel-Free Color Generation in Liquid-Crystal Heterostructures for Programmable Electromagnetic Surfaces,” IMID, 2026. <span class="tag">Poster P2-198</span></li>
         <li>H. Oh, et al., “Analysis of Meander Delay Line Liquid Crystal Phase Shifter using Director Angle Extraction,” IMID, 2024.</li>
@@ -125,7 +99,7 @@
         <li>S. Cha, <span class="me">J. Ma</span>, et al., “Concept and Numerical Modeling for Virtual Acceleration Sense on Vestibular Organ using Focused Ultrasound,” IMID, 2020.</li>
       </ol>
 
-      <h3 class="serif">Domestic Conference Presentations</h3>
+      <h3>Domestic Conference Presentations</h3>
       <ol class="ordered">
         <li><span class="me">J. Ma</span>, et al., “Liquid Crystal Printing as a Spatially Programmable Platform for Decoupled Optical Functionality,” KMID (The Korean Meeting on Information Display), 2026.</li>
         <li><span class="me">J. Ma</span>, et al., “Enhancing Light-driven Polymer Stabilized Liquid Crystal Smart Devices,” BLCS (British Liquid Crystal Society), 2024. <a href="https://eng.ox.ac.uk/media/qz4hlbdr/blcs-conference-booklet-2024_04042024.pdf" class="link-btn" target="_blank">[Link]</a></li>
@@ -133,10 +107,27 @@
         <li>J.-Y. Choi, <span class="me">J. Ma</span>, et al., “전기적 커플링 오픈 스터브를 이용한 소형 액정 기반 가변 광대역 대역저지 필터,” IEIE Summer Conference, 2023.</li>
       </ol>
     </section>
-  </main>
-
-  <footer class="footer">
-    <div>© Justin (Junseok) Ma, Ph.D.</div>
-  </footer>
+  </div>
+</main>
+<!-- FOOTER:START -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-cta">
+      <h2>Let’s build the next<br /><span>antenna</span> together.</h2>
+      <div class="footer-links">
+        <a href="mailto:jun971105@gmail.com">jun971105@gmail.com</a>
+        <a href="https://scholar.google.com/citations?user=HI6_iqEAAAAJ&hl=en" target="_blank" rel="noopener">Scholar</a>
+        <a href="https://www.linkedin.com/in/justin-junseok-ma/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.researchgate.net/profile/Justin-Ma-11/research" target="_blank" rel="noopener">ResearchGate</a>
+        <a href="https://github.com/justin-js-ma" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Justin (Junseok) Ma, Ph.D. · Suwon, Republic of Korea</span>
+    </div>
+  </div>
+</footer>
+<script src="/assets/js/site.js" defer></script>
+<!-- FOOTER:END -->
 </body>
 </html>

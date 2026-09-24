@@ -1,154 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- HEAD:START -->
   <meta charset="UTF-8" />
-  <title>Dr. Justin (Junseok) Ma — Research</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <style>
-    :root {
-      --maxw: 980px;
-      --bg: #fff;
-      --ink: #202124;
-      --muted: #666;
-      --rule: #e6e6e6;
-      --link: #0b62d6;
-      --card: #f7f7f7;
-    }
-    html, body {
-      margin: 0;
-      padding: 0;
-      background: var(--bg);
-      color: var(--ink);
-    }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Helvetica, Arial, sans-serif;
-      line-height: 1.65;
-    }
-    .serif {
-      font-family: Georgia, "Times New Roman", Times, serif;
-    }
-    .nav {
-      border-bottom: 1px solid var(--rule);
-      background: #fff;
-    }
-    .nav-inner {
-      max-width: var(--maxw);
-      margin: 0 auto;
-      padding: 12px 20px;
-      display: flex;
-      align-items: center;
-      gap: 18px;
-    }
-    .nav a {
-      color: var(--ink);
-      text-decoration: none;
-      font-size: 15px;
-      padding: 6px 10px;
-      border-radius: 6px;
-    }
-    .nav a:hover {
-      background: #f5f5f5;
-    }
-    .nav .brand {
-      font-weight: 700;
-      letter-spacing: 0.2px;
-      margin-right: auto;
-    }
-    .nav .active {
-      color: #fff;
-      background: #111;
-    }
-    .wrap {
-      max-width: var(--maxw);
-      margin: 0 auto;
-      padding: 32px 20px 56px;
-    }
-    .page-title {
-      margin: 6px 0 18px;
-    }
-    .lead {
-      color: var(--muted);
-      margin: 0 0 18px;
-    }
-    .section {
-      margin-top: 28px;
-      padding-top: 18px;
-      border-top: 1px solid var(--rule);
-    }
-    .section h2 {
-      margin: 0 0 10px;
-      font-size: 20px;
-      font-weight: 700;
-    }
-    .bullets {
-      margin: 0;
-      padding-left: 18px;
-    }
-    .bullets li {
-      margin: 6px 0;
-      font-size: 15px;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 16px;
-    }
-    .card {
-      background: var(--card);
-      border: 1px solid var(--rule);
-      border-radius: 10px;
-      padding: 14px 14px;
-    }
-    .card h3 {
-      margin: 0 0 8px;
-      font-size: 16px;
-    }
-    .card p {
-      margin: 0;
-      font-size: 14px;
-      color: #333;
-    }
-    .note {
-      color: var(--muted);
-      font-size: 13px;
-    }
-    .overview-img {
-      width: 100%;
-      max-width: 100%;
-      border-radius: 12px;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
-      margin-bottom: 24px;
-    }
-  </style>
+  <meta name="color-scheme" content="light dark" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/site.css" />
+  <script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
+  <!-- HEAD:END -->
+  <title>Dr. Justin (Junseok) Ma — Research</title>
 </head>
 <body>
-  <!-- NAV -->
-  <nav class="nav">
-    <div class="nav-inner">
-      <a class="brand" href="/">Justin Ma</a>
-      <a href="/">About</a>
-      <a href="/bio.html">Bio</a>
-      <a class="active" href="/research.html">Research</a>
-      <a href="/publication.html">Academic Publications</a>
-    </div>
-  </nav>
+<!-- NAV:START -->
+<header class="site-nav">
+  <div class="container">
+    <a class="brand" href="/"><span class="brand-mark">JM</span>Justin Ma</a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="/" data-nav="home">About</a>
+      <a href="/research.html" data-nav="research" class="active" aria-current="page">Research</a>
+      <a href="/publication.html" data-nav="publications">Publications</a>
+      <a href="/bio.html" data-nav="bio">Bio</a>
+      <a class="nav-cv" href="https://drive.google.com/file/d/1LHwjuKT5SRex9XsXRxIwTksMJjRlqdAP/view?usp=sharing" target="_blank" rel="noopener">CV</a>
+    </nav>
+    <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+    </button>
+  </div>
+</header>
+<!-- NAV:END -->
   
-  <main class="wrap">
-    <h1 class="serif page-title">Research</h1>
+  <main class="page">
+<div class="container">
+    <header class="page-header">
+      <span class="eyebrow">Research</span>
+      <h1>Adaptive materials, programmable waves</h1>
+    </header>
     <p class="lead">
       I design liquid-crystal-based material platforms that connect molecular-level anisotropy with device- and system-level functionality. By integrating chemistry, materials science, electromagnetic engineering, and advanced fabrication methods such as drop-on-demand printing and laser-assisted patterning, my research develops reconfigurable materials and devices across optical, microwave, and millimeter-wave regimes. The broader goal is to establish adaptive, printable, and programmable platforms for next-generation displays, smart surfaces, wireless systems, wearable electronics, and reconfigurable photonic hardware.
     </p>
 
     <section class="section" id="overview">
-      <img src="images/Picture1.png" alt="Research Overview Graphic" class="overview-img">
-      <h2 class="serif">Overview</h2>
+      <img src="/images/research-overview.jpg" alt="Research Overview Graphic" class="overview-img">
+      <h2>Overview</h2>
       <p>
         My research is centered on transforming liquid crystals from conventional display materials into multifunctional, field-programmable media for modern electronic and photonic systems. I develop composite LC materials, patterning strategies, and device architectures that enable dynamic control of light, electromagnetic waves, and interfacial functionality. This work bridges fundamental material design with practical hardware platforms, spanning optoelectronics, RF/mmWave components, intelligent surfaces, and emerging reconfigurable photonic systems.
       </p>
     </section>
 
     <section class="section" id="focus-areas">
-      <h2 class="serif">Focus Areas</h2>
+      <h2>Focus Areas</h2>
       <div class="grid">
         <div class="card">
           <h3>Liquid-Crystal Technology</h3>
@@ -189,7 +92,7 @@
     </section>
 
     <section class="section" id="highlights">
-      <h2 class="serif">Recent Highlights</h2>
+      <h2>Recent Highlights</h2>
       <ul class="bullets">
         <li>Developed printed electrochromic/PDLC smart-window platforms with electrically tunable transparency and spatial image integration.</li>
         <li>Demonstrated voltage-programmable color and transmittance modulation in doped chiral nematic liquid-crystal systems.</li>
@@ -200,6 +103,27 @@
       </ul>
       <p class="note">See more publications on the About page or Google Scholar.</p>
     </section>
-  </main>
+  </div>
+</main>
+<!-- FOOTER:START -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-cta">
+      <h2>Let’s build the next<br /><span>antenna</span> together.</h2>
+      <div class="footer-links">
+        <a href="mailto:jun971105@gmail.com">jun971105@gmail.com</a>
+        <a href="https://scholar.google.com/citations?user=HI6_iqEAAAAJ&hl=en" target="_blank" rel="noopener">Scholar</a>
+        <a href="https://www.linkedin.com/in/justin-junseok-ma/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.researchgate.net/profile/Justin-Ma-11/research" target="_blank" rel="noopener">ResearchGate</a>
+        <a href="https://github.com/justin-js-ma" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Justin (Junseok) Ma, Ph.D. · Suwon, Republic of Korea</span>
+    </div>
+  </div>
+</footer>
+<script src="/assets/js/site.js" defer></script>
+<!-- FOOTER:END -->
 </body>
 </html>

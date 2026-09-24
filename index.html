@@ -1,438 +1,357 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- HEAD:START -->
   <meta charset="UTF-8" />
-  <title>Justin (Junseok) Ma, Ph.D. — About</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <style>
-    :root {
-      --maxw: 980px;
-      --bg: #fff;
-      --ink: #202124;
-      --muted: #666;
-      --rule: #e6e6e6;
-      --link: #0b62d6;
-    }
-    html, body { margin:0; padding:0; background:var(--bg); color:var(--ink); }
-    body { font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Helvetica,Arial,sans-serif; line-height:1.65; }
-    .serif { font-family: Georgia, "Times New Roman", Times, serif; }
-
-    /* Top Nav */
-    .nav { border-bottom:1px solid var(--rule); background:#fff; }
-    .nav-inner { max-width:var(--maxw); margin:0 auto; padding:12px 20px; display:flex; align-items:center; gap:18px; }
-    .nav a { color:var(--ink); text-decoration:none; font-size:15px; padding:6px 10px; border-radius:6px; }
-    .nav a:hover { background:#f5f5f5; }
-    .nav .brand { font-weight:700; letter-spacing:.2px; margin-right:auto; }
-    .nav .active { color:#fff; background:#111; }
-
-    .wrap { max-width: var(--maxw); margin:0 auto; padding:32px 20px 56px; }
-
-    /* 상단 레이아웃 */
-    .hero { display:flex; gap:36px; align-items:flex-start; flex-wrap:wrap; }
-    .photo { flex:0 0 260px; }
-    .photo img { width:100%; max-width:260px; border-radius:10px; box-shadow:0 6px 18px rgba(0,0,0,.1); }
-    .intro { flex:1 1 420px; min-width:280px; }
-    .intro h1 { margin:0 0 10px; font-size:34px; font-weight:700; }
-    .intro .lines { font-size:16px; }
-    .intro .lines div + div { margin-top:4px; }
-    .intro a { color:var(--link); text-decoration:none; }
-    .intro a:hover { text-decoration:underline; }
-    .links { margin-top:10px; font-size:15px; }
-    .links a { color:var(--link); text-decoration:none; }
-    .links a:hover { text-decoration:underline; }
-    .links span { color:var(--muted); margin:0 6px; }
-
-    /* 섹션 */
-    .section { margin-top:36px; padding-top:24px; border-top:1px solid var(--rule); }
-    .section h2 { margin:0 0 12px; font-size:20px; font-weight:700; }
-
-    /* 리스트 */
-    .bullets { margin:0; padding-left:18px; }
-    .bullets li { margin:6px 0; font-size:15px; }
-    .ordered { margin:0; padding-left:22px; }
-    .ordered li { margin:6px 0; font-size:15px; }
-    .where { font-weight:700; }  /* 폰트 굵기를 700으로 변경 */
-    .when { color:var(--muted); }
-    .note { color:var(--muted); }
-
-    /* 저자명 하이라이트 */
-    .me { font-weight:700; text-decoration: underline; }
-
-    /* KAIST 하이라이트 */
-    .kaist-letter { color: var(--link); font-weight:700; }
-    .kaist-blue { color: var(--link); font-weight:700; }
-
-    /* 서브 리스트 (프로젝트 설명용) */
-    .sub { margin:6px 0 0 16px; padding-left:16px; }
-    .sub li { font-size:14px; color:#333; }
-
-    @media (max-width:720px){
-      .hero{flex-direction:column}
-      .intro h1{font-size:28px}
-    }
-    <style>
-      html, body {
-        height: 100%;
-        margin: 0;
-      }
-    
-      body {
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh;
-      }
-    
-      main {
-        flex: 1;
-      }
-    
-      .footer {
-        padding: 1rem 0;
-        text-align: center;
-        color: #888;
-        font-size: 14px;
-      }
-    </style>
-  </style>
+  <meta name="color-scheme" content="light dark" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/site.css" />
+  <script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
+  <!-- HEAD:END -->
+  <title>Justin (Junseok) Ma, Ph.D. — RF/Antenna Engineer</title>
+  <meta name="description" content="Justin (Junseok) Ma, Ph.D. — Staff Engineer in RF/Antenna Engineering at Samsung Electronics. AI-assisted antenna design, mmWave, UWB, satellite connectivity and liquid-crystal RF devices." />
 </head>
 <body>
 
-  <!-- NAV -->
-  <nav class="nav">
-    <div class="nav-inner">
-      <a class="brand" href="/">Justin Ma</a>
-      <a class="active" href="/">About</a>
-      <a href="/bio.html">Bio</a>
-      <a href="/research.html">Research</a>
-      <a href="/publication.html">Academic Publications</a>
-    </div>
-  </nav>
+<!-- NAV:START -->
+<header class="site-nav">
+  <div class="container">
+    <a class="brand" href="/"><span class="brand-mark">JM</span>Justin Ma</a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="/" data-nav="home" class="active" aria-current="page">About</a>
+      <a href="/research.html" data-nav="research">Research</a>
+      <a href="/publication.html" data-nav="publications">Publications</a>
+      <a href="/bio.html" data-nav="bio">Bio</a>
+      <a class="nav-cv" href="https://drive.google.com/file/d/1LHwjuKT5SRex9XsXRxIwTksMJjRlqdAP/view?usp=sharing" target="_blank" rel="noopener">CV</a>
+    </nav>
+    <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+    </button>
+  </div>
+</header>
+<!-- NAV:END -->
 
-<main class="wrap">
+<main>
 
-  <!-- 상단 프로필 -->
-  <section class="hero">
-    <div class="photo">
-      <!-- 너가 원하면 /images/... 로 바꿔도 됩니다 -->
-      <img src="https://raw.githubusercontent.com/justin-js-ma/justin-js-ma.github.io/main/images/profile/pic.png" alt="Dr. Justin (Junseok) Ma">
-    </div>
-    <div class="intro">
-      <h1 class="serif">Justin (Junseok) Ma, Ph.D.</h1>
-      <div class="lines">
-        <div><a href="mailto:jun971105@gmail.com">jun971105@gmail.com</a></div>
-        <div><strong>Staff Engineer (CL3), RF/Antenna Engineering</strong></div>
-        <div>
-          Advanced Antenna Lab · Mobile eXperience (MX) Division
-        </div>
-        <div>
-          <strong>Samsung Electronics</strong> · Suwon, Republic of Korea
-        </div>
-        <div style="margin-top:8px; color:#666;">
-          AI-Assisted Antenna Design · Electromagnetics · mmWave · UWB · Satellite Connectivity
-        </div>
-      </div>
-
-      <!-- 프로필 하단 링크 묶음 -->
-      <div class="links">
-        <a href="https://www.linkedin.com/in/justin-junseok-ma/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        <span>·</span>
-        <a href="https://www.researchgate.net/profile/Justin-Ma-11/research" target="_blank" rel="noopener noreferrer">ResearchGate</a>
-        <span>·</span>
-        <a href="https://github.com/justin-js-ma" target="_blank" rel="noopener noreferrer">GitHub</a>
-        <span>·</span>
-        <a href="https://scholar.google.com/citations?user=HI6_iqEAAAAJ&hl=ko&oi=ao" target="_blank" rel="noopener noreferrer">Google Scholar</a>
-        <span>·</span>
-        <a href="https://drive.google.com/file/d/1LHwjuKT5SRex9XsXRxIwTksMJjRlqdAP/view?usp=sharing">CV (PDF)</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Research Interests -->
-
-  <section class="section" id="interests">
-    <h2 class="serif">Research &amp; Technical Interests</h2>
-    <ul class="bullets">
-      <li>AI-Assisted Antenna Design &amp; Electromagnetic Optimization</li>
-      <li>RF, Microwave &amp; Millimeter-Wave Antenna Systems</li>
-      <li>UWB, Satellite &amp; Next-Generation Mobile Connectivity</li>
-      <li>Reconfigurable Intelligent Surfaces &amp; Programmable Electromagnetics</li>
-      <li>Liquid-Crystal-Based RF/mmWave Devices &amp; Functional Materials</li>
-      <li>Reconfigurable Optoelectronics &amp; Advanced Device Fabrication</li>
-    </ul>
-  </section>
-  <!-- Education (KAIST에 NSRI 추가) -->
- <!-- Research Appointments & Visiting Training -->
-  <section class="section" id="appointments">
-    
-    <h2 class="serif">Professional &amp; Research Appointments</h2>
-    <ul class="bullets">
-      <li>
-        <span class="where">Samsung Electronics — Mobile eXperience (MX) Division</span>
-        — Staff Engineer (CL3), RF/Antenna Engineering
-        <span class="when">Sep 2026 – Present</span>
-        <span class="note"> · Advanced Antenna Lab</span>
-      </li>
-      <li>
-        <span class="where">KAIST — Natural Sciences Research Institute</span>
-        — Jang Young-Sil Postdoctoral Research Fellow
-        <span class="when">Sep 2025 – Aug 2026</span>
-        <span class="note">
-          · <a href="https://yoon.kaist.ac.kr/" target="_blank" rel="noopener">
-            Soft Material Assembly Group (SMA Group)
+  <!-- Hero -->
+  <section class="hero" id="about">
+    <div class="container">
+      <div>
+        <span class="eyebrow">RF / Antenna Engineer · Liquid-Crystal Researcher</span>
+        <h1>Justin (Junseok) Ma<span class="phd">, Ph.D.</span></h1>
+        <p class="hero-role">Staff Engineer (CL3), RF/Antenna Engineering</p>
+        <p class="hero-org">Advanced Antenna Lab · Mobile eXperience (MX) Division · Samsung Electronics, Suwon</p>
+        <p class="hero-lead">I build antennas and reconfigurable RF hardware for next-generation mobile devices — combining AI-assisted electromagnetic design with a background in liquid-crystal materials, printed devices, and programmable surfaces across microwave, mmWave and optical bands.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="mailto:jun971105@gmail.com">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+            Get in touch
           </a>
-        </span>
-      </li>
-  
-      <li>
-        <span class="where">University of Oxford — Department of Engineering Science</span> — Recognised Student
-        <span class="when">Dec 2023 – Dec 2024</span>
-        <span class="note"> · Keble College · <a href="https://eng.ox.ac.uk/smp/" target="_blank" rel="noopener">Soft Matter Photonics Group (SMP Group)</a> · <a href="https://eng.ox.ac.uk/people/junseok-ma/" target="_blank" rel="noopener">My Profile</a></span>
-      </li>
-    </ul>
+          <a class="btn" href="https://drive.google.com/file/d/1LHwjuKT5SRex9XsXRxIwTksMJjRlqdAP/view?usp=sharing" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>
+            CV (PDF)
+          </a>
+          <a class="icon-link" href="https://scholar.google.com/citations?user=HI6_iqEAAAAJ&hl=en" target="_blank" rel="noopener" aria-label="Google Scholar" title="Google Scholar">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+          </a>
+          <a class="icon-link" href="https://www.linkedin.com/in/justin-junseok-ma/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a class="icon-link" href="https://www.researchgate.net/profile/Justin-Ma-11/research" target="_blank" rel="noopener" aria-label="ResearchGate" title="ResearchGate">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 16V8h3a2 2 0 0 1 0 4H8m3 0 3 4"/></svg>
+          </a>
+          <a class="icon-link" href="https://github.com/justin-js-ma" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <img src="/images/profile/profile-hero.jpg" alt="Portrait of Justin (Junseok) Ma" width="880" height="1100" />
+        <span class="status"><span class="status-dot"></span>Now at Samsung Electronics</span>
+      </div>
+    </div>
   </section>
-  
+
+  <!-- Stats -->
+  <div class="container">
+    <div class="stats">
+      <div class="stat"><div class="stat-num">20+</div><div class="stat-label">Peer-reviewed publications</div></div>
+      <div class="stat"><div class="stat-num">11</div><div class="stat-label">Honors, fellowships &amp; awards</div></div>
+      <div class="stat"><div class="stat-num">9</div><div class="stat-label">Journals served as reviewer</div></div>
+      <div class="stat"><div class="stat-num">1</div><div class="stat-label">RF liquid-crystal mixture commercialized with JNC</div></div>
+    </div>
+  </div>
+
+  <!-- Research -->
+  <section class="section" id="research">
+    <div class="container section-grid">
+      <div class="section-head">
+        <span class="num">01</span>
+        <h2>Research</h2>
+        <p>From molecular-level material design to antennas in real devices.</p>
+        <a class="text-link" href="/research.html">Full research overview →</a>
+      </div>
+      <div>
+        <p class="research-intro">My work turns liquid crystals from display materials into field-programmable media for electronics and photonics, and now applies that electromagnetic intuition — together with AI/ML — to antenna engineering for mobile platforms.</p>
+        <figure class="figure card">
+          <img src="/images/research-overview.jpg" alt="Research overview: materials design, processing and advanced fabrication feeding microwave, mmWave and optoelectronic devices for human-centered technologies" loading="lazy" />
+          <figcaption>Functional materials for smart electronics — materials, fabrication, and devices toward real-world deployment.</figcaption>
+        </figure>
+        <div class="themes">
+          <article class="theme card">
+            <div class="theme-top">
+              <span class="theme-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20V10"/><path d="M8.5 6.5a5 5 0 0 1 7 0"/><path d="M6 4a8.5 8.5 0 0 1 12 0"/><circle cx="12" cy="10" r="1.2"/><path d="M9 20h6"/></svg></span>
+              <span class="theme-when">2026 — now</span>
+            </div>
+            <h3>AI-Assisted Antenna Engineering</h3>
+            <p>Applying AI/ML to antenna design-space exploration, electromagnetic performance prediction and optimization for mmWave, UWB and satellite links in next-generation mobile and emerging form-factor devices.</p>
+            <div class="result"><span>Now</span>Advanced Antenna Lab, Samsung Electronics MX</div>
+          </article>
+          <article class="theme card">
+            <div class="theme-top">
+              <span class="theme-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12c2-4 4-4 6 0s4 4 6 0 4-4 6 0"/><path d="M2 18h20"/><path d="M2 6h20"/></svg></span>
+              <span class="theme-when">2020 — 2026</span>
+            </div>
+            <h3>Liquid Crystals for Microwave &amp; mmWave</h3>
+            <p>Tunable phase shifters, filters, phased arrays and reconfigurable intelligent surfaces built on LC dielectrics — targeting low loss, fast switching and beam control for 5G, satellite and 6G.</p>
+            <div class="result"><span>Result</span>LC mixture ZOC-A019XX commercialized with JNC (tan δ ≈ 0.006, tunability ≈ 0.33 @ 28 GHz)</div>
+          </article>
+          <article class="theme card">
+            <div class="theme-top">
+              <span class="theme-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3s5 5.5 5 9a5 5 0 0 1-10 0c0-3.5 5-9 5-9z"/><path d="M10 13a2 2 0 0 0 2 2"/></svg></span>
+              <span class="theme-when">2023 — 2026</span>
+            </div>
+            <h3>Printed LC Optoelectronics</h3>
+            <p>Drop-on-demand printing of LC droplets and pixels for smart windows, reflective displays and AR optics — controlling transparency, color and polarization with minimal material and power.</p>
+            <div class="result"><span>Result</span>Image-integrated electrochromic PDLC smart windows — Adv. Opt. Mater., Hot Topic</div>
+          </article>
+          <article class="theme card">
+            <div class="theme-top">
+              <span class="theme-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><path d="M14 17.5h7M17.5 14v7"/></svg></span>
+              <span class="theme-when">2023 — 2026</span>
+            </div>
+            <h3>Reconfigurable Photonics &amp; Patterning</h3>
+            <p>Laser-assisted and hybrid patterning from millimeters to microns, and topological LC structures, toward programmable metasurfaces and adaptive photonic hardware.</p>
+            <div class="result"><span>Result</span>Metastable topological domains locked in Pi cells — Adv. Funct. Mater., Editor’s Choice</div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section class="section" id="experience">
+    <div class="container section-grid">
+      <div class="section-head">
+        <span class="num">02</span>
+        <h2>Experience</h2>
+        <p>Industry, postdoctoral and international research.</p>
+      </div>
+      <ol class="timeline">
+        <li class="tl-item current">
+          <div class="tl-when">Sep 2026 — Present</div>
+          <div class="tl-title">Samsung Electronics</div>
+          <div class="tl-role">Staff Engineer (CL3), RF/Antenna Engineering</div>
+          <div class="tl-meta">Advanced Antenna Lab · Mobile eXperience (MX) Division · Suwon</div>
+          <ul class="tl-points">
+            <li>Next-generation antenna technologies for mobile and emerging form-factor devices.</li>
+            <li><strong>AI/ML-enabled</strong> design-space exploration, EM performance prediction and design optimization.</li>
+            <li>Advanced antenna solutions across <strong>mmWave, UWB and satellite connectivity</strong>, from simulation to prototyping, measurement and system-level analysis.</li>
+          </ul>
+        </li>
+        <li class="tl-item">
+          <div class="tl-when">Sep 2025 — Aug 2026</div>
+          <div class="tl-title">KAIST</div>
+          <div class="tl-role">Jang Young-Sil Postdoctoral Research Fellow</div>
+          <div class="tl-meta">Natural Sciences Research Institute · <a class="text-link" href="https://yoon.kaist.ac.kr/" target="_blank" rel="noopener">Soft Material Assembly Group</a></div>
+          <div class="tl-sub">
+            <div class="tl-sub-title">6G Core Technology Development Program</div>
+            <div class="tl-sub-meta">IITP, Korea</div>
+            <p>Fast-switching reconfigurable intelligent surface (RIS) liquid-crystal antennas for next-generation wireless systems.</p>
+          </div>
+          <div class="tl-sub">
+            <div class="tl-sub-title">Lightweight LC-based mmWave Beamforming Antenna System</div>
+            <div class="tl-sub-meta">ADD · Dec 2021 — Nov 2026 · KRW 6.718B</div>
+            <p>Multi-purpose, lightweight LC beamforming antennas for next-generation military communications and radar on mobile platforms.</p>
+          </div>
+        </li>
+        <li class="tl-item">
+          <div class="tl-when">Dec 2023 — Dec 2024</div>
+          <div class="tl-title">University of Oxford</div>
+          <div class="tl-role">Recognised Student · Project Lead, DoD Printing for Smart Windows</div>
+          <div class="tl-meta">Department of Engineering Science · Keble College · <a class="text-link" href="https://eng.ox.ac.uk/smp/" target="_blank" rel="noopener">Soft Matter Photonics Group</a> · <a class="text-link" href="https://eng.ox.ac.uk/people/junseok-ma/" target="_blank" rel="noopener">Profile</a></div>
+          <ul class="tl-points">
+            <li>Electrochromic LC systems with simultaneously controllable color and transmittance via drop-on-demand printing.</li>
+            <li>Printed LC-based antenna and phased-array concepts using advanced materials (push-pull azo, blue-phase).</li>
+          </ul>
+        </li>
+        <li class="tl-item">
+          <div class="tl-when">2016 — 2025</div>
+          <div class="tl-title">POSTECH</div>
+          <div class="tl-role">B.S., M.S. &amp; Ph.D. researcher, Electrical Engineering</div>
+          <div class="tl-meta"><a class="text-link" href="https://sites.google.com/view/kimwooksung/home" target="_blank" rel="noopener">Wave Arrays &amp; Display Engineering Lab (WADE Group)</a></div>
+          <div class="tl-sub">
+            <div class="tl-sub-title">Project Lead — LC Printing for Smart Devices</div>
+            <div class="tl-sub-meta">Feb 2025 — Present</div>
+            <p>High-resolution, full-color smart windows with banking structures for precise patterning; extending printed LC to RF and optoelectronic devices.</p>
+          </div>
+          <div class="tl-sub">
+            <div class="tl-sub-title">Samsung Science &amp; Technology Foundation — CORE: Sub-THz 6G</div>
+            <div class="tl-sub-meta">Sep 2021 — Sep 2024</div>
+            <p>LC characterization and fabrication for RIS optimized for D-band, and tunable microwave/mmWave components for 6G.</p>
+          </div>
+          <div class="tl-sub">
+            <div class="tl-sub-title">LC-based RF Applications &amp; Commercialization with JNC Corporation (Japan)</div>
+            <div class="tl-sub-meta">Sep 2020 — Aug 2024</div>
+            <p>Developed LC composites for 5G and satellite communications; commercialized mixtures including ZOC-A019XX. <a href="https://www.jnc-corp.co.jp/english/news/assets/PDF.pdf" target="_blank" rel="noopener">Corporate disclosure</a></p>
+          </div>
+        </li>
+        <li class="tl-item">
+          <div class="tl-when">Jun 2018 — Aug 2018</div>
+          <div class="tl-title">LG Display</div>
+          <div class="tl-role">Intern, Preliminary Research Team for OLED</div>
+          <div class="tl-meta">Advanced LCD/OLED technology research and process-efficiency proposals.</div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
   <!-- Education -->
   <section class="section" id="education">
-    <h2 class="serif">Education</h2>
-    <ul class="bullets">
-      <li>
-        <span class="where">POSTECH</span> — Ph.D., Electrical Engineering
-        <span class="when">Feb 2022 – Aug 2025</span>
-        <span class="note"> · <a href="https://sites.google.com/view/kimwooksung/home?authuser=0" target="_blank" rel="noopener">Wave Arrays &amp; Display Engineering Lab (WADE Group)</a></span>
-      </li>
-  
-      <li>
-        <span class="where">POSTECH</span> — M.S., Electrical Engineering
-        <span class="when">Feb 2020 – Feb 2022</span>
-        <span class="note"> · <a href="https://sites.google.com/view/kimwooksung/home?authuser=0" target="_blank" rel="noopener">Wave Arrays &amp; Display Engineering Lab (WADE Group)</a></span>
-      </li>
-  
-      <li>
-        <span class="where">POSTECH</span> — B.S., Electrical Engineering
-        <span class="when">Feb 2016 – Feb 2020</span>
-      </li>
-    </ul>
-  </section>
-
-  <!-- Professional Experience -->
-  <section class="section" id="experience">
-    <h2 class="serif">Professional Experience</h2>
-    <ul class="bullets">
-      <!-- KAIST: 국가 R&D 프로젝트 묶음 -->
-      <!-- Samsung Electronics -->
-      <li>
-        <span class="where">Samsung Electronics — Mobile eXperience (MX) Division</span>
-        — Staff Engineer (CL3), RF/Antenna Engineering
-        <span class="when">Sep 2026 – Present</span>
-      
-        <ul class="sub">
-          <li>
-            Developing next-generation antenna technologies for mobile and emerging form-factor devices within the Advanced Antenna Lab.
-          </li>
-          <li>
-            Applying <strong>AI/ML-enabled methodologies</strong> to antenna design-space exploration, electromagnetic performance prediction, and design optimization.
-          </li>
-          <li>
-            Developing advanced antenna solutions across <strong>mmWave, UWB, and satellite connectivity</strong> for next-generation mobile wireless platforms.
-          </li>
-          <li>
-            Integrating electromagnetic simulation, AI-assisted optimization, prototyping, measurement, and system-level analysis for advanced RF/antenna architectures.
-          </li>
-        </ul>
-      </li>
-      
-      <li>
-        <span class="where">KAIST</span> — National R&amp;D Projects (Researcher)
-        <ul class="sub">
-          <li><strong>6G Core Technology Development Program</strong> (IITP, Korea): Fast-switching <em>reconfigurable intelligent surface (RIS)</em> liquid-crystal antennas for next-generation wireless systems.</li>
-          <li><strong>Lightweight LC-based mmWave Beamforming Antenna System</strong> (ADD, Agency for Defense Development): Multi-purpose, lightweight LC beamforming antenna system for next-generation military communications and radar, mountable on missiles and mobile weapon platforms. <span class="when">Dec 2021 – Nov 2026</span> <span class="note">· Total investment: KRW 6.718B</span></li>
-        </ul>
-      </li>
-
-      <!-- POSTECH Project Lead -->
-      <li>
-        <span class="where">POSTECH</span> — Project Lead, LC Printing for Smart Devices <span class="when">Feb 2025 – Present</span>
-        <ul class="sub">
-          <li>High-resolution, full-color smart windows for commercial display; <em>banking structures</em> for enhanced resolution and precise pattern formation.</li>
-          <li>Extending printed LC to RF &amp; optoelectronic devices for next-gen communication and optical systems.</li>
-          <li>Developing an innovative fabrication method for liquid-crystal devices.</li>
-        </ul>
-      </li>
-
-      <!-- Oxford Project Lead (안테나 연구 포함) -->
-      <li>
-        <span class="where">University of Oxford</span> — Project Lead, DoD Printing for Smart Windows <span class="when">Dec 2023 – Dec 2024</span>
-        <ul class="sub">
-          <li>Electrochromic LC systems with simultaneously controllable color &amp; transmittance using Drop-on-Demand (DoD) printing.</li>
-          <li>Printed, LC-based antennas/phased-array concepts; integrated advanced materials (push-pull azo, blue-phase) for optical &amp; RF performance.</li>
-        </ul>
-      </li>
-
-      <!-- 삼성과학기술재단 CORE -->
-      <li>
-        <span class="where">Samsung Science &amp; Technology Foundation</span> — Researcher, CORE: Sub-THz 6G <span class="when">Sep 2021 – Sep 2024</span>
-        <ul class="sub">
-          <li>Characterization &amp; fabrication of LCs for RIS optimized for D-band communication.</li>
-          <li>LC-based tunable microwave/mmWave components for 6G networks.</li>
-        </ul>
-      </li>
-
-      <!-- POSTECH Researcher (JNC 상용화) -->
-      <li>
-        <span class="where">POSTECH &amp; JNC Corporation (Japan)</span> — Researcher, LC-based RF Applications &amp; Commercialization <span class="when">Sep 2020 – Aug 2024</span>
-        <ul class="sub">
-          <li>Developed &amp; optimized LC composites for microwave/mmWave (5G &amp; satellite comms).</li>
-          <li>Commercialized <strong> new LC mixtures with JNC Corporation (Japan)</strong> — incl. ZOC-A019XX (loss tangent ≈ 0.006; tunability ≈ 0.33 @ 28 GHz). <a href="https://www.jnc-corp.co.jp/english/news/assets/PDF.pdf" target="_blank" rel="noopener">Corporate Disclosure</a></li>
-        </ul>
-      </li>
-
-      <!-- LG Display 인턴 -->
-      <li>
-        <span class="where">LG Display</span> — Intern, Preliminary Research Team for OLED <span class="when">Jun 2018 – Aug 2018</span>
-        <ul class="sub">
-          <li>Researched advanced LCD/OLED technologies to support display innovation.</li>
-          <li>Suggested process-efficiency strategies to improve manufacturing workflow.</li>
-        </ul>
-      </li>
-    </ul>
-  </section>
-  
-        <!--Invited Talks-->
-<section class="section" id="talks">
-    <h2 class="serif">Invited Talk</h2>
-    <ul class="bullets">
-      <li>
-        <span class="where">Chungnam National University (CNU)</span> — <span class="when">Apr 22, 2026</span>
-        <div class="note" style="margin-top: 5px; font-weight: 700; color: #111; font-size: 15.5px;">
-          "Liquid Crystal Engineering: From Molecular Alignment to Advanced Devices"
-        </div>
-        <ul class="sub">
-          <li><strong>Host:</strong> Prof. Jun-Hee Na (Dept. of Electrical, Electronics and Communication Engineering Education)</li>
-          <li><strong>Venue:</strong> Global Talent Development Center (W-15), Room 602</li>
-          <li><strong>Scope:</strong> Functional LC mixtures, DoD printing, and microwave/mmWave applications.</li>
-        </ul>
-      </li>
-    </ul>
-  </section>
-  
-  <!-- Publications (그대로 유지, 내 이름 하이라이트)
-  <section class="section" id="publications">
-    <h2 class="serif">Publications (20+)</h2>
-
-    <h3 class="serif" style="margin:10px 0 6px">Dissertations</h3>
-    <ol class="ordered">
-      <li><span class="me">J. Ma</span>, “A Study of Liquid Crystal-based Phase Shifter in the Millimeter-wave Range for Utilizing Current Mass-production Technology of Display Industry,” M.S. Thesis, Dept. of Electrical Engineering, POSTECH, Korea, 2021.</li>
-      <li><span class="me">J. Ma</span>, “Development of Multifunctional Reconfigurable Liquid Crystal Devices Using Drop-on-Demand Printing,” Ph.D. Dissertation, Dept. of Electrical Engineering, POSTECH, Korea, 2025.</li>
-    </ol>
-
-    <h3 class="serif" style="margin:14px 0 6px">Journal Publications</h3>
-    <ol class="ordered">
-      <li> <span class="me">J. Ma*</span>, Dang-Oh Kim, Hee Seong Yun, and Dong-Ki Yoon* “Decoupling Optical Ringing from True Permittivity Dynamics in Twisted–Nematic Liquid Crystals for 160-GHz RIS Applications”, <strong><em>Appl. Phys. Lett.</em></strong>, 2026. (Drafting)</li>
-      <li>Jinge Guo†, Xuke Qiu†, Runchen Zhang, Qihao Han, Jiahe Cui, An Wang, Zimo Zhao, Yifei Ma, Mengmeng Li, Waqas Kamal, <span class="me">J. Ma</span> , Yongge Ma, Steve J Elston, Alfonso A. Castrejón-Pita, Stephen M Morris, and Chao He,, “Adaptive complex beam manipulation via inkjet-printed negative anisotropy liquid crystal droplets”, <strong><em>Adv. Func. Mater.</em></strong>, 2026. (Drafting)</li>
-      <li>D. Kim+*, <span class="me">J. Ma</span>+*, <em>et al.</em>, “Ultrafast, Critically Damped Liquid-Crystal Phase Shifters Enable 360° Analog Beam Steering in 160 GHz Reconfigurable Intelligent Surfaces”, <strong><em>IEEE Antennas Wirel. Propag. Lett.</em></strong>, 2026. (Drafting)</li>
-      <li>B. Mee <em>et al.</em>, “Reconfigurable Optically-Transparent Antenna Using Drop-on-Demand Printed Nematic Liquid Crystals”, <strong><em>Adv. Mater. Sci. Eng.</em></strong>, 2025 (Submitted).</li>            
-      <li><span class="me">J. Ma</span>+*, D. Lee+, <em>et al.</em>, “Inkjet-Printed Cholesteric Liquid Crystal Pixels with Frequency-Addressable Optical Memory for Energy-Efficient Reflective Displays”, <strong><em>ACS Appl. Mater. Interfaces.</em></strong>, 2026. (<a href="https://pubs.acs.org/doi/10.1021/acsami.6c02375?fig=fig9&ref=pdf" target="_blank" rel="noopener">Link</a>)</li>
-      <li>A. Pradeep, Y. Montelongo, <span class="me">J.S. Ma</span>, Z. Xu, T. Wang, J. Qin, C. Nourshagh, S. J. Elston, and S. M. Morris, “From Millimeters to Microns: A Hybrid Strategy for Reconfigurable Liquid-Crystal Patterning”, <strong><em>Small Methods.</em></strong>, 2026. (<a href="https://onlinelibrary.wiley.com/doi/10.1002/smtd.202501892" target="_blank" rel="noopener">Link</a>)</li>
-      <li>I.-B. Kong, T.-H. Seo, <span class="me">J. Ma</span>, S.-O. Cha, W.-S. Kim, and S.-W. Lee, “Isolated High-Voltage-Gain Full-Range Soft-Switching DC/DC Converter Using Built-in Transformer and Coupled Inductors with Minimum Design Constraints”, <strong><em>IEEE Trans. Ind. Electron.</em></strong>, 2026. (<a href="https://ieeexplore.ieee.org/document/11399289/" target="_blank" rel="noopener">Link</a>)</li>
-      <li>J.Y. Choi, <span class="me">J.S. Ma</span>, W.S. Kim*, “Tunable High-Selectivity Wideband Bandpass Filter Using Triple-Mode Stub-Loaded Resonators Based on Liquid Crystals”, <strong><em>IEEE Access</em></strong>, 2025. (<a href="https://ieeexplore.ieee.org/abstract/document/11218045" target="_blank" rel="noopener">Link</a>)</li>
-      <li><span class="me">J. Ma</span>, W. Kamal, A. Pradeep, A. J. Orr, S.-W. Oh, J.-Y. Choi, J. Guo, B. Mee, H.-W. Oh, J.-H. Lee, A. A. Castrejon-Pita*, S. J. Elston*, W.-S. Kim*, and S. M. Morris*, “Advanced image-integrated smart windows using printed electrochromic polymer-dispersed liquid crystal droplets,” <strong><em>Adv. Opt. Mater.</em></strong>, 2025. (<strong><em>Featured as HOT TOPIC: Liquid Crystals</em></strong>) (<a href="https://doi.org/10.1002/adom.202501586" target="_blank" rel="noopener">Link</a>)</li>
-      <li><span class="me">J. Ma</span>, A. Pradeep, S.W. Oh, J.H. Lee, J.Y. Choi, S.O. Cha, H.W. Oh, W.S. Kim*, “Operating temperature control in push-pull azobenzene-doped liquid crystal light-driven devices via a UV absorber”, <strong><em>Dyes and Pigments</em></strong>, 2025. (<a href="https://doi.org/10.1016/j.dyepig.2025.113145" target="_blank" rel="noopener">Link</a>)</li>
-      <li>S.-H. Lee+, S.-G. Park+, <span class="me">J. Ma</span>, W.-S. Kim, and S.-W. Oh*, “High-performance switchable visor for augmented reality using low-voltage, fast-response cholesteric liquid crystals,” <strong><em>Dyes and Pigments</em></strong>, 2025. (<a href="https://doi.org/10.1016/j.dyepig.2025.113068" target="_blank" rel="noopener">Link</a>)</li>
-      <li>S.-O. Cha, J.-H. Ka, I.-B. Kong, <span class="me">J. Ma</span>, S.-Y. Park, and W.-S. Kim*, “Off-Center Rotational Dynamics in Virtual Reality: Effects on Cybersickness and Presence,” <strong><em>IEEE Access</em></strong>, 2025. (<a href="https://doi.org/10.1109/ACCESS.2025.3580956" target="_blank" rel="noopener">Link</a>)</li>
-      <li>A. Pradeep*, U. Mur, <span class="me">J. Ma</span>, N. Spiller, Y. Jin, W. Kamal, S. J. Elston*, and S. M. Morris*, “Locking metastable topological domains in nematic liquid crystal Pi cells,” <strong><em>Adv. Funct. Mater.</em></strong>, 2025. (<strong><em>Featured as Editor’s Choice</em></strong>) (<a href="https://doi.org/10.1002/adfm.202512550" target="_blank" rel="noopener">Link</a>)</li>
-      <li>J.-Y. Choi, <span class="me">J. Ma</span>, and W.-S. Kim*, “Reconfigurable wideband bandpass filter using stepped impedance resonator based on liquid crystals,” <strong><em>Electronics</em></strong>, 2025. (<a href="https://doi.org/10.3390/electronics14122325" target="_blank" rel="noopener">Link</a>)</li>
-      <li>S. Park, <span class="me">J. Ma</span>, S. Oh, and W. Kim, “Blur image representation in defocus using generalized Gaussian kernel,” <strong><em>Inf. Disp.</em></strong>, 2025. (<a href="https://doi.org/10.1080/15980316.2025.2483195" target="_blank" rel="noopener">Link</a>)</li>
-      <li>J.-Y. Choi, <span class="me">J. Ma</span>, H. Oh, and W.-S. Kim*, “Reconfigurable narrow-band bandpass filter using electrically-coupled open-loop resonators based on liquid crystals,” <strong><em>J. Phys. D: Appl. Phys.</em></strong>, 2024. (<a href="https://doi.org/10.1088/1361-6463/ad6dd0" target="_blank" rel="noopener">Link</a>)</li>
-      <li>J.-H. Lee, <span class="me">J. Ma</span>, C.-H. An, G.-H. Lee, and S.-W. Oh*, “Advanced light: Liquid crystals-based ultra-broadband polarization rotator for functional smart devices,” <strong><em>Small Methods</em></strong>, 2023. (<a href="https://doi.org/10.1002/smtd.202301106" target="_blank" rel="noopener">Link</a>)</li>
-      <li><span class="me">J. Ma</span>, J.-Y. Choi, S. Park, I. Kong, D. Kim, C. Lee, Y. Youn, M. Hwang, S.-W. Oh*, W. Hong*, and W.-S. Kim*, “Liquid crystals for advanced smart devices with microwave and millimeter-wave applications: Recent progress for next-generation communication,” <strong><em>Adv. Mater.</em></strong>, 2023. (<strong><em>Selected as Frontispiece Cover</em></strong>) (<a href="https://doi.org/10.1002/adma.202302474" target="_blank" rel="noopener">Link</a>)</li>
-      <li>H. Shin+, <span class="me">J. Ma</span>+, J.-Y. Choi+, and W.-S. Kim*, “Phase shifting enhancement of a substrate-integrated waveguide phase shifter based on liquid crystal,” <strong><em>Appl. Sci.</em></strong>, 2023. (+ equal contribution) (<a href="https://doi.org/10.3390/app13042504" target="_blank" rel="noopener">Link</a>)</li>
-      <li><span class="me">J. Ma</span>, J.-Y. Choi, H. Shin, J. Lee, S.-W. Oh*, and W.-S. Kim*, “An evaluation of surface-active agent hexadecyltrimethylammonium bromide with vertical self-alignment properties to align liquid crystals for various cell gap conditions,” <strong><em>Appl. Sci.</em></strong>, 2022. (<a href="https://doi.org/10.3390/app122412582" target="_blank" rel="noopener">Link</a>)</li>
-      <li><span class="me">J. Ma</span>, J.-Y. Choi, S.-W. Oh, and W.-S. Kim, “Liquid-crystal-based floating-electrode-free coplanar waveguide phase shifter with an additional liquid-crystal layer for 28-GHz applications,” <strong><em>J. Phys. D: Appl. Phys.</em></strong>, 2021. (<a href="https://doi.org/10.1088/1361-6463/ac38e1" target="_blank" rel="noopener">Link</a>)</li>
-      <li><span class="me">J. Ma</span>, J.-Y. Choi, and W.-S. Kim, “액정의 고주파 대역 특성과 RF 응용 기술 동향,” <strong><em>Information Display</em></strong>, 22(3), 2021. (<a href="https://www.researchgate.net/profile/Justin-Ma-11/publication/365668761_aegjeong-ui_gojupa_daeyeog_teugseong-gwa_RF_eung-yong_gisul_donghyang/links/637dc3a537878b3e87d3bc1f/aegjeong-ui-gojupa-daeyeog-teugseong-gwa-RF-eung-yong-gisul-donghyang.pdf" target="_blank" rel="noopener">Link</a>)</li>
-    </ol>
-
-    <h3 class="serif" style="margin:14px 0 6px">International Conference Presentations</h3>
-    <ol class="ordered">
-      <li>H. Oh, S. Park, J.-Y. Choi, <span class="me">J. Ma</span>, S. Choi, and W.-S. Kim, “Analysis of Meander Delay Line Liquid Crystal Phase Shifter using Director Angle Extraction,” IMID, 2024.</li>
-      <li>J.-Y. Choi, <span class="me">J. Ma</span>, H. Oh, and W.-S. Kim, “Characterization of Nematic Liquid Crystals at 10 GHz using an Open Stub Resonator,” AP-S/URSI, 2024. (<a href="https://ieeexplore.ieee.org/abstract/document/10632239" target="_blank" rel="noopener">Link</a>)</li>
-      <li>J.-Y. Choi, <span class="me">J. Ma</span>, H. Shin, and W.-S. Kim, “Reconfigurable Phased Array Antenna Based on Liquid Crystal with Miniaturized Bandpass Filter,” ISAP, Oct. 31–Nov. 3, 2022. (<a href="https://ieeexplore.ieee.org/abstract/document/9998726" target="_blank" rel="noopener">Link</a>)</li>
-      <li>H. Shin, J.-Y. Choi, <span class="me">J. Ma</span>, and W.-S. Kim, “Phase Shift Enhancement of Substrate Integrated Waveguide Phase Shifter Using Liquid Crystal,” IMID, Korea, Aug. 23–26, 2022. (<a href="https://poasis.postech.ac.kr/handle/2014.oak/116107" target="_blank" rel="noopener">Link</a>)</li>
-      <li><span class="me">J. Ma</span>, J.-Y. Choi, H. Shin, and W.-S. Kim, “Comparative Analysis of Liquid-Crystal Driving between the Grounded-Coplanar Waveguide and the Floating-Electrode-Free Coplanar Waveguide in Liquid-Crystal Phase Shifters,” AP-S/URSI, 2022. (<a href="https://ieeexplore.ieee.org/abstract/document/9887438" target="_blank" rel="noopener">Link</a>)</li>
-      <li><span class="me">J. Ma</span>, H. Shin, and W.-S. Kim, “Analysis about Novel Design of Liquid Crystal Based Floating Electrode Free Coplanar Waveguide Phase Shifter for Performance Improvement,” IMID, Korea, Aug. 25–27, 2021.</li>
-      <li>S. Cha, <span class="me">J. Ma</span>, and W.-S. Kim, “Concept and Numerical Modeling for Virtual Acceleration Sense on Vestibular Organ using Focused Ultrasound,” IMID, Korea, Aug. 25–28, 2020.</li>
-    </ol>
-    <h3 class="serif" style="margin:14px 0 6px">Domestic Conference Presentations</h3>
-<ol class="ordered">
-  <li>
-    <span class="me">J. Ma</span>, S.-W. Oh, J.-Y. Choi, H. Oh, S. M. Morris*, and W.-S. Kim*, 
-    “Enhancing Light-driven Polymer Stabilized Liquid Crystal Smart Devices,” 
-    BLCS, 2024. 
-    (<a href="https://eng.ox.ac.uk/media/qz4hlbdr/blcs-conference-booklet-2024_04042024.pdf" target="_blank" rel="noopener">BLCS</a>)
-  </li>
-  <li>
-    J.-Y. Choi, <span class="me">J. Ma</span>, H. Oh, and W.-S. Kim*, 
-    “Characterization of Nematic Liquid Crystal at 10 GHz using Director Angle Extraction,” 
-    Korea Liquid Crystal Conference, 2024. 
-  </li>
-  <li>
-    J.-Y. Choi, <span class="me">J. Ma</span>, S. Park, and W.-S. Kim*, 
-    “전기적 커플링 오픈 스터브를 이용한 소형 액정 기반 가변 광대역 대역저지 필터,” 
-    IEIE Summer Conference, 2023. 
-  </li>
-</ol>
-  </section> -->
-
-  <!-- Academic Service — Reviewer -->
-  <section class="section" id="reviewer">
-    <h2 class="serif">Academic Service — Journal Reviewer</h2>
-    <ul class="bullets">
-      <li><span class="where">Engineering Research Express</span> (IOP) — <span class="when">2023 – Current</span> · Reviews: 2</li>
-      <li><span class="where">Journal of Physics D: Applied Physics</span> (IOP) — <span class="when">2025 – Current</span> · Reviews: 1</li>
-      <li><span class="where">Liquid Crystals</span> (Taylor &amp; Francis) — <span class="when">2025 – Current</span> · Reviews: 2</li>
-      <li><span class="where">Light Science & Applications</span> (Nature) — <span class="when">2025 – Current</span> · Reviews: 1</li>
-      <li><span class="where">Dyes and Pigments </span> (Elsevier B.V.) — <span class="when">2025 – Current</span> · Reviews: 1</li>
-      <li><span class="where">Photonics </span> (MDPI) — <span class="when">2026 – Current</span> · Reviews: 1</li> 
-      <li><span class="where">Electronics </span> (MDPI) — <span class="when">2026 – Current</span> · Reviews: 1</li> 
-      <li><span class="where">Advanced Optical Materials </span> (Wiley) — <span class="when">2026 – Current</span> · Reviews: 2</li> 
-      <li><span class="where">Microwave and Optical Technology Letters </span> (Wiley) — <span class="when">2026 – Current</span> · Reviews: 1</li> 
-    </ul>
-  </section>
-
-  <!-- Scholarships / Honors & Awards -->
-  <section class="section" id="awards">
-    <h2 class="serif">Scholarships, Honors &amp; Awards</h2>
-    <ul class="bullets">
-      <li>Kim Beom-Man Best Ph.D. Dissertation Award (Departmental Top Award) — Department of Electrical Engineering, POSTECH <span class="when">2026</span></li>
-      <li>BK21 FOUR Outstanding Graduate Student Award (Overseas Research) — NRF & Ministry of Education (Korea) - Top 14 awardees nationwide <span class="when">2025</span></li>
-      <li>Jang Young-Sil Postdoctoral Fellowship — KAIST / NRF (National Research Foundation of Korea) <span class="when">2026</span></li>
-      <li>POSTECHIAN Fellowship, POSTECH <span class="when">2024</span></li>
-      <li>Excellence Awards (2nd Prize), EE Dept. Outstanding Performance Contest, POSTECH <span class="when">2024</span></li>
-      <li>Excellent Paper Challenge Prize, POSTECH Best Paper Competition <span class="when">2024</span></li>
-      <li>Samsung Electronics MX Division Sponsorship (Antenna Prior Research Organization) <span class="when">2023</span></li>
-      <li>Grand Prize, The 8th Electromagnetic Wave Measurement Thesis Contest (KIEES) <span class="when">2023</span></li>
-      <li>BK21 FOUR Outstanding Graduate Student International Funding (Oxford) <span class="when">2023</span></li>
-      <li>BK21 Interdisciplinary Research Group Support Funding <span class="when">2023</span></li>
-      <li>Kim Jong-Han Foundation Scholarship <span class="when">2018 – 2019</span></li>
-    </ul>
-  </section>
-
-
-  </main>
-  <footer class="footer" style="margin-top: 100px; padding: 40px 0; border-top: 1px solid #eee;">
-    <div class="footer-inner" style="display: flex; flex-direction: column; align-items: center; gap: 12px;">
-      
-      <div style="display: inline-flex; align-items: center; background: #fdfdfd; border: 1px solid #eee; padding: 5px 15px; border-radius: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.02);">
-        <span style="font-size: 10px; font-weight: 800; color: #aaa; letter-spacing: 1px; text-transform: uppercase; margin-right: 10px;">Total Hits</span>
-        
-        <img src="https://visitor-badge.laobi.icu/badge?page_id=justin-js-ma.github.io&color=0b62d6&style=flat-square&label=" 
-             alt="counter" 
-             style="height: 16px; vertical-align: middle;"
-             onerror="this.style.display='none'"> 
+    <div class="container section-grid">
+      <div class="section-head">
+        <span class="num">03</span>
+        <h2>Education</h2>
+        <p>Electrical Engineering, POSTECH.</p>
       </div>
-  <footer class="footer">
-    <div class="footer-inner">
-      <div>© Justin (Junseok) Ma, Ph.D. </div>
+      <div class="edu">
+        <div class="edu-item card"><div class="when">2022 — 2025</div><div class="deg">Ph.D.</div><div class="school">POSTECH, Electrical Engineering</div><div class="lab">Dissertation: multifunctional reconfigurable LC devices using drop-on-demand printing</div></div>
+        <div class="edu-item card"><div class="when">2020 — 2022</div><div class="deg">M.S.</div><div class="school">POSTECH, Electrical Engineering</div><div class="lab">Thesis: LC-based mmWave phase shifters using display mass-production technology</div></div>
+        <div class="edu-item card"><div class="when">2016 — 2020</div><div class="deg">B.S.</div><div class="school">POSTECH, Electrical Engineering</div><div class="lab">Kim Jong-Han Foundation Scholar</div></div>
+      </div>
     </div>
-  </footer>
+  </section>
+
+  <!-- Publications -->
+  <section class="section" id="publications">
+    <div class="container section-grid">
+      <div class="section-head">
+        <span class="num">04</span>
+        <h2>Selected Publications</h2>
+        <p>20+ papers across electromagnetics, liquid crystals, photonics and materials.</p>
+        <a class="text-link" href="/publication.html">All publications →</a>
+      </div>
+      <div class="pubs">
+        <a class="pub card" href="https://doi.org/10.1002/adma.202302474" target="_blank" rel="noopener">
+          <span class="badge">Frontispiece Cover</span>
+          <span class="pub-title">Liquid crystals for advanced smart devices with microwave and millimeter-wave applications: recent progress for next-generation communication</span>
+          <span class="pub-authors"><span class="me">J. Ma</span>, J.-Y. Choi, S. Park, et al.</span>
+          <span class="pub-venue">Advanced Materials · 2023</span>
+        </a>
+        <a class="pub card" href="https://doi.org/10.1002/adom.202501586" target="_blank" rel="noopener">
+          <span class="badge">Hot Topic: Liquid Crystals</span>
+          <span class="pub-title">Advanced image-integrated smart windows using printed electrochromic polymer-dispersed liquid crystal droplets</span>
+          <span class="pub-authors"><span class="me">J. Ma</span>, W. Kamal, A. Pradeep, et al.</span>
+          <span class="pub-venue">Advanced Optical Materials · 2025</span>
+        </a>
+        <a class="pub card" href="https://doi.org/10.1002/adfm.202512550" target="_blank" rel="noopener">
+          <span class="badge">Editor’s Choice</span>
+          <span class="pub-title">Locking metastable topological domains in nematic liquid crystal Pi cells</span>
+          <span class="pub-authors">A. Pradeep, U. Mur, <span class="me">J. Ma</span>, et al.</span>
+          <span class="pub-venue">Advanced Functional Materials · 2025</span>
+        </a>
+        <a class="pub card" href="https://pubs.acs.org/doi/10.1021/acsami.6c02375" target="_blank" rel="noopener">
+          <span class="badge">First Author</span>
+          <span class="pub-title">Inkjet-printed cholesteric liquid crystal pixels with frequency-addressable optical memory for energy-efficient reflective displays</span>
+          <span class="pub-authors"><span class="me">J. Ma</span>, D. Lee, et al.</span>
+          <span class="pub-venue">ACS Appl. Mater. Interfaces · 2026</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Talks & Service -->
+  <section class="section" id="service">
+    <div class="container section-grid">
+      <div class="section-head">
+        <span class="num">05</span>
+        <h2>Talks &amp; Service</h2>
+        <p>Invited talks and peer review.</p>
+      </div>
+      <div>
+        <div class="talk card">
+          <div>
+            <div class="talk-title">“Liquid Crystal Engineering: From Molecular Alignment to Advanced Devices”</div>
+            <p>Invited talk · Chungnam National University (CNU) · Host: Prof. Jun-Hee Na, Dept. of Electrical, Electronics and Communication Engineering Education</p>
+            <p>Functional LC mixtures, DoD printing, and microwave/mmWave applications.</p>
+          </div>
+          <span class="when">Apr 22, 2026</span>
+        </div>
+        <div class="sub-h">Journal reviewer</div>
+        <div class="reviews">
+          <span class="chip">Light: Science &amp; Applications <em>Nature</em></span>
+          <span class="chip">Advanced Optical Materials <em>Wiley ×2</em></span>
+          <span class="chip">J. Phys. D: Applied Physics <em>IOP</em></span>
+          <span class="chip">Engineering Research Express <em>IOP ×2</em></span>
+          <span class="chip">Liquid Crystals <em>T&amp;F ×2</em></span>
+          <span class="chip">Dyes and Pigments <em>Elsevier</em></span>
+          <span class="chip">Microwave &amp; Optical Tech. Letters <em>Wiley</em></span>
+          <span class="chip">Photonics <em>MDPI</em></span>
+          <span class="chip">Electronics <em>MDPI</em></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Honors -->
+  <section class="section" id="honors">
+    <div class="container section-grid">
+      <div class="section-head">
+        <span class="num">06</span>
+        <h2>Honors &amp; Awards</h2>
+        <p>Scholarships, fellowships and prizes.</p>
+      </div>
+      <ul class="honors">
+        <li><span><span class="h-title">Kim Beom-Man Best Ph.D. Dissertation Award</span><span class="h-org">Departmental top award · Dept. of Electrical Engineering, POSTECH</span></span><span class="h-year">2026</span></li>
+        <li><span><span class="h-title">Jang Young-Sil Postdoctoral Fellowship</span><span class="h-org">KAIST / National Research Foundation of Korea</span></span><span class="h-year">2026</span></li>
+        <li><span><span class="h-title">BK21 FOUR Outstanding Graduate Student Award (Overseas Research)</span><span class="h-org">NRF &amp; Ministry of Education · top 14 awardees nationwide</span></span><span class="h-year">2025</span></li>
+        <li><span><span class="h-title">POSTECHIAN Fellowship</span><span class="h-org">POSTECH</span></span><span class="h-year">2024</span></li>
+        <li><span><span class="h-title">Excellence Award (2nd Prize)</span><span class="h-org">EE Dept. Outstanding Performance Contest, POSTECH</span></span><span class="h-year">2024</span></li>
+        <li><span><span class="h-title">Excellent Paper Challenge Prize</span><span class="h-org">POSTECH Best Paper Competition</span></span><span class="h-year">2024</span></li>
+        <li><span><span class="h-title">Grand Prize, 8th Electromagnetic Wave Measurement Thesis Contest</span><span class="h-org">KIEES</span></span><span class="h-year">2023</span></li>
+        <li><span><span class="h-title">Samsung Electronics MX Division Sponsorship</span><span class="h-org">Antenna Prior Research Organization</span></span><span class="h-year">2023</span></li>
+        <li><span><span class="h-title">BK21 FOUR Outstanding Graduate Student International Funding</span><span class="h-org">University of Oxford research visit</span></span><span class="h-year">2023</span></li>
+        <li><span><span class="h-title">BK21 Interdisciplinary Research Group Support Funding</span><span class="h-org">POSTECH</span></span><span class="h-year">2023</span></li>
+        <li><span><span class="h-title">Kim Jong-Han Foundation Scholarship</span><span class="h-org">Undergraduate scholarship</span></span><span class="h-year">2018 — 2019</span></li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER:START -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-cta">
+      <h2>Let’s build the next<br /><span>antenna</span> together.</h2>
+      <div class="footer-links">
+        <a href="mailto:jun971105@gmail.com">jun971105@gmail.com</a>
+        <a href="https://scholar.google.com/citations?user=HI6_iqEAAAAJ&hl=en" target="_blank" rel="noopener">Scholar</a>
+        <a href="https://www.linkedin.com/in/justin-junseok-ma/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.researchgate.net/profile/Justin-Ma-11/research" target="_blank" rel="noopener">ResearchGate</a>
+        <a href="https://github.com/justin-js-ma" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Justin (Junseok) Ma, Ph.D. · Suwon, Republic of Korea</span>
+      <span class="hits">Visits <img src="https://visitor-badge.laobi.icu/badge?page_id=justin-js-ma.github.io&color=2f47d0&style=flat-square&label=" alt="visitor count" onerror="this.style.display='none'" /></span>
+    </div>
+  </div>
+</footer>
+<script src="/assets/js/site.js" defer></script>
+<!-- FOOTER:END -->
 </body>
 </html>
