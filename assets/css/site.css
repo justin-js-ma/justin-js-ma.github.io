@@ -598,3 +598,6 @@ strong { font-weight: 600; }
 .tl-head .tl-title { margin: 0; }
 .tl-where { display: inline-flex; align-items: center; gap: 4px; font-size: 13px; color: var(--faint); }
 .tl-where svg { width: 13px; height: 13px; flex-shrink: 0; position: relative; top: 1px; }
+.pill--new { background: color-mix(in srgb, #1f9d6b 14%, transparent); color: #147a52; }
+:root[data-theme="dark"] .pill--new { color: #6fe3b0; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .pill--new { color: #6fe3b0; } }
