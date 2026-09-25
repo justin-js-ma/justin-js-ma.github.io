@@ -601,3 +601,19 @@ strong { font-weight: 600; }
 .pill--new { background: color-mix(in srgb, #1f9d6b 14%, transparent); color: #147a52; }
 :root[data-theme="dark"] .pill--new { color: #6fe3b0; }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .pill--new { color: #6fe3b0; } }
+
+/* ---------- Home: philosophy statement ---------- */
+.motto { padding: 104px 0 8px; }
+.motto .container { display: flex; flex-direction: column; align-items: center; text-align: center; }
+.motto-line { margin: 0; font-size: clamp(30px, 4.4vw, 54px); line-height: 1.1; letter-spacing: -0.03em; font-weight: 700; max-width: 980px; }
+.motto-line span { color: var(--accent); }
+.motto-text { margin: 22px 0 0; max-width: 640px; font-size: 17px; line-height: 1.7; color: var(--muted); }
+.motto + .section { padding-top: 104px; }
+.footer-message--contact h2 { margin-top: 8px !important; font-size: clamp(26px, 3vw, 34px) !important; }
+@media (max-width: 720px) {
+  .motto { padding: 72px 0 0; }
+  .motto .container { align-items: flex-start; text-align: left; }
+  .motto-line { font-size: 26px; line-height: 1.15; }
+  .motto-text { font-size: 15.5px; margin-top: 16px; }
+  .motto + .section { padding-top: 72px; }
+}
