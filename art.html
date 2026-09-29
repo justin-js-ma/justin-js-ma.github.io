@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- HEAD:START -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light dark" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/site.css?v=20260930b" />
+  <script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
+  <!-- HEAD:END -->
+  <title>Art — Junseok (Justin) Ma</title>
+  <meta name="description" content="Digital art by Justin Ma: physics, code and AI — calculated, not drawn." />
+</head>
+<body>
+<!-- NAV:START -->
+<header class="site-nav">
+  <div class="container">
+    <a class="brand" href="/"><span class="brand-mark">JM</span>Junseok Ma</a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="/" data-nav="home">About</a>
+      <a href="/research.html" data-nav="research">Research</a>
+      <a href="/publication.html" data-nav="publications">Publications</a>
+      <a href="/bio.html" data-nav="bio">Bio</a>
+      <a href="/art.html" data-nav="art" class="active" aria-current="page">Art</a>
+      <a class="nav-cv" href="https://drive.google.com/file/d/1LHwjuKT5SRex9XsXRxIwTksMJjRlqdAP/view?usp=sharing" target="_blank" rel="noopener">CV</a>
+    </nav>
+    <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+    </button>
+  </div>
+</header>
+<!-- NAV:END -->
+  <main class="page art-page">
+  <div class="container">
+    <header class="page-header">
+      <span class="eyebrow">Art</span>
+      <h1>Questions about humans and AI</h1>
+      <p>A side project I started in September 2026. I use physics, code and AI to put a few questions I keep coming back to into pictures and sound: when AI can find the optimal answer and draw the perfect line, what is left that is ours? Each piece is one of those questions.</p>
+      <p class="art-hint">Works play as you scroll · turn the sound on · each work notes what the math, the AI and I did.</p>
+    </header>
+    <div class="art-grid">
+        <article class="artwork">
+          <div class="art-media">
+            <video src="/images/art/j-light-wave.mp4" poster="/images/art/j-light-wave.jpg" muted loop playsinline preload="none" controls aria-label="J — Light &amp; Wave — looping video with sound"></video>
+          </div>
+          <div class="art-body">
+            <div class="art-meta"><span>2026.09.25</span><span>Python · 2D wave simulation · sound</span></div>
+            <h2>J — Light &amp; Wave</h2>
+            <p class="art-q">How far does a thought travel before it fades?</p>
+            <div class="art-lines">
+            <p>My signature, turned into an antenna.</p>
+            <p>Thoughts merge, grow, vanish.<br />The farther they travel, the more they fade.</p>
+            </div>
+            <details class="art-how"><summary>How it was made</summary><p>About 240 tiny wave sources were placed along the strokes of my signature, a quarter wavelength apart, so each stroke radiates like a traveling-wave antenna. Their cylindrical waves were summed pixel by pixel: gold marks the crests, blue the troughs, and brightness the field strength. The loop is one full wave cycle. Physics set the interference and the nulls; I chose the color, the glow and the fade.</p></details>
+          </div>
+        </article>
+        <article class="artwork">
+          <div class="art-media">
+            <video src="/images/art/undone.mp4" poster="/images/art/undone.jpg" muted loop playsinline preload="none" controls aria-label="Undone — looping video with sound"></video>
+          </div>
+          <div class="art-body">
+            <div class="art-meta"><span>2026.09.26</span><span>Python · 3D rendering · sound</span></div>
+            <h2>Undone</h2>
+            <p class="art-q">If AI can make every line perfect, is the tremble what makes it human?</p>
+            <div class="art-lines">
+            <p>The perfect line was drawn by an AI.<br />The trembling one is my hand.</p>
+            <p>It keeps trying to become perfect.<br />It keeps coming back to me.</p>
+            </div>
+            <details class="art-how"><summary>How it was made</summary><p>The trembling line is traced from my real handwritten signature. An AI smoothed it into perfect curves, then let it fall back to my hand. The melody is read off the signature itself: the higher the pen, the higher the note — clean when perfecting, lo-fi when returning.</p></details>
+          </div>
+        </article>
+        <article class="artwork">
+          <div class="art-media">
+            <video src="/images/art/argmin.mp4" poster="/images/art/argmin.jpg" muted loop playsinline preload="none" controls aria-label="Argmin — looping video with sound"></video>
+          </div>
+          <div class="art-body">
+            <div class="art-meta"><span>2026.09.26</span><span>Python · optimization · 3D · sound</span></div>
+            <h2>Argmin</h2>
+            <p class="art-q">AI finds the same optimum for everyone. What is the worth of a path no one else walks?</p>
+            <div class="art-lines">
+            <p>2,400 AIs. One answer.<br />One hand. One path.</p>
+            <p>The optimum is the same for everyone.<br />The way there never is.</p>
+            </div>
+            <details class="art-how"><summary>How it was made</summary><p>Every particle runs real gradient descent on the landscape, and they all find the same minimum. The golden line is my handwritten signature, which ignores the slope. The particles’ tones collapse into one note as they converge.</p></details>
+          </div>
+        </article>
+        <article class="artwork">
+          <div class="art-media">
+            <video src="/images/art/coexistence-city.mp4" poster="/images/art/coexistence-city.jpg" muted loop playsinline preload="none" controls aria-label="Coexistence City — looping video with sound"></video>
+          </div>
+          <div class="art-body">
+            <div class="art-meta"><span>2026.09.28</span><span>Photomosaic optimization · video · sound</span></div>
+            <h2>Coexistence City</h2>
+            <p class="art-q">Can a human and a machine build one city without either being erased?</p>
+            <div class="art-lines">
+            <p>Not a single pixel added.</p>
+            <p>One human. One machine.<br />5,184 pieces, each used exactly once, rebuilt into a city.</p>
+            </div>
+            <details class="art-how"><summary>How it was made</summary><p>The human is me; the robot was imagined by an AI (ChatGPT). Both portraits were cut into tiles, and an optimizer decided where every tile goes — no copies, no recoloring, nothing left over. Every tile that lands plays a note: soft strings for the human, small metallic pings for the machine.</p></details>
+          </div>
+        </article>
+    </div>
+    <p class="art-follow">More on Instagram <a href="https://www.instagram.com/art_justin__/" target="_blank" rel="noopener">@art_justin__ ↗</a></p>
+  </div>
+  </main>
+<!-- FOOTER:START -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-cta">
+      <div class="footer-message">
+        <h2>Build technology that matters —<br /><span>and rise by lifting others.</span></h2>
+        <p>I want my work to leave a positive mark beyond the lab, and to grow by helping the people around me grow. If that resonates, I’d love to hear from you.</p>
+      </div>
+      <div class="footer-links">
+        <a href="mailto:jun971105@gmail.com">jun971105@gmail.com</a>
+        <a href="https://scholar.google.com/citations?user=HI6_iqEAAAAJ&hl=en" target="_blank" rel="noopener">Scholar</a>
+        <a href="https://www.linkedin.com/in/justin-junseok-ma/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.researchgate.net/profile/Justin-Ma-11/research" target="_blank" rel="noopener">ResearchGate</a>
+        <a href="https://github.com/justin-js-ma" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Junseok (Justin) Ma, Ph.D. · Suwon, Republic of Korea</span>
+    </div>
+  </div>
+</footer>
+<script src="/assets/js/site.js" defer></script>
+<script src="/assets/js/art.js" defer></script>
+<!-- FOOTER:END -->
+</body>
+</html>
