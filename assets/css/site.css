@@ -644,3 +644,12 @@ strong { font-weight: 600; }
   .art-body h2 { font-size: 21px; }
 }
 .art-q { margin: 0 0 4px; padding-left: 12px; border-left: 2px solid var(--accent); font-size: 15.5px; line-height: 1.55; color: var(--accent); font-weight: 500; max-width: none !important; }
+/* featured (wide) artwork card — first card on the Art page */
+.artwork--feature { grid-column: 1 / -1; flex-direction: row; }
+.artwork--feature .art-media { flex: 0 0 46%; aspect-ratio: 720 / 998; background: #f6efdd; }
+.artwork--feature .art-body { justify-content: center; padding: 32px 36px; }
+@media (max-width: 720px) {
+  .artwork--feature { flex-direction: column; }
+  .artwork--feature .art-media { flex: none; }
+  .artwork--feature .art-body { padding: 18px 18px 20px; }
+}
