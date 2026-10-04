@@ -653,3 +653,9 @@ strong { font-weight: 600; }
   .artwork--feature .art-media { flex: none; }
   .artwork--feature .art-body { padding: 18px 18px 20px; }
 }
+/* portrait works: Dyed (3:4) featured; Off-Brand shown whole inside square grid card */
+.artwork--feature .art-media { aspect-ratio: 3 / 4; background: #ece6d8; }
+.art-media--portrait { background: #f6efdd; }
+.art-media--portrait video { object-fit: contain; }
+.art-alt { font-weight: 400; font-size: 0.7em; color: var(--faint); margin-left: 6px; }
+.art-credit { margin: 6px 0 0; font-size: 12.5px; line-height: 1.6; color: var(--faint); max-width: none !important; }

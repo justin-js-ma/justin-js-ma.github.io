@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/assets/css/site.css?v=20261002" />
+  <link rel="stylesheet" href="/assets/css/site.css?v=20261005" />
   <script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
   <!-- HEAD:END -->
   <title>Art — Junseok (Justin) Ma</title>
@@ -36,7 +36,7 @@
   <main class="page art-page">
   <div class="container">
     <header class="page-header">
-      <span class="eyebrow">Art</span>
+      <span class="eyebrow">Art · newest first</span>
       <h1>Questions about humans and AI</h1>
       <p>A side project I started in September 2026. I use physics, code and AI to put a few questions I keep coming back to into pictures and sound: when AI can find the optimal answer and draw the perfect line, what is left that is ours? Each piece is one of those questions.</p>
       <p class="art-hint">Works play as you scroll · turn the sound on · each work notes what the math, the AI and I did.</p>
@@ -44,6 +44,23 @@
     <div class="art-grid">
         <article class="artwork artwork--feature">
           <div class="art-media">
+            <video src="/images/art/dyed.mp4" poster="/images/art/dyed.jpg" muted loop playsinline preload="none" controls aria-label="Dyed — looping animation with sound"></video>
+          </div>
+          <div class="art-body">
+            <div class="art-meta"><span>2026.10.05</span><span>Drawing · AI image · motion &amp; sound</span></div>
+            <h2>Dyed <span class="art-alt">물들다</span></h2>
+            <p class="art-q">When the dream is free and everyone is smiling, who notices the color isn’t theirs?</p>
+            <div class="art-lines">
+            <p>No one was forced.<br />Everyone is smiling.</p>
+            <p>That’s why no one notices<br />they’re being dyed.</p>
+            <p>Only one stays awake.</p>
+            </div>
+            <details class="art-how"><summary>How it was made</summary><p>Inspired by Diego Rivera’s <em>Detroit Industry</em> murals (1932–33): where Rivera painted workers and machines side by side, this wall is vertical. Two operators at the top unspool color; it pours through the faces on the screens and seeps into a sea of sleeping, smiling people, then winds back up to the reel, every 24 seconds. One man, awake and holding someone asleep, never takes the color. The drawing grew out of my own hand-drawn style (curly hair, spiral eyes, sunflowers) and was developed with ChatGPT (OpenAI) from my sketches and directions. The motion and sound are code written with Claude (Anthropic): a server hum and a music-box lullaby that swells as the color spreads, and one high note that never changes, for the one who stays awake.</p></details>
+            <p class="art-credit">Concept, original drawing &amp; art direction: Junseok Ma · AI image generation &amp; editing: ChatGPT (OpenAI) · Motion &amp; sound (code): Claude (Anthropic)</p>
+          </div>
+        </article>
+        <article class="artwork">
+          <div class="art-media art-media--portrait">
             <video src="/images/art/off-brand.mp4" poster="/images/art/off-brand.jpg" muted loop playsinline preload="none" controls aria-label="Off-Brand — looping animation of a hand-drawn page"></video>
           </div>
           <div class="art-body">
@@ -60,47 +77,17 @@
         </article>
         <article class="artwork">
           <div class="art-media">
-            <video src="/images/art/j-light-wave.mp4" poster="/images/art/j-light-wave.jpg" muted loop playsinline preload="none" controls aria-label="J — Light &amp; Wave — looping video with sound"></video>
+            <video src="/images/art/every-four-years.mp4" poster="/images/art/every-four-years.jpg" muted loop playsinline preload="none" controls aria-label="Every Four Years — looping video with sound"></video>
           </div>
           <div class="art-body">
-            <div class="art-meta"><span>2026.09.25</span><span>Python · 2D wave simulation · sound</span></div>
-            <h2>J — Light &amp; Wave</h2>
-            <p class="art-q">How far does a thought travel before it fades?</p>
+            <div class="art-meta"><span>2026.09.30</span><span>Flag mosaic · loop · sound</span></div>
+            <h2>Every Four Years</h2>
+            <p class="art-q">When every nation is whole on its own, what is left between us?</p>
             <div class="art-lines">
-            <p>My signature, turned into an antenna.</p>
-            <p>Thoughts merge, grow, vanish.<br />The farther they travel, the more they fade.</p>
+            <p>The lanes were always there.<br />One day, they became borders.</p>
+            <p>No one left. Every flag came back whole.<br />Only the stadium is gone.</p>
             </div>
-            <details class="art-how"><summary>How it was made</summary><p>About 240 tiny wave sources were placed along the strokes of my signature, a quarter wavelength apart, so each stroke radiates like a traveling-wave antenna. Their cylindrical waves were summed pixel by pixel: gold marks the crests, blue the troughs, and brightness the field strength. The loop is one full wave cycle. Physics set the interference and the nulls; I chose the color, the glow and the fade.</p></details>
-          </div>
-        </article>
-        <article class="artwork">
-          <div class="art-media">
-            <video src="/images/art/undone.mp4" poster="/images/art/undone.jpg" muted loop playsinline preload="none" controls aria-label="Undone — looping video with sound"></video>
-          </div>
-          <div class="art-body">
-            <div class="art-meta"><span>2026.09.26</span><span>Python · 3D rendering · sound</span></div>
-            <h2>Undone</h2>
-            <p class="art-q">If AI can make every line perfect, is the tremble what makes it human?</p>
-            <div class="art-lines">
-            <p>The perfect line was drawn by an AI.<br />The trembling one is my hand.</p>
-            <p>It keeps trying to become perfect.<br />It keeps coming back to me.</p>
-            </div>
-            <details class="art-how"><summary>How it was made</summary><p>The trembling line is traced from my real handwritten signature. An AI smoothed it into perfect curves, then let it fall back to my hand. The melody is read off the signature itself: the higher the pen, the higher the note — clean when perfecting, lo-fi when returning.</p></details>
-          </div>
-        </article>
-        <article class="artwork">
-          <div class="art-media">
-            <video src="/images/art/argmin.mp4" poster="/images/art/argmin.jpg" muted loop playsinline preload="none" controls aria-label="Argmin — looping video with sound"></video>
-          </div>
-          <div class="art-body">
-            <div class="art-meta"><span>2026.09.26</span><span>Python · optimization · 3D · sound</span></div>
-            <h2>Argmin</h2>
-            <p class="art-q">AI finds the same optimum for everyone. What is the worth of a path no one else walks?</p>
-            <div class="art-lines">
-            <p>2,400 AIs. One answer.<br />One hand. One path.</p>
-            <p>The optimum is the same for everyone.<br />The way there never is.</p>
-            </div>
-            <details class="art-how"><summary>How it was made</summary><p>Every particle runs real gradient descent on the landscape, and they all find the same minimum. The golden line is my handwritten signature, which ignores the slope. The particles’ tones collapse into one note as they converge.</p></details>
+            <details class="art-how"><summary>How it was made</summary><p>The flags of 193 UN member states and 2 observer states, each cut into 108 pieces — 21,060 in all, every piece used exactly once, nothing added or recolored. Arranged by color, they become a stadium seen from above. It tears along the lane lines, each piece flies home to its own flag in parade order, and then they gather again, in a seamless 36-second loop. The crowd is heard only while the stadium is whole; the glassy sparkle follows how many nations are in motion. Made in dialogue with Claude (Anthropic), which wrote the layout, rendering and sound code. Flag artwork: flag-icons (MIT).</p></details>
           </div>
         </article>
         <article class="artwork">
@@ -120,17 +107,47 @@
         </article>
         <article class="artwork">
           <div class="art-media">
-            <video src="/images/art/every-four-years.mp4" poster="/images/art/every-four-years.jpg" muted loop playsinline preload="none" controls aria-label="Every Four Years — looping video with sound"></video>
+            <video src="/images/art/argmin.mp4" poster="/images/art/argmin.jpg" muted loop playsinline preload="none" controls aria-label="Argmin — looping video with sound"></video>
           </div>
           <div class="art-body">
-            <div class="art-meta"><span>2026.09.30</span><span>Flag mosaic · loop · sound</span></div>
-            <h2>Every Four Years</h2>
-            <p class="art-q">When every nation is whole on its own, what is left between us?</p>
+            <div class="art-meta"><span>2026.09.26</span><span>Python · optimization · 3D · sound</span></div>
+            <h2>Argmin</h2>
+            <p class="art-q">AI finds the same optimum for everyone. What is the worth of a path no one else walks?</p>
             <div class="art-lines">
-            <p>The lanes were always there.<br />One day, they became borders.</p>
-            <p>No one left. Every flag came back whole.<br />Only the stadium is gone.</p>
+            <p>2,400 AIs. One answer.<br />One hand. One path.</p>
+            <p>The optimum is the same for everyone.<br />The way there never is.</p>
             </div>
-            <details class="art-how"><summary>How it was made</summary><p>The flags of 193 UN member states and 2 observer states, each cut into 108 pieces — 21,060 in all, every piece used exactly once, nothing added or recolored. Arranged by color, they become a stadium seen from above. It tears along the lane lines, each piece flies home to its own flag in parade order, and then they gather again, in a seamless 36-second loop. The crowd is heard only while the stadium is whole; the glassy sparkle follows how many nations are in motion. Made in dialogue with Claude (Anthropic), which wrote the layout, rendering and sound code. Flag artwork: flag-icons (MIT).</p></details>
+            <details class="art-how"><summary>How it was made</summary><p>Every particle runs real gradient descent on the landscape, and they all find the same minimum. The golden line is my handwritten signature, which ignores the slope. The particles’ tones collapse into one note as they converge.</p></details>
+          </div>
+        </article>
+        <article class="artwork">
+          <div class="art-media">
+            <video src="/images/art/undone.mp4" poster="/images/art/undone.jpg" muted loop playsinline preload="none" controls aria-label="Undone — looping video with sound"></video>
+          </div>
+          <div class="art-body">
+            <div class="art-meta"><span>2026.09.26</span><span>Python · 3D rendering · sound</span></div>
+            <h2>Undone</h2>
+            <p class="art-q">If AI can make every line perfect, is the tremble what makes it human?</p>
+            <div class="art-lines">
+            <p>The perfect line was drawn by an AI.<br />The trembling one is my hand.</p>
+            <p>It keeps trying to become perfect.<br />It keeps coming back to me.</p>
+            </div>
+            <details class="art-how"><summary>How it was made</summary><p>The trembling line is traced from my real handwritten signature. An AI smoothed it into perfect curves, then let it fall back to my hand. The melody is read off the signature itself: the higher the pen, the higher the note — clean when perfecting, lo-fi when returning.</p></details>
+          </div>
+        </article>
+        <article class="artwork">
+          <div class="art-media">
+            <video src="/images/art/j-light-wave.mp4" poster="/images/art/j-light-wave.jpg" muted loop playsinline preload="none" controls aria-label="J — Light &amp; Wave — looping video with sound"></video>
+          </div>
+          <div class="art-body">
+            <div class="art-meta"><span>2026.09.25</span><span>Python · 2D wave simulation · sound</span></div>
+            <h2>J — Light &amp; Wave</h2>
+            <p class="art-q">How far does a thought travel before it fades?</p>
+            <div class="art-lines">
+            <p>My signature, turned into an antenna.</p>
+            <p>Thoughts merge, grow, vanish.<br />The farther they travel, the more they fade.</p>
+            </div>
+            <details class="art-how"><summary>How it was made</summary><p>About 240 tiny wave sources were placed along the strokes of my signature, a quarter wavelength apart, so each stroke radiates like a traveling-wave antenna. Their cylindrical waves were summed pixel by pixel: gold marks the crests, blue the troughs, and brightness the field strength. The loop is one full wave cycle. Physics set the interference and the nulls; I chose the color, the glow and the fade.</p></details>
           </div>
         </article>
     </div>
