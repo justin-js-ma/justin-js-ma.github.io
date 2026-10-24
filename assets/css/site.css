@@ -763,3 +763,7 @@ strong { font-weight: 600; }
 /* publication anchors from the framework */
 .pubcard { scroll-margin-top: 140px; }
 .pubcard:target { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft), 0 10px 30px -12px rgba(47, 71, 208, 0.45); }
+.fwx-chip b { white-space: nowrap; }
+.page .fwx-note { margin: 0 !important; padding-top: 18px; border-top: 1px solid rgba(255, 255, 255, 0.08); text-align: right; font-family: var(--mono); font-size: 11px; color: #6b768c; max-width: none !important; }
+span.fwx-chip { cursor: default; }
+span.fwx-chip:hover { transform: none; }
