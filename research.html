@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/assets/css/site.css?v=20261024" />
+  <link rel="stylesheet" href="/assets/css/site.css?v=20261024b" />
   <script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
   <!-- HEAD:END -->
   <title>Dr. Junseok (Justin) Ma — Research</title>
@@ -51,49 +51,107 @@
       </p>
     </section>
 
-    <section class="section" id="framework">
-      <h2>Research framework</h2>
-      <p class="fw-sub">One chain, from molecules to working hardware: engineer the material, print it where it is needed, and build devices that switch, remember and steer.</p>
-      <div class="fw">
-        <article class="fw-step">
-          <figure class="fw-img"><img src="/images/research/lc-phase-engineering.jpg" alt="Liquid-crystal phases from crystal through smectic and nematic to isotropic on heating" loading="lazy" /></figure>
-          <div class="fw-body">
-            <span class="fw-num">01 · Functional materials</span>
+    <section class="section fwx" id="framework">
+      <div class="fwx-panel">
+        <header class="fwx-top">
+          <span class="fwx-eyebrow">Research framework</span>
+          <h2>From molecules to working hardware</h2>
+          <p>Every paper sits somewhere on one chain: engineer the material, print it where it is needed, and build hardware that switches, remembers and steers.</p>
+          <ol class="fwx-chain"><li><b>01</b>Materials</li><li><b>02</b>Processing</li><li><b>03</b>Devices &amp; systems</li></ol>
+        </header>
+        <article class="fwx-row">
+          <div class="fwx-media">
+            <a class="fwx-hero" href="/images/research/lc-phase-engineering.jpg" target="_blank" rel="noopener"><img src="/images/research/lc-phase-engineering.jpg" alt="Liquid-crystal phases from crystal through smectic and nematic to isotropic on heating" loading="lazy" /><i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i></a>
+            <p class="fwx-cap">Phase engineering: crystal → smectic → nematic → isotropic</p>
+            <div class="fwx-strip">
+              <a class="fwx-thumb" href="/images/research/lc-dielectric-tunability.jpg" target="_blank" rel="noopener"><img src="/images/research/lc-dielectric-tunability.jpg" alt="RF field and LC director: initial and aligned states with the permittivity tensor" loading="lazy" /><span>Dielectric tunability for RF</span></a>
+              <a class="fwx-thumb" href="/images/pubs/afm-2025-pi-cell-domains-v2.jpg" target="_blank" rel="noopener"><img src="/images/pubs/afm-2025-pi-cell-domains-v2.jpg" alt="Locked-in topological domains in a pi-cell" loading="lazy" /><span>Topological domains, locked</span></a>
+              <a class="fwx-thumb is-photo" href="/images/pubs/adma-2023-cover.jpg" target="_blank" rel="noopener"><img src="/images/pubs/adma-2023-cover.jpg" alt="Advanced Materials frontispiece art" loading="lazy" /><span>Adv. Mater. frontispiece</span></a>
+            </div>
+          </div>
+          <div class="fwx-text">
+            <div class="fwx-head"><span class="fwx-n">01</span><span class="fwx-k">Functional materials</span></div>
             <h3>Liquid crystals as programmable matter</h3>
-            <ul>
-              <li>Liquid-crystal phase engineering</li>
-              <li>Stimuli-responsive molecular systems (light, field, temperature)</li>
-              <li>Optical and dielectric tunability, from visible light to mmWave</li>
-            </ul>
-            <p class="fw-proof"><a href="https://doi.org/10.1002/adma.202302474" target="_blank" rel="noopener">Adv. Mater. 2023 ↗</a><a href="https://doi.org/10.1016/j.dyepig.2025.113145" target="_blank" rel="noopener">Dyes Pigm. 2026 ↗</a></p>
+            <p>Order you can rewrite with a field, light or heat. I engineer LC phases, mixtures and interfaces so that one material can be tuned from visible light to millimeter waves.</p>
+            <div class="fwx-papers">
+              <div class="fwx-group"><span class="fwx-label">Papers in this frame · 8</span>
+                <a class="fwx-chip" href="/publication.html#J5" title="LCs for µW &amp; mmWave (Adv. Mater.)"><b>J5</b>LCs for µW & mmWave (Adv. Mater.)</a>
+                <a class="fwx-chip" href="/publication.html#J1" title="RF properties of LCs (review)"><b>J1</b>RF properties of LCs (review)</a>
+                <a class="fwx-chip" href="/publication.html#J3" title="Surfactant vertical alignment"><b>J3</b>Surfactant vertical alignment</a>
+                <a class="fwx-chip" href="/publication.html#J13" title="Azobenzene LC temperature control"><b>J13</b>Azobenzene LC temperature control</a>
+                <a class="fwx-chip" href="/publication.html#J11" title="Locked topological domains"><b>J11</b>Locked topological domains</a>
+                <a class="fwx-chip" href="/publication.html#J23" title="Field-programmable torons"><b>J23</b>Field-programmable torons</a>
+                <a class="fwx-chip is-review" href="/publication.html#J25" title="Low-κ LC polymer films (under review)"><b>J25</b>Low-κ LC polymer films</a>
+                <a class="fwx-chip is-other" href="/publication.html#P1" title="Chiral-dopant LC device (patent)"><b>P1</b>Chiral-dopant LC device (patent)</a>
+              </div>
+            </div>
           </div>
         </article>
-        <article class="fw-step">
-          <figure class="fw-img fw-img--dark"><img src="/images/research/dod-jetting-shadowgraph.jpg" alt="Shadowgraph sequence of an LC ink droplet forming at a printing nozzle, 60 to 420 microseconds" loading="lazy" /></figure>
-          <div class="fw-body">
-            <span class="fw-num">02 · Scalable processing</span>
+        <article class="fwx-row is-flip">
+          <div class="fwx-media">
+            <a class="fwx-hero is-dark" href="/images/research/dod-jetting-shadowgraph.jpg" target="_blank" rel="noopener"><img src="/images/research/dod-jetting-shadowgraph.jpg" alt="Shadowgraph of an LC ink droplet forming at a printing nozzle, 60 to 360 microseconds" loading="lazy" /><i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i></a>
+            <p class="fwx-cap">Inkjet physics: one LC-ink droplet, 60–360 µs</p>
+            <div class="fwx-strip">
+              <a class="fwx-thumb is-photo" href="/images/research/dod-printer.jpg" target="_blank" rel="noopener"><img src="/images/research/dod-printer.jpg" alt="Printed LC device with a crest pattern mounted in the optical setup" loading="lazy" /><span>Printed device on the bench</span></a>
+              <a class="fwx-thumb" href="/images/research/nanoscratch-vs-coating.jpg" target="_blank" rel="noopener"><img src="/images/research/nanoscratch-vs-coating.jpg" alt="Conventional polyimide coating versus fast nanoscratching on PCB antennas" loading="lazy" /><span>Hours of coating → minutes of scratching</span></a>
+              <a class="fwx-thumb" href="/images/pubs/smtd-2026-hybrid-lc-patterning-v2.jpg" target="_blank" rel="noopener"><img src="/images/pubs/smtd-2026-hybrid-lc-patterning-v2.jpg" alt="High-resolution LC pattern and one- and two-photon polymerization" loading="lazy" /><span>mm-to-µm hybrid patterning</span></a>
+            </div>
+          </div>
+          <div class="fwx-text">
+            <div class="fwx-head"><span class="fwx-n">02</span><span class="fwx-k">Scalable processing</span></div>
             <h3>Printing liquid crystals, drop by drop</h3>
-            <ul>
-              <li>Inkjet / drop-on-demand printing of liquid crystals</li>
-              <li>Mask-free fabrication and micro-patterned functional layers</li>
-              <li>Stable jetting tuned through ink rheology and drive waveform</li>
-            </ul>
-            <p class="fw-proof"><a href="https://doi.org/10.1002/adom.202501586" target="_blank" rel="noopener">Adv. Opt. Mater. 2025 ↗</a><a href="https://onlinelibrary.wiley.com/doi/10.1002/smtd.202501892" target="_blank" rel="noopener">Small Methods 2026 ↗</a></p>
+            <p>Put the material only where it is needed. Drop-on-demand printing, laser patterning and coating-free alignment turn lab materials into patterned, manufacturable layers.</p>
+            <div class="fwx-papers">
+              <div class="fwx-group"><span class="fwx-label">Papers in this frame · 7</span>
+                <a class="fwx-chip" href="/publication.html#J14" title="Printed electrochromic smart windows"><b>J14</b>Printed electrochromic smart windows</a>
+                <a class="fwx-chip" href="/publication.html#J18" title="Inkjet CLC pixels with memory"><b>J18</b>Inkjet CLC pixels with memory</a>
+                <a class="fwx-chip" href="/publication.html#J24" title="Printed LC droplets for beam shaping"><b>J24</b>Printed LC droplets for beam shaping</a>
+                <a class="fwx-chip" href="/publication.html#J20" title="Printed transparent antenna"><b>J20</b>Printed transparent antenna</a>
+                <a class="fwx-chip" href="/publication.html#J17" title="mm-to-µm hybrid patterning"><b>J17</b>mm-to-µm hybrid patterning</a>
+                <a class="fwx-chip" href="/publication.html#J21" title="Coating-free nanoscratch alignment"><b>J21</b>Coating-free nanoscratch alignment</a>
+                <a class="fwx-chip is-other" href="/publication.html#T2" title="Ph.D. thesis: DoD-printed LC devices"><b>T2</b>Ph.D. thesis: DoD-printed LC devices</a>
+              </div>
+            </div>
           </div>
         </article>
-        <article class="fw-step">
-          <figure class="fw-img"><img src="/images/research/clc-memory-states.jpg" alt="Drive frequency writes three liquid-crystal states that remain after the field is switched off" loading="lazy" /></figure>
-          <div class="fw-body">
-            <span class="fw-num">03 · Smart devices &amp; systems</span>
-            <h3>Devices that switch, remember and steer</h3>
-            <ul>
-              <li>Printed pixels whose optical state is written by drive frequency and kept with the field off</li>
-              <li>Optoelectronics: smart windows, reflective displays, AR optics</li>
-              <li>Microwave / mmWave: tunable filters, phase shifters, intelligent surfaces</li>
-            </ul>
-            <p class="fw-proof"><a href="https://pubs.acs.org/doi/10.1021/acsami.6c02375" target="_blank" rel="noopener">ACS AMI 2026 ↗</a><a href="https://advanced.onlinelibrary.wiley.com/doi/10.1002/admt.71166" target="_blank" rel="noopener">Adv. Mater. Technol. 2026 ↗</a></p>
+        <article class="fwx-row">
+          <div class="fwx-media">
+            <a class="fwx-hero" href="/images/research/ris28-setup-unitcell.jpg" target="_blank" rel="noopener"><img src="/images/research/ris28-setup-unitcell.jpg" alt="28-GHz LC reconfigurable intelligent surface under a horn antenna, and the simulated LC tilt in one unit cell" loading="lazy" /><i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i></a>
+            <p class="fwx-cap">28-GHz LC intelligent surface: measurement and unit-cell LC tilt</p>
+            <div class="fwx-strip">
+              <a class="fwx-thumb" href="/images/research/clc-memory-states.jpg" target="_blank" rel="noopener"><img src="/images/research/clc-memory-states.jpg" alt="Drive frequency writes three LC states that remain after the field is switched off" loading="lazy" /><span>Field-off optical memory</span></a>
+              <a class="fwx-thumb is-photo" href="/images/pubs/adom-2025-ecpdlc-windows-v2.jpg" target="_blank" rel="noopener"><img src="/images/pubs/adom-2025-ecpdlc-windows-v2.jpg" alt="Printed ECPDLC device displaying OXF under AC and DC drive" loading="lazy" /><span>Color + transparency in one window</span></a>
+              <a class="fwx-thumb is-photo" href="/images/pubs/jpd-2024-open-loop-bpf.jpg" target="_blank" rel="noopener"><img src="/images/pubs/jpd-2024-open-loop-bpf.jpg" alt="Fabricated LC-tunable open-loop bandpass filter" loading="lazy" /><span>LC-tunable filter, fabricated</span></a>
+            </div>
+          </div>
+          <div class="fwx-text">
+            <div class="fwx-head"><span class="fwx-n">03</span><span class="fwx-k">Smart devices & systems</span></div>
+            <h3>Hardware that switches, remembers and steers</h3>
+            <p>Where the chain pays off: tunable filters, phase shifters and intelligent surfaces for RF, and displays, AR optics and smart windows for light — measured, not just simulated.</p>
+            <div class="fwx-papers">
+              <div class="fwx-group"><span class="fwx-label">RF &amp; mmWave · 8</span>
+                <a class="fwx-chip is-review" href="/publication.html#J28" title="160-GHz LC intelligent surface (under review)"><b>J28</b>160-GHz LC intelligent surface</a>
+                <a class="fwx-chip" href="/publication.html#J2" title="28-GHz CPW phase shifter"><b>J2</b>28-GHz CPW phase shifter</a>
+                <a class="fwx-chip" href="/publication.html#J4" title="SIW phase shifter"><b>J4</b>SIW phase shifter</a>
+                <a class="fwx-chip" href="/publication.html#J7" title="Open-loop bandpass filter"><b>J7</b>Open-loop bandpass filter</a>
+                <a class="fwx-chip" href="/publication.html#J10" title="Stepped-impedance wideband filter"><b>J10</b>Stepped-impedance wideband filter</a>
+                <a class="fwx-chip" href="/publication.html#J15" title="Triple-mode wideband filter"><b>J15</b>Triple-mode wideband filter</a>
+                <a class="fwx-chip is-review" href="/publication.html#J26" title="Low-voltage tunable filter (under review)"><b>J26</b>Low-voltage tunable filter</a>
+                <a class="fwx-chip is-other" href="/publication.html#T1" title="M.S. thesis: mmWave phase shifter"><b>T1</b>M.S. thesis: mmWave phase shifter</a>
+              </div>
+              <div class="fwx-group"><span class="fwx-label">Optics &amp; displays · 6</span>
+                <a class="fwx-chip is-review" href="/publication.html#J27" title="Subpixel-free color (under review)"><b>J27</b>Subpixel-free color</a>
+                <a class="fwx-chip" href="/publication.html#J6" title="Ultra-broadband polarization rotator"><b>J6</b>Ultra-broadband polarization rotator</a>
+                <a class="fwx-chip" href="/publication.html#J12" title="Switchable AR visor"><b>J12</b>Switchable AR visor</a>
+                <a class="fwx-chip" href="/publication.html#J22" title="OST-HMD light blocking"><b>J22</b>OST-HMD light blocking</a>
+                <a class="fwx-chip" href="/publication.html#J19" title="Tunable LC depolarizer"><b>J19</b>Tunable LC depolarizer</a>
+                <a class="fwx-chip" href="/publication.html#J9" title="Defocus blur model"><b>J9</b>Defocus blur model</a>
+              </div>
+            </div>
           </div>
         </article>
+        <p class="fwx-beyond"><span class="fwx-label">Beyond the frame</span><a class="fwx-chip" href="/publication.html#J8" title="VR cybersickness study"><b>J8</b>VR cybersickness study</a>
+                <a class="fwx-chip" href="/publication.html#J16" title="Isolated DC/DC converter"><b>J16</b>Isolated DC/DC converter</a><span class="fwx-note">Dashed = under review · click any paper to jump to it</span></p>
       </div>
     </section>
 
