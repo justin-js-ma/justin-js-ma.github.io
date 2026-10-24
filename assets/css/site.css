@@ -659,3 +659,32 @@ strong { font-weight: 600; }
 .art-media--portrait video { object-fit: contain; }
 .art-alt { font-weight: 400; font-size: 0.7em; color: var(--faint); margin-left: 6px; }
 .art-credit { margin: 6px 0 0; font-size: 12.5px; line-height: 1.6; color: var(--faint); max-width: none !important; }
+
+/* ---------- Research: framework (materials → processing → devices) ---------- */
+.fw-sub { margin: 0 0 22px; font-size: 16.5px; color: var(--muted); }
+.fw { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; counter-reset: none; }
+.fw-step { position: relative; display: flex; flex-direction: column; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+.fw-step:not(:last-child)::after {
+  content: ""; position: absolute; top: 96px; right: -15px; width: 12px; height: 12px; z-index: 2;
+  background: no-repeat center / 12px url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M3 2l4 4-4 4' fill='none' stroke='%238a909b' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+.fw-img { margin: 0; aspect-ratio: 16 / 10; background: #fff; border-bottom: 1px solid var(--line); display: grid; place-items: center; }
+.fw-img img { width: 100%; height: 100%; object-fit: contain; padding: 10px; }
+.fw-img--dark { background: #151515; }
+.fw-img--dark img { padding: 0; object-fit: contain; }
+.fw-body { padding: 18px 20px 20px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+.fw-num { font-family: var(--mono); font-size: 11.5px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent); }
+.page .fw-step h3 { margin: 0; font-size: 18px; line-height: 1.3; }
+.fw-step ul { margin: 2px 0 0; padding-left: 18px; font-size: 14.5px; line-height: 1.55; color: var(--muted); }
+.fw-step li { margin: 4px 0; }
+.fw-proof { margin: auto 0 0 !important; padding-top: 12px; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 13px; font-weight: 600; }
+@media (max-width: 980px) {
+  .fw { grid-template-columns: 1fr; }
+  .fw-step::after { display: none; }
+  .fw-step { display: grid; grid-template-columns: 300px minmax(0, 1fr); }
+  .fw-img { aspect-ratio: auto; border-bottom: 0; border-right: 1px solid var(--line); }
+}
+@media (max-width: 720px) {
+  .fw-step { display: flex; }
+  .fw-img { aspect-ratio: 16 / 10; border-right: 0; border-bottom: 1px solid var(--line); }
+}
